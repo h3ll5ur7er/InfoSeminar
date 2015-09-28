@@ -2,15 +2,15 @@
 % Main document
 % ===========================================================================
 % This is part of the document "Project documentation template".
-% Authors: brd3, kaa1
+% Authors: aescd5,knece1
 %
 
 %---------------------------------------------------------------------------
 \documentclass[
 	a4paper,					% paper format
 	10pt,							% fontsize
-	twoside,					% double-sided
-	openright,				% begin new chapter on right side
+	%twoside,					% double-sided
+	%openright,				% begin new chapter on right side
 	notitlepage,			% use no standard title page
 	parskip=half,			% set paragraph skip to half of a line
 ]{scrreprt}					% KOMA-script report
@@ -103,7 +103,6 @@
 \usepackage{makeidx}                         		% To produce index
 \makeindex                                    	% Index-Initialisation
 %---------------------------------------------------------------------------
-
 % Glossary Package
 %---------------------------------------------------------------------------
 % the glossaries package uses makeindex
@@ -156,20 +155,12 @@
 %---------------------------------------------------------------------------
 %\include{vorspann/titelseite_ohne_bild}		% activate for Titelseite ohne Bild
 \include{vorspann/titelseite_mit_bild}			% activate for Titelseite mit Bild
-\include{vorspann/versionen}
-\cleardoubleemptypage
-\setcounter{page}{1}
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Management Summary}
-\include{vorspann/management_summary}
-\cleardoubleemptypage
 %---------------------------------------------------------------------------
 
 % Table of contents
 %---------------------------------------------------------------------------
 \tableofcontents
-\cleardoublepage
+%\cleardoublepage
 %---------------------------------------------------------------------------
 
 % Main part:
@@ -177,14 +168,14 @@
 \pagenumbering{arabic}
 
 \include{kapitel/einleitung}
-\include{kapitel/anleitungen}
-\include{kapitel/satzspiegeltest}
+\include{kapitel/aop}
+\include{kapitel/aspectj}
 \include{kapitel/schlussfolgerungen}
 %---------------------------------------------------------------------------
 
 % Selbständigkeitserklärung
 %---------------------------------------------------------------------------
-\cleardoublepage
+%\cleardoublepage
 \phantomsection 
 \addcontentsline{toc}{chapter}{Selbständigkeitserklärung}
 \include{vorspann/selbstaendigkeitserklaerung}
@@ -192,7 +183,7 @@
 
 % Glossary
 %---------------------------------------------------------------------------
-\cleardoublepage
+%\cleardoublepage
 \phantomsection 
 \addcontentsline{toc}{chapter}{Glossar}
 \renewcommand{\glossaryname}{Glossar}
@@ -201,7 +192,6 @@
 
 % Bibliography
 %---------------------------------------------------------------------------
-\cleardoublepage
 \phantomsection 
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \bibliographystyle{IEEEtranS}
@@ -210,32 +200,19 @@
 
 % Listings
 %---------------------------------------------------------------------------
-\cleardoublepage
 \phantomsection 
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
 \listoffigures
-\cleardoublepage
 \phantomsection 
 \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
 \listoftables
-%---------------------------------------------------------------------------
-
-% Index
-%---------------------------------------------------------------------------
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Stichwortverzeichnis}
-\renewcommand{\indexname}{Stichwortverzeichnis}
-\printindex
 %---------------------------------------------------------------------------
 
 % Attachment:
 %---------------------------------------------------------------------------
 \appendix
 \settocdepth{section}
-\include{anhang/beispielanhang}
-\include{anhang/beispielanhangB}
-\include{anhang/inhaltCDROM}
+\include{anhang/demoprogramm}
 %---------------------------------------------------------------------------
 
 %---------------------------------------------------------------------------
