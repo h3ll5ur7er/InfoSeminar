@@ -21,6 +21,12 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{moodle:auftrag}
+\BIBentryALTinterwordspacing
+Dozenten, ``Auftragsbeschreibungen infoseminar.'' [Online]. Available:
+  \url{https://moodle.bfh.ch/mod/data/view.php?d=462}
+\BIBentrySTDinterwordspacing
+
 \bibitem{laddad:aspectj}
 R.~Laddad, \emph{AspectJ in Action 2nd Edition}.\hskip 1em plus 0.5em minus
   0.4em\relax Manning Publications, 2009, vol.~2.
