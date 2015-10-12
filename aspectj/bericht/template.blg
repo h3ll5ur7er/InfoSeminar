@@ -8,9 +8,14 @@ A level-1 auxiliary file: vorspann/selbstaendigkeitserklaerung.aux
 The style file: IEEEtranS.bst
 A level-1 auxiliary file: anhang/demoprogramm.aux
 Database file #1: datenbanken/bibliography.bib
+Warning--I didn't find a database entry for "net:apectc"
 -- IEEEtranS.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** Sorting version - not for normal IEEE work.
+Warning--to sort, need author, organization, or key in net:postsharp
+Warning--to sort, need author, organization, or key in net:aspectsharp
+Warning--to sort, need author, organization, or key in net:afterthought
 
 Done.
+(There were 4 warnings)

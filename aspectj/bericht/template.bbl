@@ -21,6 +21,23 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{net:afterthought}
+\BIBentryALTinterwordspacing
+``Afterthought open source framework.'' [Online]. Available:
+  \url{https://github.com/vc3/Afterthought}
+\BIBentrySTDinterwordspacing
+
+\bibitem{net:aspectsharp}
+\BIBentryALTinterwordspacing
+``Aspectsharp framework.'' [Online]. Available:
+  \url{http://sourceforge.net/projects/aspectsharp/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{net:postsharp}
+\BIBentryALTinterwordspacing
+``Postsharp.'' [Online]. Available: \url{https://www.postsharp.net/customers}
+\BIBentrySTDinterwordspacing
+
 \bibitem{moodle:auftrag}
 \BIBentryALTinterwordspacing
 Dozenten, ``Auftragsbeschreibungen informatikseminar.'' [Online]. Available:

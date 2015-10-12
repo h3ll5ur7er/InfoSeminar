@@ -2,8 +2,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Beispielsklasse - Motivation f\IeC {\"u}r AOP\relax }}{4}{figure.caption.2}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Code Scattering (Source \cite [p~54]{laddad:aspectj})\relax }}{5}{figure.caption.5}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Systemdesign mit AOP (Source\cite [p~55]{laddad:aspectj})\relax }}{5}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Code Scattering (\cite [p~54]{laddad:aspectj})\relax }}{5}{figure.caption.5}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Systemdesign mit AOP (\cite [p~55]{laddad:aspectj})\relax }}{5}{figure.caption.6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces AOP Konzepte (\cite [p~60]{laddad:aspectj})\relax }}{7}{figure.caption.9}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

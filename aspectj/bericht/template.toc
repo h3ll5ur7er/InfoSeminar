@@ -17,34 +17,34 @@
 \contentsline {subparagraph}{\nonumberline Weaving Rules Spezifizierung}{6}{section*.8}
 \contentsline {subsection}{\numberline {2.3.2}Implementation}{6}{subsection.2.3.2}
 \contentsline {section}{\numberline {2.4}Konzepte}{6}{section.2.4}
-\contentsline {section}{\numberline {2.5}Programmiersprachen}{6}{section.2.5}
-\contentsline {paragraph}{\nonumberline Java}{6}{section*.9}
-\contentsline {paragraph}{\nonumberline .NET Framework}{6}{section*.10}
-\contentsline {paragraph}{\nonumberline C++}{6}{section*.11}
-\contentsline {chapter}{\numberline {3}AspectJ}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Bestandteile von AspectJ}{7}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Common crosscutting}{7}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Dynamic crosscutting}{7}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Static crosscutting}{7}{subsection.3.1.3}
-\contentsline {paragraph}{\nonumberline Inner-type declaration}{7}{section*.12}
-\contentsline {paragraph}{\nonumberline Weave-time declaration}{7}{section*.13}
-\contentsline {section}{\numberline {3.2}Syntaxvarianten}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Join-Point Model}{7}{section.3.3}
-\contentsline {section}{\numberline {3.4}Weaving}{7}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Source weaving}{7}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Binary weaving}{7}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Load-time weaving}{7}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}Entwicklungstools}{7}{section.3.5}
-\contentsline {chapter}{\numberline {4}Schlussfolgerungen}{8}{chapter.4}
-\contentsline {section}{\numberline {4.1}Nutzen von AspectJ}{8}{section.4.1}
-\contentsline {section}{\numberline {4.2}Nachteile von AspectJ}{8}{section.4.2}
-\contentsline {section}{\numberline {4.3}Alternativen}{8}{section.4.3}
-\contentsline {section}{\numberline {4.4}Fazit}{8}{section.4.4}
-\contentsline {chapter}{Selbst\IeC {\"a}ndigkeitserkl\IeC {\"a}rung}{9}{section*.14}
-\contentsline {chapter}{Literaturverzeichnis}{10}{section*.16}
-\contentsline {chapter}{Abbildungsverzeichnis}{10}{section*.18}
-\contentsline {chapter}{Tabellenverzeichnis}{11}{section*.20}
+\contentsline {section}{\numberline {2.5}Programmiersprachen}{7}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Java}{7}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}C, C++}{8}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}.NET Framework}{8}{subsection.2.5.3}
+\contentsline {chapter}{\numberline {3}AspectJ}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Bestandteile von AspectJ}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Common crosscutting}{9}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Dynamic crosscutting}{9}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Static crosscutting}{9}{subsection.3.1.3}
+\contentsline {paragraph}{\nonumberline Inner-type declaration}{9}{section*.10}
+\contentsline {paragraph}{\nonumberline Weave-time declaration}{9}{section*.11}
+\contentsline {section}{\numberline {3.2}Syntaxvarianten}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}Join-Point Model}{9}{section.3.3}
+\contentsline {section}{\numberline {3.4}Weaving}{9}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Source weaving}{9}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Binary weaving}{9}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Load-time weaving}{9}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Entwicklungstools}{9}{section.3.5}
+\contentsline {chapter}{\numberline {4}Schlussfolgerungen}{10}{chapter.4}
+\contentsline {section}{\numberline {4.1}Nutzen von AspectJ}{10}{section.4.1}
+\contentsline {section}{\numberline {4.2}Nachteile von AspectJ}{10}{section.4.2}
+\contentsline {section}{\numberline {4.3}Alternativen}{10}{section.4.3}
+\contentsline {section}{\numberline {4.4}Fazit}{10}{section.4.4}
+\contentsline {chapter}{Selbst\IeC {\"a}ndigkeitserkl\IeC {\"a}rung}{11}{section*.12}
+\contentsline {chapter}{Literaturverzeichnis}{12}{section*.14}
+\contentsline {chapter}{Abbildungsverzeichnis}{12}{section*.16}
+\contentsline {chapter}{Tabellenverzeichnis}{13}{section*.18}
 \save@tocdepth \setcounter {tocdepth}{1}
-\contentsline {chapter}{\numberline {A}Demoprogramm}{13}{appendix.A}
-\contentsline {section}{\numberline {A.1}Programmbeschreibung}{13}{section.A.1}
-\contentsline {section}{\numberline {A.2}Source Code}{13}{section.A.2}
+\contentsline {chapter}{\numberline {A}Demoprogramm}{15}{appendix.A}
+\contentsline {section}{\numberline {A.1}Programmbeschreibung}{15}{section.A.1}
+\contentsline {section}{\numberline {A.2}Source Code}{15}{section.A.2}
