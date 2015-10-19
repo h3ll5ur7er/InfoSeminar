@@ -38,6 +38,13 @@
 ``Postsharp.'' [Online]. Available: \url{https://www.postsharp.net/customers}
 \BIBentrySTDinterwordspacing
 
+\bibitem{bruce:alternatives}
+\BIBentryALTinterwordspacing
+D.~Bruce, ``Alternatives to aspect-oriented programming,'' 2001. [Online].
+  Available:
+  \url{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.18.6399&rep=rep1&type=pdf}
+\BIBentrySTDinterwordspacing
+
 \bibitem{moodle:auftrag}
 \BIBentryALTinterwordspacing
 Dozenten, ``Auftragsbeschreibungen informatikseminar.'' [Online]. Available:

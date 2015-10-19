@@ -1,11 +1,43 @@
 \chapter{AspectJ}
 \label{chap:aspectj}
-
 \section{Bestandteile von AspectJ}
+In diesem Kapitel betrachten wir, wie die verschiedenen Komponenten des im Abschnitt \nameref{sec:aop_concepts} vorgestellten Modells einer Aspektorientierten Programmiersprache in AspectJ umgesetzt sind. Alle hier verwendeten Codeteile sind Bestandteil unseres Demoprogrammes, welches sich im Anhang befindet (\nameref{chap:demoprogramm}).
 
-\subsection{Common crosscutting}
+\subsection{Allgemein}
+\subsubsection{Aspect}
+Der Aspect ist die zentrale Einheit in AspectJ. Im Aspect werden alle Bestandteile eines Anliegens einer Applikation zusammengefasst. Ein Aspect kann gleich wie eine normale Javaklasse Attribute und Methoden enthalten und dient zur Kapselung des Anliegens. So werden alle Funktionen welche das Logging einer Applikation betreffen im Logging aspect zusammengefasst. Aspects werden in Dateien mit der Endung .aj gespeichert.
+
+\lstinputlisting[language=Java, firstline=3, lastline=9]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/LogAspectShort.aj}
+\subsubsection{Join-Point Modell}
+Die Join Points sind die Punkte im Programmablauf wo die Systemübergreifenden Anliegen im Code der Business Logic anknüpfen sollen. AspectJ bietet eine Menge solcher Punkte an und der Entwickler muss sich genau überlegen welchen Punkt er als Einstiegspunkt verwenden will. Die nachfolgende Tabelle zeigt eine Übersicht der vorhandenen Join Points in AspectJ.
+
+\begin{table}[H]
+	\centering
+		\begin{tabular}{p{0.30\textwidth} p{0.65\textwidth}} \toprule
+			\textbf{Kategorie} & \textbf{Join Point} \\ \midrule
+			Methode & Ausführung der Methode (Method Body) \\ \midrule
+			Methode & Aufruf der Methode (aufrufender Kontext) \\ \midrule
+			Konstruktor & Ausführung des Konstruktors \\ \midrule
+			Konstruktor & Aufruf des Konstruktors \\ \midrule
+			Feldzugriff & Lesender Zugriff auf Feld \\ \midrule
+			Feldzugriff & Schreibender Zugriff auf Feld \\ \midrule
+			Exception Handling & Catch Block \\ \midrule
+			Initialisierung & Laden, Initialisierung und Pre-Init einer Klasse \\ \midrule
+			Advice & Ausführung eines Advice
+			 \\ \bottomrule
+		\end{tabular}
+	\caption{Übersicht über alle Join Points in AspectJ}
+	\label{tab:overview}
+\end{table}
+
+Die Pointcuts wählen einen oder mehrere solcher Punkte aus und können intern benannt werden. Die Syntax der Pointcuts beruht auf Signaturen von Methoden oder Feldern. Die Selektion der Join Points kann aufgrund des Access Modifiers, der Rückgabetypen, der Klasse und des Namens des Members eingeschränkt werden. Der Stern kann als Wildcard Charakter verwendet werden. So selektiert der nachfolgende pointcut alle Methoden, aller Klassen die öffentlich sind.
+
+\lstinputlisting[language=Java, firstline=11, lastline=11]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/LogAspect.aj}
 
 \subsection{Dynamic crosscutting}
+Beim Dynamic crosscutting wird der Programmfluss verändert und um zusätzlichen Code erweitert. Dieser zusätzliche Code wird in AspectJ in einem Advice gekapselt. Der Advice kann vor, nach oder um den Join Point herum ausgeführt werden (before, after, around). Folgender Advice schreibt den Start und das Ende der Methode auf die Konsole. Über das Objekt thisJoinPoint kann auf den Kontext des Join Points zugegriffen werden, in dem Fall auf die Signatur der Methode.
+
+\lstinputlisting[language=Java, firstline=13, lastline=18]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/LogAspect.aj}
 
 \subsection{Static crosscutting}
 
@@ -14,8 +46,16 @@
 \paragraph{Weave-time declaration}
 
 \section{Syntaxvarianten}
+Für die Verwendung von AspectJ können zwei Syntaxvarianten eingesetzt werden.
 
-\section{Join-Point Model}
+\begin{itemize}
+\item Traditionelle Variante \\
+Diese Variante haben wir bisher in allen unseren Beispielen verwendet. Man verwendet die Schlüsselwörter von AspectJ und der gesamte Umfang von AspectJ steht zur Verfügung. Man nennt diese Variante traditionell, da dies zuerst die einzige Möglichkeit war um AspectJ zu verwenden.
+\item Annotation basierte Variante \\
+In dieser Variante verwendet man normale Javaobjekte um die Konstrukte von AspectJ abzubilden. Diese Klassen und Methoden müssen jedoch mit Annotations versehen werden, damit der Weaver sie versteht. Ausserdem sind nicht ganz alle Konstrukte hiermit abbildbar.
+\end{itemize}
+
+\lstinputlisting[language=Java, firstline=6, lastline=17]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/LogAspectAlt.java}
 
 \section{Weaving}
 
@@ -26,3 +66,4 @@
 \subsection{Load-time weaving}
 
 \section{Entwicklungstools}
+AspectJ wird als Open Source Projekt von Eclipse weiterentwickelt. Deshalb werden für die IDE Eclipse AspectJ Development Tools (AJDT) zur Verfügung gestellt. Der Funktionsumfang dieser Tool kann online nachgelesen werden. \cite{eclipse:ajdt}

@@ -4,22 +4,22 @@
 \section{Geschichte}
 \label{sec:aop_geschichte}
 
-Das Konzept der Aspektorientierten Programmierung wurde im Xerox PARC (Palo Alto Research Center Incorporated) entwickelt und gewann ab 1995 an Wichtigkeit. Wie bei allen neuen Spezifikationen war der Umfang und die Bestandteile der Aspektorientierten Programmierung zuerst nicht klar abgegrenzt. Gregor Kiczales und sein Team waren massgeblich an der Entwicklung von AOP beteiligt.\\
+Das Konzept der Aspektorientierten Programmierung wurde im Xerox PARC (Palo Alto Research Center Incorporated) entwickelt und gewann ab 1995 an Wichtigkeit. Wie bei allen neuen Spezifikationen war der Umfang und die Bestandteile der Aspektorientierten Programmierung zunächst nicht klar abgegrenzt. Gregor Kiczales und ein Team von Forschern waren massgeblich an der Entwicklung von AOP beteiligt.\\
 Nach Entwicklung des theoretischen Grundlage folgte im Jahre 1998 eine erste Version von AspectJ, eine Implementation von AOP in Java. Die Version 1.0 von AspectJ wurde jedoch erst im Jahre 2002 nach weiterer Forschung veröffentlicht.\footnote{\cite{lopes:historyaop}} \\
-Die Aspektorientierte Programmierung wurde durch die Publikation von AspectJ bekannt und es wurden seither Erweiterungen für die meisten populären Programmiersprachen entwickelt. 
+Die Aspektorientierte Programmierung wurde durch die Publikation von AspectJ bekannt gemacht und es wurden seither Erweiterungen für die meisten populären Programmiersprachen entwickelt. 
 
-Die Entwicklung und der Betrieb von AspectJ wurde von XeroX Parc an Eclipse weitergereicht. Dort läuft AspectJ bis heute als Open-Source Projekt weiter. Mit der Version 1.8.7 wurde am 9. September 2015 die aktuellste Version veröffentlicht.
+Die Entwicklung und der Betrieb von AspectJ wurde von XeroX Parc an Eclipse weitergereicht. Dort läuft die Entwicklung von AspectJ bis heute als Open-Source Projekt weiter. Mit der Version 1.8.7 wurde am 9. September 2015 die bis heute aktuellste Version veröffentlicht.
 
 \section{Motivation}
 \label{sec:aop_motivation}
 
-Einer der Hauptgründe warum AOP entwickelt wurde ist die erweiterte Modularität die damit erreicht werden kann. Beim Design eines Systems werden in der Regel verschiedene Kategorien von Funktionalitäten aufgestellt und so die Software in verschiedene sogenannte Anliegen aufgeteilt. Dabei unterscheidet man zwischen den folgenden zwei Gruppen:
+Einer der Hauptgründe warum AOP entwickelt wurde ist die erweiterte Modularität die damit erreicht werden kann. Beim Design eines Systems werden in der Regel verschiedene Kategorien von Funktionalitäten aufgestellt und so die Software in verschiedene sogenannte Anliegen aufgeteilt. Diese Anliegen werden isoliert betrachtet und deren Funktionalität spezifiziert. Dabei unterscheidet man zwischen den folgenden zwei Gruppen von Anliegen (concern) einer Applikation.
 
 \begin{itemize}
-	\item Kernanliegen (core concerns)\\
+	\item Core concerns (Kernanliegen)\\
 	Hierbei handelt sich um die Kernfunktionalität der Applikation, die sogenannte Business Logic. Diese Gruppe beinhaltet zum Beispiel den Datenbankzugriff, die Interagierung mit dem Benutzer etc.
-	\item System Übergreifende Anliegen (cross-cutting concerns) \\
-	Andere Funktionalitäten wie das Logging, die Sicherheit, Concurrency sowie Transaktionen betreffen das gesamte System.
+	\item Cross-cutting concerns (System-übergreifende Anliegen) \\
+	Andere Funktionalitäten wie das Logging, die Sicherheit, Concurrency sowie Transaktionen betreffen das gesamte System und werden an vielen verschiedenen Orten verwendet.
 \end{itemize}
 
 Diese Gruppen dienen als Grundlage zur Veranschaulichung, warum gerade bei der Modularisierung die OOP Schwachstellen aufweist.\newpage
@@ -50,11 +50,11 @@ Die Kernanliegen der Applikation werden in Klassen der Business Logic abgebildet
 
 \paragraph{Code Tangling}
 
-Von Code Tangling (to tangle - sich verwickeln) spricht man wenn ein Modul verschiedene Anliegen bearbeitet. Als Beispiel kann man die Abbildung \ref{fig:classmotivationaop} nehmen. Während der Designphase werden die Anliegen seperat entworfen und in der Implementation wird alles wieder miteinander verwickelt.
+Von Code Tangling (to tangle - sich verwickeln) spricht man wenn ein Modul verschiedene Anliegen bearbeitet. Als Beispiel kann man die Abbildung \ref{fig:classmotivationaop} nehmen. Während der Designphase werden alle Anliegen seperat entworfen und in der Implementation wird dennoch alles wieder miteinander verwickelt und verwoben. Die gewünschte Trennung der Anliegen und Modularisierung der Applikation wird nicht erreicht.
 
 \paragraph{Code Scattering}
 
-Bei Code Scattering (to scatter - streuen) ist die Perspektive eine andere. Die Funktionen eines Moduls werden in verschiedene anderen Modulen verwendetet und so im ganzen System gestreut. Folgende Abbildung soll dies anhand eines Sicherheitsmoduls veranschaulichen.
+Bei Code Scattering (to scatter - streuen) ist die Perspektive eine andere. Die Funktionen eines Moduls werden in verschiedene anderen Modulen verwendetet und so im ganzen System gestreut. Es gibt oftmals verschiedene Arten um auf Funktionen eines Modules zuzugreifen. Durch diese Aufrufe wird ein Teil der Logik des aufzurufenden Moduls ins aufrufende Modul verschoben. Folgende Abbildung soll dies anhand eines Sicherheitsmoduls veranschaulichen.
 
 \begin{figure}[H]
 	\centering
@@ -67,7 +67,7 @@ Bei Verwendung von OOP ist das Code Tangling und Code Scattering unumgänglich. 
 
 \subsection{Modularisierung mit AOP}
 \label{sec:aop_modaop}
-Bleiben wir beim Beispiel eines Security Moduls; Das Modul wird mit Klassen implementiert und mittels Interfaces gegen aussen sichtbar gemacht. In der OOP werden nun alle Codeteile welche Securityfunktionen verwenden möchten einen Aufruf dieses Moduls beinhalten. Bei einer Änderung in der API müssen unter Umständen tausende Aufrufe ebenfalls geändert werden. Mit AOP jedoch beinhalten die Client Module keine Aufrufe mehr. Aufrufe des Sicherheitsmoduls werden bei genau definierten Punkten im Code automatisch ausgelöst. Als Beispiel kann definiert werden, dass bei allen öffentlichen Methoden einer Klasse vor Ausführung des Bodys die Berechtigung des Benutzers geprüft wird. Bei dieser Deklaration der Einstiegspunkte im Code und des in diesen Fällen auszuführenden Codes spricht man von einem Aspect. Um diese automatische Ausführung möglich zu machen muss der Code mit dem des Aspects verwebt werden. Man spricht hierbei von Weaving.
+AOP ist diese Alternative. Bleiben wir beim Beispiel eines Security Moduls; Das Modul wird mit Klassen implementiert und mittels Interfaces gegen aussen sichtbar gemacht. In der OOP werden nun alle Codeteile welche Securityfunktionen verwenden möchten einen Aufruf dieses Moduls beinhalten. Bei einer Änderung in der API müssen unter Umständen tausende Aufrufe ebenfalls geändert werden. Mit AOP jedoch beinhalten die Client Module keine Aufrufe mehr. Aufrufe des Sicherheitsmoduls werden bei genau definierten Punkten im Code automatisch ausgelöst. Es kann beispielsweise definiert werden, dass bei allen öffentlichen Methoden einer Klasse vor Ausführung des Bodys die Berechtigung des Benutzers geprüft wird. Bei dieser Deklaration der Einstiegspunkte im Code und des in diesen Fällen auszuführenden Codes spricht man von einem Aspect. Um diese automatische Ausführung möglich zu machen muss der Code der Kernanliegen (Business Logic) mit dem des Aspects verwebt werden. Man spricht hierbei von Weaving.
 \begin{figure}[H]
 	\centering
 		\includegraphics[scale=0.5]{bilder/motivationAop.png}
@@ -77,14 +77,14 @@ Bleiben wir beim Beispiel eines Security Moduls; Das Modul wird mit Klassen impl
 
 \section{Aspektorientierte Sprache}
 \label{sec:aop_lang}
-Die Aspektorientierte Programmierung ist eine Methode und muss um verwendet werden zu können spezifiziert und danach implementiert werden.
+Die Aspektorientierte Programmierung ist eine Methode in der Softwareentwicklung. Damit eine Programmiersprache um den Funktionsumfang von AOP erweitert werden kann, wird zuerst eine Spezifizierung erstellt und diese Spezifikation anschliessend umgesetzt.
 \subsection{Spezifizierung}
 \subparagraph{Programmiersprache}
-Als Grundlage für die Entwicklung eines Aspektorientierten Programms dient eine Programmiersprache. Es werden in der Regel bestehende Programmiersprachen wie C, C++, CSharp und Java verwendet. In dieser Sprache werden die einzelnen Module unabhängig von einander entwickelt, also ohne dass diese aufeinander zugreifen.
+Als Grundlage für die Entwicklung eines Aspektorientierten Programms dient eine Programmiersprache. Es werden in der Regel bestehende Programmiersprachen wie C, C++, CSharp und Java verwendet, da diese von vielen Entwicklern bereits verstanden und verwendet werden. Im Falle der Entwicklung einer neuen Applikation werden alle Module in jener Programmiersprache isoliert voneinander entwickelt.
 \subparagraph{Weaving Rules Spezifizierung}
-Die Sprache muss eine Möglichkeit bieten um diese entwickelten Module miteinander verknüpfen zu können. Dazu müssen sogenannte Weaving Rules deklariert werden. Die Weaving Rules bestimmen wie der Code verknüpft wird. Hierfür können Standardelemente einer Sprache verwendet werden (Annotations) oder auch die bestehende Sprache um neue Bestandteile erweitert werden (Keywords).
+Die Sprache muss nun eine Möglichkeit bieten um diese entwickelten Module miteinander verknüpfen zu können. Dazu müssen sogenannte Weaving Rules deklariert werden. Die Weaving Rules bestimmen wie der Code verknüpft wird. Hierfür können Standardelemente einer Sprache verwendet (Annotations) oder auch die bestehende Sprache um neue Bestandteile erweitert werden (Keywords).
 \subsection{Implementation}
-Eine Implementation einer AOP Sprache kann in zwei Schritte gegliedert werden. Zuerst muss die Verknüpfung der verschiedenen Anliegen mittels Weaving rules sichergestellt und anschliessend daraus  ausführbarer Code generiert werden. Ein sogenannter \textbf{Weaver} führt diese Aufgaben aus. Es gibt drei verschiedene Typen von Weavern:
+Eine Implementation einer AOP Sprache kann in zwei Schritte gegliedert werden. Zuerst muss die Verknüpfung der verschiedenen Anliegen mittels Weaving rules sichergestellt und anschliessend daraus  ausführbarer Code generiert werden. Bei AOP führt der sogenannte \textbf{Weaver} diese Aufgaben aus. Es gibt drei verschiedene Typen von Weavern:
 
 \begin{itemize}
 \item Source-to-Source weaver \\ Der Sourcecode der Core und Crosscutting concerns wird zuerst verwoben und dieser neu entstandene Source Code von einem regulären Compiler kompiliert. 
@@ -92,25 +92,26 @@ Eine Implementation einer AOP Sprache kann in zwei Schritte gegliedert werden. Z
 \item Load time weaver \\ Vergleichbar mit dem Byte Code weaving, ausser dass der Verknüpfungsvorgang erst beim Aufrufen des Programms statt findet.
 \end{itemize}
 
-Ein Weaver ist nicht mit einem Compiler gleichzustellen. Je nach Typus braucht es jedoch eine enge Zusammenarbeit zwischen Weaver und Compiler.
+Ein Weaver ist nicht mit einem Compiler gleichzustellen. Je nach Typus braucht es jedoch eine enge Zusammenarbeit zwischen Weaver und Compiler. Deswegen stellen einige Anbieter von AOP Erweiterungen den Entwicklern ihre eigenen Compiler inklusive Weaver zur Verfügung.
 
 \section{Konzepte}
+\label{sec:aop_concepts}
 
-Diese Konzepte sind die Grundlage von Aspekorientierter Programmierung. Dies ist ein generisches Modell und nicht jede Implementation einer Aspekorientierten Programmiersprache muss zwingend alle Konzepte implementieren.\footnote{\cite[p~58]{laddad:aspectj}}
+Die folgenden Konzepte sind die Grundlage von Aspekorientierter Programmierung. Dies ist ein generisches Modell und nicht jede Implementation einer Aspekorientierten Programmiersprache muss zwingend alle Konzepte implementieren.\footnote{\cite[p~58]{laddad:aspectj}}
 
 \begin{itemize}
-\item \textit{Identifizierbare Punkte in der Ausführung des Programms} \\ Während der Ausführung eines Programms gibt es Points of Interest. Solche Punkte könnten bspw. der Aufruf einer Methode oder das Werfen von Exceptions sein. Im Umfeld von AOP werden diese Punkte \textbf{Join Points} genannt. 
-\item \textit{Selektion der gewünschten Punkte}\\ Um diese Join Points ansprechen zu können, müssen sie selektiert werden. Dies geschieht mit sogenannten \textbf{Pointcuts}. So können bspw. alle öffentlichen Methoden aller Klassen eines Systems mit einem Pointcut selektiert werden. Ein Pointcut kann auch auf den Kontext eines Join Points zugreifen (Parameter, Typ etc.).
+\item \textit{Identifizierbare Punkte in der Ausführung des Programms} \\ Während der Ausführung eines Programms gibt es Points of Interest. Solche Punkte sind beispielsweise der Aufruf einer Methode oder das Werfen von Exceptions. Im Umfeld von AOP werden diese Punkte \textbf{Join Points} genannt. 
+\item \textit{Selektion von Punkten während des Programmablaufs}\\ Diese Join Points müssen irgendwie angesteuert werden können. Dies geschieht mit einem \textbf{Pointcut}. Ein Pointcut beinhaltet ein Statement, welches eine gewisse Anzahl von Join Points selektiert. So könnten beispielsweise alle öffentlichen Methoden aller Klassen eines Systems selektiert werden. Ein Pointcut kann auch auf den Kontext eines Join Points zugreifen (Parameter einer Methode, Klasse etc.).
 \item \textit{Veränderung des regulären Programmablaufs (dynamic crosscutting)}\\
-Wenn ein Join Point von einem Pointcut selektiert wurde, soll der reguläre Programmablauf verändert werden durch Ausführung von zusätzlichem Code. Dieser Code ist frei wählbar und deshalb ist der Programmfluss nicht immer derselbe. Der auszuführende Code wird in einem \textbf{Advice} gesammelt.
+Wenn ein Join Point von einem Pointcut selektiert wurde, soll der reguläre Programmablauf durch Ausführung von zusätzlichem Code verändert werden. Dieser Code ist vom Entwickler frei wählbar und der Programmablauf wird dadurch dynamisch. Der auszuführende Code wird in einem \textbf{Advice} gesammelt.
 \item \textit{Veränderung der statischen Struktur des Systems (static crosscutting)}\\
-Um gewisse crosscutting concerns umsetzen zu können müssen in einer Klasse zusätzliche Felder deklariert werden (\textbf{inter-type declaration}). Ausserdem kann es nötig sein bereits beim weaving zu wissen, ob gewisse Join Points im System vorhanden sein werden, um angemessen darauf reagieren zu können. Dies wird durch \textbf{weave-time declaration} ermöglicht.
+Um gewisse crosscutting concerns umsetzen zu können müssen in einer Klasse zusätzliche Felder deklariert werden (\textbf{inter-type declaration}). Ausserdem kann es nötig sein bereits beim weaving zu wissen, ob gewisse Join Points im System vorhanden sein werden, um angemessen darauf reagieren zu können. Dies wird durch \textbf{weave-time declarations} ermöglicht.
 
 \item \textit{Ort zur Deklaration}\\
-All diese Elemente (pointcuts, dynamic \& static crosscutting) werden logisch in einem Ort, dem \textbf{Aspect}, deklariert und zusammengefasst.
+All diese Elemente (pointcuts, dynamic \& static crosscutting) werden logisch in einem Ort, dem \textbf{Aspect}, deklariert.
 \end{itemize}
 
-Alle diese Konzepte werden in der Abbildung \ref{fig:concepts} zusammengefasst und graphisch abgebildet.
+Alle diese Konzepte werden in der Abbildung \ref{fig:concepts} zusammengefasst und deren Beziehung zueinander graphisch abgebildet.
 
 \begin{figure}[H]
 	\centering
@@ -118,36 +119,35 @@ Alle diese Konzepte werden in der Abbildung \ref{fig:concepts} zusammengefasst u
 	\caption{AOP Konzepte (\cite[p~60]{laddad:aspectj})}
 	\label{fig:concepts}
 \end{figure}
+\newpage
 
 \section{Programmiersprachen}
 
-Beinahe für jede bekanntere Programmiersprache gibt es eine Erweiterung oder ein Framework um AOP als gesamtes oder Teile davon zu ermöglichen. Nachfolgend eine Übersicht über die bekanntesten Sprachen mit den verbreitesten Frameworks.
+Beinahe für jede bekanntere Programmiersprache gibt es eine Erweiterung oder ein Framework um AOP als Gesamtes oder Teile davon zu ermöglichen. Nachfolgend eine Übersicht über die bekanntesten Sprachen mit den verbreitesten Frameworks.
 
 \subsection{Java}
 
 AspectJ gilt als erstes komplettes AOP Framework überhaupt und ist deshalb auch am Verbreitesten.
 
 \begin{itemize}
-\item AspectJ - Wird detailliert im nächsten Kapitel beleuchtet.
-\item JBOSS AOP
-\item Spring AOP
+\item AspectJ - Wird detailliert im Kapitel \nameref{chap:aspectj} beleuchtet
+\item Spring AOP - Spring ist ein Framework zur Entwicklung von Java Applications. Auch dort gibt es die Möglichkeit AOP zu verwenden. Jedoch ist man limitiert auf Methodenaufrufe als Join Points.
 \end{itemize}
 
 \subsection{C, C++}
 
 \begin{itemize}
 \item AspectC++ - Eine Adaptierung von AspectJ in C/C++ \footnote{\cite{net:apectc}}
-\item 
 \end{itemize}
 
 \subsection{.NET Framework}
 
-CSharp unterstützt nativ sogenannte Extension methods. Hiermit können nachträglich zu Klassen oder Interfaces zusätzliche Felder oder Methoden hinzugefügt werden (static crosscutting).
+CSharp unterstützt nativ sogenannte Extension methods. Hiermit können nachträglich zu Klassen oder Interfaces zusätzliche Methoden hinzugefügt werden (static crosscutting). Dies ist allerdings nur ein Teil der AOP, für alles andere benötigt man ein Framework.
+
+Nemerle -> Emaaaaa
 
 \begin{itemize}
 \item PostSharp - Kommerzielle Software welche eine grosse Verbreitung geniesst (Siemens, Roche, Lufthansa und viele mehr) \footnote{\cite{net:postsharp}}
 \item AspectSharp - AOP Framework für .NET\footnote{\cite{net:aspectsharp}}
 \item Afterthought - Afterthought ist eine Open Source Alternative zu Postsharp.\footnote{\cite{net:afterthought}}
 \end{itemize}
-
-\subsection{Python}
