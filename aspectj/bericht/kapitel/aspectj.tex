@@ -35,7 +35,7 @@ Die Pointcuts wählen einen oder mehrere solcher Punkte aus und können intern b
 \lstinputlisting[language=Java, firstline=11, lastline=11]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/LogAspect.aj}
 
 \subsection{Dynamic crosscutting}
-Beim Dynamic crosscutting wird der Programmfluss verändert und um zusätzlichen Code erweitert. Dieser zusätzliche Code wird in AspectJ in einem Advice gekapselt. Der Advice kann vor, nach oder um den Join Point herum ausgeführt werden (before, after, around). Folgender Advice schreibt den Start und das Ende der Methode auf die Konsole. Über das Objekt thisJoinPoint kann auf den Kontext des Join Points zugegriffen werden, in dem Fall auf die Signatur der Methode.
+Beim Dynamic crosscutting wird der Programmfluss verändert und um zusätzlichen Code erweitert. Dieser zusätzliche Code wird in AspectJ in einem Advice gekapselt. Der Advice kann vor, nach oder um den Join Point herum ausgeführt werden (before, after, around). Folgender Advice schreibt den Start und das Ende der Methode auf die Konsole. Über das Objekt thisJoinPoint kann auf den Kontext des Join Points zugegriffen werden. In diesem konkreten Fall verwenden wir den Kontext um auf die Signatur der Methode zuzugreifen.
 
 \lstinputlisting[language=Java, firstline=13, lastline=18]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/LogAspect.aj}
 
@@ -50,9 +50,9 @@ Für die Verwendung von AspectJ können zwei Syntaxvarianten eingesetzt werden.
 
 \begin{itemize}
 \item Traditionelle Variante \\
-Diese Variante haben wir bisher in allen unseren Beispielen verwendet. Man verwendet die Schlüsselwörter von AspectJ und der gesamte Umfang von AspectJ steht zur Verfügung. Man nennt diese Variante traditionell, da dies zuerst die einzige Möglichkeit war um AspectJ zu verwenden.
-\item Annotation basierte Variante \\
-In dieser Variante verwendet man normale Javaobjekte um die Konstrukte von AspectJ abzubilden. Diese Klassen und Methoden müssen jedoch mit Annotations versehen werden, damit der Weaver sie versteht. Ausserdem sind nicht ganz alle Konstrukte hiermit abbildbar.
+Diese Variante haben wir bisher in allen unseren Beispielen verwendet. Man verwendet die Schlüsselwörter von AspectJ und der gesamte Umfang von AspectJ steht zur Verfügung. Man nennt diese Variante traditionell, da dies zu Beginn die erste und einzige Möglichkeit war um AspectJ zu verwenden.
+\item Annotation-based Variante \\
+In der annotation-based Variante verwendet man normale Javaobjekte um die Konstrukte von AspectJ abzubilden. Diese Klassen und Methoden werden mit Annotations versehen, damit der Weaver versteht wie der Code zu verknüpfen ist. Diese Variante wurde erst ab Version 5 von AspectJ eingeführt und es sind nicht ganz alle Konstrukte abbildbar.
 \end{itemize}
 
 \lstinputlisting[language=Java, firstline=6, lastline=17]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/LogAspectAlt.java}
@@ -66,4 +66,7 @@ In dieser Variante verwendet man normale Javaobjekte um die Konstrukte von Aspec
 \subsection{Load-time weaving}
 
 \section{Entwicklungstools}
-AspectJ wird als Open Source Projekt von Eclipse weiterentwickelt. Deshalb werden für die IDE Eclipse AspectJ Development Tools (AJDT) zur Verfügung gestellt. Der Funktionsumfang dieser Tool kann online nachgelesen werden. \cite{eclipse:ajdt}
+\subsection{Eclipse}
+AspectJ wird als Open Source Projekt von Eclipse weiterentwickelt. Deshalb werden für die IDE Eclipse AspectJ Development Tools (AJDT) zur Verfügung gestellt. Emaaaa \cite{eclipse:ajdt}
+\subsection{IntelliJ}
+\subsection{Weitere}

@@ -16,7 +16,7 @@
 \contentsline {subparagraph}{\nonumberline Programmiersprache}{6}{section*.7}
 \contentsline {subparagraph}{\nonumberline Weaving Rules Spezifizierung}{6}{section*.8}
 \contentsline {subsection}{\numberline {2.3.2}Implementation}{6}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Konzepte}{6}{section.2.4}
+\contentsline {section}{\numberline {2.4}Konzepte}{7}{section.2.4}
 \contentsline {section}{\numberline {2.5}Programmiersprachen}{8}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Java}{8}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}C, C++}{8}{subsection.2.5.2}
@@ -36,15 +36,24 @@
 \contentsline {subsection}{\numberline {3.3.2}Binary weaving}{11}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Load-time weaving}{11}{subsection.3.3.3}
 \contentsline {section}{\numberline {3.4}Entwicklungstools}{11}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Eclipse}{11}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}IntelliJ}{11}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Weitere}{11}{subsection.3.4.3}
 \contentsline {chapter}{\numberline {4}Schlussfolgerungen}{12}{chapter.4}
 \contentsline {section}{\numberline {4.1}Nutzen von AOP}{12}{section.4.1}
+\contentsline {paragraph}{\nonumberline Einfacheres Programmdesign}{12}{section*.15}
+\contentsline {paragraph}{\nonumberline Saubere Implementation}{12}{section*.16}
+\contentsline {paragraph}{\nonumberline Bessere Wiederverwendbarkeit}{12}{section*.17}
+\contentsline {paragraph}{\nonumberline Einfachere Erweiterbarkeit und Anpassung}{12}{section*.18}
 \contentsline {section}{\numberline {4.2}Nachteile von AOP}{12}{section.4.2}
-\contentsline {section}{\numberline {4.3}Alternativen}{12}{section.4.3}
-\contentsline {section}{\numberline {4.4}Fazit}{12}{section.4.4}
-\contentsline {chapter}{Selbst\IeC {\"a}ndigkeitserkl\IeC {\"a}rung}{13}{section*.15}
-\contentsline {chapter}{Literaturverzeichnis}{14}{section*.17}
-\contentsline {chapter}{Abbildungsverzeichnis}{14}{section*.19}
-\contentsline {chapter}{Tabellenverzeichnis}{15}{section*.21}
+\contentsline {paragraph}{\nonumberline Zus\IeC {\"a}tzliches Wissen}{12}{section*.19}
+\contentsline {paragraph}{\nonumberline Ver\IeC {\"a}nderung des Build- und Entwicklungsprozesses}{12}{section*.20}
+\contentsline {paragraph}{\nonumberline Komplexer Programmfluss}{13}{section*.21}
+\contentsline {section}{\numberline {4.3}Alternativen}{13}{section.4.3}
+\contentsline {section}{\numberline {4.4}Fazit}{13}{section.4.4}
+\contentsline {chapter}{Selbst\IeC {\"a}ndigkeitserkl\IeC {\"a}rung}{14}{section*.22}
+\contentsline {chapter}{Literaturverzeichnis}{15}{section*.24}
+\contentsline {chapter}{Abbildungsverzeichnis}{15}{section*.26}
 \save@tocdepth \setcounter {tocdepth}{1}
 \contentsline {chapter}{\numberline {A}Demoprogramm}{17}{appendix.A}
 \contentsline {section}{\numberline {A.1}Programmbeschreibung}{17}{section.A.1}

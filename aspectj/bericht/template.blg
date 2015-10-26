@@ -1,21 +1,16 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: template.aux
+The style file: abbrvnat.bst
 A level-1 auxiliary file: vorspann/titelseite_mit_bild.aux
 A level-1 auxiliary file: kapitel/einleitung.aux
 A level-1 auxiliary file: kapitel/aop.aux
 A level-1 auxiliary file: kapitel/aspectj.aux
 A level-1 auxiliary file: kapitel/schlussfolgerungen.aux
 A level-1 auxiliary file: vorspann/selbstaendigkeitserklaerung.aux
-The style file: IEEEtranS.bst
+Illegal, another \bibstyle command---line 40 of file template.aux
+ : \bibstyle
+ :          {IEEEtranS}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: anhang/demoprogramm.aux
 Database file #1: datenbanken/bibliography.bib
 Warning--I didn't find a database entry for "net:apectc"
--- IEEEtranS.bst version 1.14 (2015/08/26) by Michael Shell.
--- http://www.michaelshell.org/tex/ieeetran/bibtex/
--- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-** Sorting version - not for normal IEEE work.
-Warning--to sort, need author, organization, or key in net:postsharp
-Warning--to sort, need author, organization, or key in net:aspectsharp
-Warning--to sort, need author, organization, or key in net:afterthought
-
-Done.
-(There were 4 warnings)
+(There was 1 error message)

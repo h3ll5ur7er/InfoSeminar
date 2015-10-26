@@ -38,6 +38,9 @@
 \usepackage{booktabs}													% package for nicer tables
 \usepackage{tocvsec2}													% provides means of controlling the sectional numbering
 \usepackage{listings}
+\usepackage{natbib}   % omit 'round' option if you prefer square brackets
+\bibliographystyle{abbrvnat}
+\setcitestyle{authoryear,open={(},close={)}}
 %---------------------------------------------------------------------------
 
 % Load Math Packages
@@ -212,8 +215,8 @@
 \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
 \listoffigures
 \phantomsection 
-\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
-\listoftables
+%\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+%\listoftables
 %---------------------------------------------------------------------------
 
 % Attachment:

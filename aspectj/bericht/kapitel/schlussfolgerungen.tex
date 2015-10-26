@@ -1,19 +1,39 @@
 \chapter{Schlussfolgerungen}
 \label{chap:schlussfolgerungen}
 \section{Nutzen von AOP}
+\paragraph{Einfacheres Programmdesign}
+Die verschiedenen Module einer Applikation können einzeln entworfen werden, ohne den Fokus auf das Zusammenspiel derjenigen richten zu müssen. Design Entscheidungen können auch erst zu einem späteren Zeitpunkt im Projektverlauf getroffen werden ohne Änderungen im gesamten System zu verursachen. Features werden erst entworfen wenn sie wirklich gebraucht werden und nicht \glqq{}auf Vorrat\grqq.
+\paragraph{Saubere Implementation}
+Mit AOP wird das Single Responsibility Principle voll und ganz eingehalten. Eine Klasse oder ein Modul behandelt nur genau seine Aufgabe. Desweiteren werden in der Implementation Code Tangling und Code Scattering vermieden. Die Logik eines Modules ist genau an einem Ort zu finden, nämlich im Modul selber.
 
+Dies macht es möglich bereits früh im Projekt einen voll funktionstüchtigen Protoypen der Kernfunktionalität (Business Logic) zur Hand zu haben. So können Fehler in den Anforderungen oder der Business Logic frühzeitig erkennt und die Crosscutting Concerns wie Logging oder Security erst nachträglich hinzugefügt werden ohne im ganzen System Änderungen machen zu müssen.
+
+Dies macht die Entwicklung mit AOP schnell und effizient, daher auch günstiger für Unternehmen. Die einzelnen Module können ausserdem besser getestet und durch die Verantwortlichen geprüft werden (review).
+\paragraph{Bessere Wiederverwendbarkeit}
+Der Schlüssel zur Wiederverwendung von Code ist so wenig Coupling wie nur möglich. Bei AspectJ ist es möglich auf Codeebene gar kein Coupling zu haben. Ein Aspect kann beliebig oft wiederverwendet werden. Im Gegensatz zu einem klassischen Modul (API) muss die Business Logik der Applikation nicht durch Aufrufe verschmutzt werden. Wenn genau die gleiche Funktionalität gesucht wird, kann auch der Aspect ohne Veränderung übernommen werden. Dies vereinfacht insbesondere bei Unternehmen mit Applikationen ähnlicher Architektur der Betrieb und die Entwicklung dieser Applikationen. 
+\paragraph{Einfachere Erweiterbarkeit und Anpassung}
+Neue systemübergreifende Anliegen können problemlos und ohne Anpassung des Systems hinzugefügt werden. Bei bestehenden Modulen reicht es die einzelnen Module anzupassen und es ist nicht überall Änderungen vorzunehmen.\footnote{\cite{aop:benefits}}
 \section{Nachteile von AOP}
-
+\paragraph{Zusätzliches Wissen}
+Die Verwendung von AOP setzt ein fundiertes Wissen voraus. Die Konzepte müssen verstanden und umgesetzt werden. Entweder werden bestehende Entwickler ausgebildet oder es werden erfahrene Entwickler angestellt. Beides kostet Geld und ist eine Investition in die Zukunft. Um die Architektur einer komplexen Applikation mit AOP zu designen und umzusetzen braucht es definitiv einen Experten.
+\paragraph{Veränderung des Build- und Entwicklungsprozesses}
+Je nach Unternehmen gibt es genaue Richtlinien und Prozesse wie Software entwickelt werden muss. Aufgrund der grossen Flexibilität von AOP können sich dort Konflikte ergeben. Ausserdem muss ein anderer Compiler und ganz sicher ein Weaver für das Builden eingesetzt werden. Das kann zu Veränderung in der Konfiguration der Infrastruktur und des Deployments führen.
+\paragraph{Komplexer Programmfluss}
+Durch blosses Betrachten des Codes ist der genaue Programmfluss für Entwickler ohne AOP Kenntnisse nur schwer zu erkennen. Hierbei können die Entwicklertools (bspw. Eclipse) Klarheit schaffen indem sie den Ablauf visualisieren und die von einem Pointcut angesprochenen Join Points markieren. Doch eigentlich ist genau diese Unabhängigkeit des Codes bei Verwendung von AOP gewünscht. Abstraktion versteckt Details und AOP ist nach OOP eine zusätzliche Ebene an Abstraktion.
 \section{Alternativen}
-Es gibt keine echte Alternative die genau den gleichen Funktionsumfang wie AOP hat. \footnote{\cite{bruce:alternatives}} Es gibt jedoch Methoden oder Patterns, welche die Modularität und die Trennung von Crosscutting und Core Concerns begünstigen.
+Es gibt keine echte Alternative die genau den gleichen Funktionsumfang wie AOP hat. \footnote{\cite{bruce:alternatives}} Es gibt jedoch Methoden oder Patterns, welche die Modularität und die Trennung von Crosscutting und Core Concerns auch ohne die Verwendung von AOP begünstigen. Im Detail auf diese Alternativen einzugehen sprengt den Rahmen dieses Berichtes. 
 \begin{itemize}
+\item Design Patterns
+\begin{itemize}
+\item Observer, Chain of Responsibility, Proxy and Decorator Pattern \footnote{\cite[p~66]{laddad:aspectj}}
+\item Component-Based Programming\footnote{\cite{wiki:componentbased}} 
+\end{itemize}
 \item Dependency injection
 \item Functional Programming
-\item Component-Based Programming
-% http://programmers.stackexchange.com/questions/1060/what-alternatives-are-there-for-cross-cutting-concerns-other-than-aspect-oriente
-\item Design Patterns
-\item Code Generation
-%Buech
+\item Code Generation\footnote{\cite{aop:alternatives}}
 \end{itemize}
 
 \section{Fazit}
+Aspect-Oriented Programming ist eine ansprechende und hilfreiche Erweiterung zu OOP. AOP löst einige uns allen wohlbekannte Probleme der klassischen Softwareentwicklung mit OOP. Uns erstaunt dass sich die Verbreitung von AOP in Grenzen hält und sie sich nicht als neuer Standard in der Softwareentwicklung etabliert hat. Gründe hierfür könnte die zusätzliche Komplexität und die nötige Weiterbildung sein, die Unternehmen  scheuen. Vielleicht liegt es auch einfach an der mangelhaften Bekanntheit der Technologie oder daran dass bestehende Applikationen oder Bibliotheken nur mit viel Aufwand auf AOP umzuschreiben sind.
+
+Das Kennenlernen der Konzepte und Ideen von AOP war für uns beide eine Bereicherung. Wir glauben das AOP die Softwareentwicklung vereinfachen und revolutionieren könnte. Die Lernkurve ist aber relativ steil. Wir freuen uns darauf AOP in einem realen Projekt anwenden zu können und so einem Praxistest zu unterziehen.

@@ -92,7 +92,7 @@ Eine Implementation einer AOP Sprache kann in zwei Schritte gegliedert werden. Z
 \item Load time weaver \\ Vergleichbar mit dem Byte Code weaving, ausser dass der Verknüpfungsvorgang erst beim Aufrufen des Programms statt findet.
 \end{itemize}
 
-Ein Weaver ist nicht mit einem Compiler gleichzustellen. Je nach Typus braucht es jedoch eine enge Zusammenarbeit zwischen Weaver und Compiler. Deswegen stellen einige Anbieter von AOP Erweiterungen den Entwicklern ihre eigenen Compiler inklusive Weaver zur Verfügung.
+Ein Weaver ist nicht mit einem Compiler gleichzustellen. Je nach Typus braucht es jedoch eine enge Zusammenarbeit zwischen Weaver und Compiler. Deswegen stellen einige Anbieter von AOP Erweiterungen den Entwicklern ihre eigenen Compiler inklusive Weaver zur Verfügung.\newpage
 
 \section{Konzepte}
 \label{sec:aop_concepts}
@@ -107,8 +107,8 @@ Wenn ein Join Point von einem Pointcut selektiert wurde, soll der reguläre Prog
 \item \textit{Veränderung der statischen Struktur des Systems (static crosscutting)}\\
 Um gewisse crosscutting concerns umsetzen zu können müssen in einer Klasse zusätzliche Felder deklariert werden (\textbf{inter-type declaration}). Ausserdem kann es nötig sein bereits beim weaving zu wissen, ob gewisse Join Points im System vorhanden sein werden, um angemessen darauf reagieren zu können. Dies wird durch \textbf{weave-time declarations} ermöglicht.
 
-\item \textit{Ort zur Deklaration}\\
-All diese Elemente (pointcuts, dynamic \& static crosscutting) werden logisch in einem Ort, dem \textbf{Aspect}, deklariert.
+\item \textit{Deklaration aller Konstrukte}\\
+All diese Elemente (pointcuts, dynamic \& static crosscutting) werden logisch an einem Ort, dem \textbf{Aspect}, deklariert. Der Aspekt kapselt ein systemübergreifendes Anliegen. 
 \end{itemize}
 
 Alle diese Konzepte werden in der Abbildung \ref{fig:concepts} zusammengefasst und deren Beziehung zueinander graphisch abgebildet.
