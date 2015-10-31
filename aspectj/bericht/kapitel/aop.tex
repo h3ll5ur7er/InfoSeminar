@@ -41,7 +41,7 @@ Die Kernanliegen der Applikation werden in Klassen der Business Logic abgebildet
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[scale=1.0]{bilder/motivationprogram.png}
+		\includegraphics[scale=1.0]{bilder/motivationprogram}
 	\caption{Beispielsklasse - Motivation für AOP}
 	\label{fig:classmotivationaop}
 \end{figure}
@@ -58,7 +58,7 @@ Bei Code Scattering (to scatter - streuen) ist die Perspektive eine andere. Die 
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[scale=0.5]{bilder/motivationsCodeScattering.png}
+		\includegraphics[scale=0.5]{bilder/motivationsCodeScattering}
 	\caption{Code Scattering (\cite[p~54]{laddad:aspectj})}
 	\label{fig:motivationcs}
 \end{figure}
@@ -70,7 +70,7 @@ Bei Verwendung von OOP ist das Code Tangling und Code Scattering unumgänglich. 
 AOP ist diese Alternative. Bleiben wir beim Beispiel eines Security Moduls; Das Modul wird mit Klassen implementiert und mittels Interfaces gegen aussen sichtbar gemacht. In der OOP werden nun alle Codeteile welche Securityfunktionen verwenden möchten einen Aufruf dieses Moduls beinhalten. Bei einer Änderung in der API müssen unter Umständen tausende Aufrufe ebenfalls geändert werden. Mit AOP jedoch beinhalten die Client Module keine Aufrufe mehr. Aufrufe des Sicherheitsmoduls werden bei genau definierten Punkten im Code automatisch ausgelöst. Es kann beispielsweise definiert werden, dass bei allen öffentlichen Methoden einer Klasse vor Ausführung des Bodys die Berechtigung des Benutzers geprüft wird. Bei dieser Deklaration der Einstiegspunkte im Code und des in diesen Fällen auszuführenden Codes spricht man von einem Aspect. Um diese automatische Ausführung möglich zu machen muss der Code der Kernanliegen (Business Logic) mit dem des Aspects verwebt werden. Man spricht hierbei von Weaving.
 \begin{figure}[H]
 	\centering
-		\includegraphics[scale=0.5]{bilder/motivationAop.png}
+		\includegraphics[scale=0.5]{bilder/motivationAop}
 	\caption{Systemdesign mit AOP (\cite[p~55]{laddad:aspectj})}
 	\label{fig:motivationaop}
 \end{figure}
@@ -115,7 +115,7 @@ Alle diese Konzepte werden in der Abbildung \ref{fig:concepts} zusammengefasst u
 
 \begin{figure}[H]
 	\centering
-		\includegraphics[scale=0.5]{bilder/concepts.png}
+		\includegraphics[scale=0.5]{bilder/concepts}
 	\caption{AOP Konzepte (\cite[p~60]{laddad:aspectj})}
 	\label{fig:concepts}
 \end{figure}
@@ -137,17 +137,19 @@ AspectJ gilt als erstes komplettes AOP Framework überhaupt und ist deshalb auch
 \subsection{C, C++}
 
 \begin{itemize}
-\item AspectC++ - Eine Adaptierung von AspectJ in C/C++ \footnote{\cite{net:apectc}}
+\item AspectC++ - Eine Adaptierung von AspectJ in C/C++ \footnote{\cite{net:aspectc}}
 \end{itemize}
 
 \subsection{.NET Framework}
 
 CSharp unterstützt nativ sogenannte Extension methods. Hiermit können nachträglich zu Klassen oder Interfaces zusätzliche Methoden hinzugefügt werden (static crosscutting). Dies ist allerdings nur ein Teil der AOP, für alles andere benötigt man ein Framework.
 
-Nemerle -> Emaaaaa
-
 \begin{itemize}
 \item PostSharp - Kommerzielle Software welche eine grosse Verbreitung geniesst (Siemens, Roche, Lufthansa und viele mehr) \footnote{\cite{net:postsharp}}
 \item AspectSharp - AOP Framework für .NET\footnote{\cite{net:aspectsharp}}
 \item Afterthought - Afterthought ist eine Open Source Alternative zu Postsharp.\footnote{\cite{net:afterthought}}
 \end{itemize}
+
+\subsection{Nemerle}
+Nemerle ist eine relativ junge, quelloffene Programmiersprache (2003 erstmals öffentlich erschienen, erster stabiler Release 13. Mai 2011). Sie benutzt die Common Language Infrastucture (CLI) und kann somit Plattformunabhängig (.net/Mono) genutzt werden. 
+Nemerle unterstützt Funktionale-, Objektorientierte- und Imperative Programmierung und verfügt über ein mächtiges Meta-Programming System (Makros) welches schlussendlich auch Aspektorientierte Programmierung ermöglicht. Beispiele unter: \citet{github:nemerleaopsrc}

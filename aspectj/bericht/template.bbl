@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -33,6 +33,12 @@ B.~Pratap.
 \newblock URL
   \url{http://www.tekhnologia.com/2012/01/benefits-of-aspect-oriented-programming.html}.
 
+\bibitem[(RSDN)(2015)]{github:nemerleaopsrc}
+R.~S. D.~N. (RSDN).
+\newblock Nemerle aop example, 2015.
+\newblock URL
+  \url{https://github.com/rsdn/nemerle/tree/master/snippets/aop/src/ftests}.
+
 \bibitem[Unknown(2015{\natexlab{a}})]{eclipse:ajdt}
 Unknown.
 \newblock Aspectj development tools (ajdt), 2015{\natexlab{a}}.
@@ -43,14 +49,19 @@ Unknown.
 \newblock Afterthought open source framework, 2015{\natexlab{b}}.
 \newblock URL \url{https://github.com/vc3/Afterthought}.
 
-\bibitem[Unknown(2015{\natexlab{c}})]{net:aspectsharp}
+\bibitem[Unknown(2015{\natexlab{c}})]{net:aspectc}
 Unknown.
-\newblock Aspectsharp framework, 2015{\natexlab{c}}.
+\newblock Aspectc++, 2015{\natexlab{c}}.
+\newblock URL \url{http://www.aspectc.org/}.
+
+\bibitem[Unknown(2015{\natexlab{d}})]{net:aspectsharp}
+Unknown.
+\newblock Aspectsharp framework, 2015{\natexlab{d}}.
 \newblock URL \url{http://sourceforge.net/projects/aspectsharp/}.
 
-\bibitem[Unknown(2015{\natexlab{d}})]{net:postsharp}
+\bibitem[Unknown(2015{\natexlab{e}})]{net:postsharp}
 Unknown.
-\newblock Postsharp, 2015{\natexlab{d}}.
+\newblock Postsharp, 2015{\natexlab{e}}.
 \newblock URL \url{https://www.postsharp.net/customers}.
 
 \bibitem[Various(2010)]{aop:alternatives}
