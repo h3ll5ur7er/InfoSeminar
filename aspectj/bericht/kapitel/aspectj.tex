@@ -5,11 +5,11 @@ In diesem Kapitel betrachten wir, wie die verschiedenen Komponenten des im Absch
 
 \subsection{Allgemein}
 \subsubsection{Aspect}
-Der Aspect ist die zentrale Einheit in AspectJ. Im Aspect werden alle Bestandteile eines Anliegens einer Applikation zusammengefasst. Ein Aspect kann gleich wie eine normale Javaklasse Attribute und Methoden enthalten und dient zur Kapselung des Anliegens. So werden alle Funktionen welche das Logging einer Applikation betreffen im Logging aspect zusammengefasst. Aspects werden in Dateien mit der Endung .aj gespeichert.
+Der Aspect ist die zentrale Einheit in AspectJ. Im Aspect werden alle Bestandteile eines Anliegens einer Applikation zusammengefasst. Ein Aspect kann gleich wie eine normale Javaklasse Attribute und Methoden enthalten und dient zur Kapselung des Anliegens. So werden alle Funktionen welche das Logging einer Applikation betreffen im Logging Aspect zusammengefasst. Aspects werden in Dateien mit der Endung .aj gespeichert.
 
 \lstinputlisting[language=Java, firstline=3, lastline=9]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/LogAspectShort.aj}
 \subsubsection{Join-Point Modell}
-Die Join Points sind die Punkte im Programmablauf wo die Systemübergreifenden Anliegen im Code der Business Logic anknüpfen sollen. AspectJ bietet eine Menge solcher Punkte an und der Entwickler muss sich genau überlegen welchen Punkt er als Einstiegspunkt verwenden will. Die nachfolgende Tabelle zeigt eine Übersicht der vorhandenen Join Points in AspectJ.
+Die Join Points sind die Punkte im Programmablauf, wo die Systemübergreifenden Anliegen im Code der Business Logic anknüpfen können. AspectJ bietet eine Menge solcher Punkte an und der Entwickler muss sich genau überlegen welchen Punkt er als Einstiegspunkt verwenden will, da der Kontext des Join Points sich teils sehr stark unterscheidet (Bsp. Aufruf oder Ausführung von Methode). Die nachfolgende Tabelle zeigt eine Übersicht der vorhandenen Join Points in AspectJ.
 
 \begin{table}[H]
 	\centering
@@ -45,7 +45,7 @@ Mit Static crosscutting wird die statische Struktur des Programms verändert. Es
 
 \paragraph{Inner-type declaration}
 
-Mit Inter-type declarations können Variablen und Methoden an bestehende Klassen angefügt werden, auch wenn man keinen Zugrif auf deren Code hat.\\Beispiel:\\
+Mit Inter-type declarations können Variablen und Methoden an bestehende Klassen angefügt werden, auch wenn man keinen Zugrif auf deren Code hat (in APIs).\\Beispiel:\\
 
 
 \begin{lstlisting}[language=Java]
@@ -54,14 +54,14 @@ public interface Visitor{
 }
 
 public aspect PointVisitor{
-	private ArrayList<Visitor> java.awt.Point.visitors;
+	private ArrayList<Visitor> java.awt.Point.visitors = new ArrayList<Visitor>();
 
 	public void java.awt.Point.visit(Visitor v){
 		visitors.add(v);
 		v.visitPoint(this);
 	}
-
 }
+
 //====== Call ======
 public class SomeCallerClass{
 	public void someMethod(Visitor v){
@@ -72,11 +72,11 @@ public class SomeCallerClass{
 }
 \end{lstlisting}
 
-Hier wird der Klasse java.awt.Point eine Methode visit(Visitor) die Buch führ über alle Visitors und eine ArrayList als Speicher hinzugefügt. Mit dem Code aus dem Beispiel könnte diese Liste zwar nicht ausgelesen werden, aber das ist nicht was in dem Beispiel gezeigt werden soll.\\
-Inner-type declarations können auch verwendet werden um Standardimplementationen für interfaces bereitzustellen.
+Hier wird der Klasse java.awt.Point eine Methode visit(Visitor) hinzugefügt, welche sich alle Besucher (visitors) dieses Punktes in einer ArrayList merkt. Mit dem Code aus dem Beispiel könnte diese Liste zwar nicht ausgelesen werden, was aber für diese Veranschaulichung keine Rolle spielt.\\
+Inner-type declarations können auch verwendet werden um Standardimplementationen für Interfaces bereitzustellen.
 
 \paragraph{Type-hierarchy modification}
-Mit Aspekten kann auch die Klassenhierarchie verändert werden. Sowohl das implementieren von Interfaces als auch das Extenden von Klassen ist möglich. Multi-inheritance wird jedoch nach wie vor nicht unterstützt.\\
+Mit Aspekten kann auch die Klassenhierarchie verändert werden. Sowohl das implementieren von Interfaces als auch das Erweitern und Erben von Klassen ist möglich. Multi-inheritance wird jedoch nach wie vor nicht unterstützt.\\
 Hier einige Beispiele:\\
 
 \begin{lstlisting}[language=Java]
@@ -120,14 +120,11 @@ public class AnotherCallerClass{
 }
 \end{lstlisting}
 
-Im ersten Teil wird die Klasse VisitorImpl zu einer Implementation von Visitor aus dem letzten Beispiel Code. Bekanntlich müssen bei Interfaces alle Methoden implementiert werden. Auch dies kann wie wir zuvor gesehen haben vom Aspekt übernommen werden.
-Es könnte anstelle des Klassennamen auch ein Pattern stehen sodas mehrere Klassen verändert werden.
-Wie im zweiten Beispiel, indem alle Klassen mit @PointVisitor Annotation Subklassen von VisitorImpl werden.
+Im ersten Teil wird die Klasse VisitorImpl als Implementation von Visitor deklariert. Bekanntlich müssen bei Interfaces alle Methoden implementiert werden. Auch dies kann wie wir zuvor gesehen haben vom Aspekt übernommen werden.
+Anstelle des Klassennamen kann auch ein Pattern angegeben werden, sodass mehrere Klassen aufs Mal verändert werden können. Dies ist beim zweiten Beispiel der Fall, wo alle Klassen mit der @PointVisitor Annotation zu Subklassen von VisitorImpl werden.
 
 \paragraph{Weave-time declaration}
-Weave-time declarations geben dem Entwickler die möglichkeit Errors und Warnings zu generieren. Eine typische Anwendung dafür ist es zu verhindern dass nicht unterstützte Methoden verwendet werden.
-
-
+Weave-time declarations geben dem Entwickler die möglichkeit Errors und Warnings zu generieren. Eine typische Anwendung dafür ist es zu verhindern, dass nicht unterstützte Methoden verwendet werden.
 
 \section{Syntaxvarianten}
 Für die Verwendung von AspectJ können zwei Syntaxvarianten eingesetzt werden.
@@ -147,40 +144,39 @@ Wird vom Load-time Weaving-Agent verwendet um den Bytecode geladener Klassen mit
 Weavingprozesse in AspectJ können entweder nach Input oder nach Zeitpunkt des Weavings unterschieden werden.
 
 \subsection{Build-time weaving}
-Der AspectJ compiler ajc produziert aus .java, .aj, .class und .jar Dateien Bytecode, der auch auf standard JVMs ausgeführt werden kann (Einzig "aspectjrt.jar" muss dem Classpath hinzugefügt werden, wenn die standard JVM genutzt wird. Diese Klassenbibliothek beinhaltet AspectJ Type definitionen wie JointPoint oder Signature, Annotationen und interne Klassen von AspectJ).
+Der AspectJ compiler ajc produziert aus .java, .aj, .class und .jar Dateien Bytecode, der auch auf Standard Java Virtual Machines ausgeführt werden kann. Es muss jedoch "aspectjrt.jar" der Umgebungsvariable Classpath hinzugefügt werden, wenn eine Standard JVM genutzt werden soll. Diese Klassenbibliothek beinhaltet AspectJ Typendefinitionen sowie Definitionen für JointPoints oder Signaturen, Annotationen und interne Klassen von AspectJ.
 \subsubsection*{Build-time Source weaving}
-Die meisst verwendete Form des Weavings nimmt sowohl die Klassen als auch die Aspekte als Source code. Aspekte können in klassischer Form in .aj Dateien oder in Annotationsschreibweise (@Aspect) vorliegen.\\
+Die am Oftesten verwendete Form des Weavings akzeptiert sowohl reguläre Klassen als auch Aspekte als Source code. Aspekte können in klassischer Form in .aj Dateien oder in Annotationsschreibweise (@Aspect) vorliegen.\\
 Beispiel build Befehl:\\
 > ajc path/to/src/*.java path/to/aspects.aj\\
-Es gilt zu beachten dass im gegensatz zu javac alle Source Dateien zusammen kompiliert werden müssen. Die folgenden Befehle produzieren nicht das selbe Resultat wie das oben erwähnte Beispiel.\\
+Es gilt zu beachten, dass ,im Gegensatz zum Standard Java Compiler javac, mit ajc alle Source Dateien zusammen kompiliert werden müssen. Die folgenden Befehle ergeben nicht das selbe Resultat wie das oben erwähnte Beispiel.\\
 
 > ajc path/to/src/*.java\\
 
 > ajc path/to/aspects.aj\\
 
 Da solche Aufrufe schnell unübersichtlich werden können wird bei komplexeren Projekten Ant oder Maven verwendet.\\
-Im inneren des Compilers werden die Source Dateien zuerst in Bytecode umgeewandelt, welcher dann verwoben wird, folglich ist Build-time weaving immer Binary weaving. Build-time source weaving und Build-time binary weaving können deshalb auch kombiniert werden.\\
+Im Inneren des Compilers werden selbst die Source Dateien zuerst in Bytecode umgewandelt und erst dann verwoben. Folglich ist Build-time weaving immer Binary weaving. Build-time source weaving und Build-time binary weaving können deshalb auch kombiniert werden.\\
 > ajc path/to/src/*.java path/to/aspects.aj -inpath application.jar -aspectpath precompiledAspects.jar
 
 \subsubsection*{Build-time Binary weaving}
 Build-time weaving bietet sich besonders dann an, wenn man keinen Zugang zum Source code der Applikation (oder der Aspekte) hat.\\
-Es spielt keine Rolle ob die Klassen mit javac oder ajc kompiliert wurden, sogar Aspekte in Annotationsschreibweise können mit problemlos mit javac kompiliert und anschliessend mit ajc verwoben werden. Aspekte in klassischer Form müssen mit ajc kompiliert werden, da javac die AspectJ Syntax nicht versteht.
-
+Es spielt keine Rolle ob die Klassen mit javac oder ajc kompiliert wurden, sogar Aspekte in Annotationsschreibweise können problemlos mit javac kompiliert und anschliessend mit ajc verwoben werden. Aspekte in klassischer Form müssen mit ajc kompiliert werden, da javac die traditionelle AspectJ Syntax nicht versteht.
 
 \subsection{Load-time weaving}
 
-Beim Load-time weaving werden die aspekte verwoben während die VM die Klassen lädt (Daher auch der Name). In Java-Versionen >5 geschieht mit Hilfe des Java Virtual Machine Tools Interface (JVMTI). Bei früheren Java Versionen musste ein eigener Classloader verwendet werden, der interaktion mit dem Bytecode erlaubt, bevor die klasse geladen wird.\\
-Um das ganze dennoch Performant zu machen müssen alle Aspekte in einer aop.xml Datei im META-INF Verzeichnis des Classpaths aufgeführt werden.\\
+Beim Load-time weaving werden die Aspekte verwoben, während die JVM die Klassen lädt. In neueren Java-Versionen (>5) wird hierfür das Java Virtual Machine Tools Interface (JVMTI) gebraucht. Bei früheren Java Versionen musste ein eigener Classloader verwendet werden, der Interaktionen mit dem Bytecode ermöglicht, bevor die Klasse geladen wird.\\
+Um das ganze dennoch performant zu machen müssen alle Aspekte in einer aop.xml Datei im META-INF Verzeichnis des Classpaths aufgeführt werden.\\
 
 Beispielaufruf:\\
 > java -javaagent:path/to/aspectjweaver.jar [Optionen] <Main-Klasse>\\
 Mit diesem Aufruf initialisiert die JVM den Weaver-Agent.
-Dieser kombiniert alle die aop.xml Dateien aller angegebenen Classpaths und lädt die darin aufgelisteten Aspekte. Der Rest passiert Event basiert. Der Agent registriert sein Interresse am Class-Loading Event und lässt die JVM den Einstiegspunkt der Applikation laden. Die JVM lädt Klassen sobald sie gebraucht werden und benachrichtigt dabei den Agent der den geladenen Bytecode  bei Bedarf verändern kann.
+Dieser kombiniert alle aop.xml Dateien aller angegebenen Classpaths und lädt die darin aufgelisteten Aspekte. Der Rest passiert Event basiert. Der Agent registriert sein Interesse am Class-Loading Event und lässt die JVM den Einstiegspunkt der Applikation laden. Die JVM lädt Klassen sobald sie gebraucht werden und benachrichtigt dabei den Agent der den geladenen Bytecode bei Bedarf verändern und verweben kann.
 
 \section{Entwicklungstools}
 \subsection{Eclipse}
 AspectJ wird als Open Source Projekt von Eclipse weiterentwickelt. Deshalb werden für die IDE Eclipse AspectJ Development Tools (AJDT) zur Verfügung gestellt. \cite{eclipse:ajdt}
 \subsection{IntelliJ}
-IntelliJ IDEA der Tschechischen Entwicklerfirma Jetbrains kommt standardmässig mit einem AspectJ Plugin. Dieses beinhaltet alles von der Integration des ajc Compilers bis hin zur Codevervollständigung.
+Die IntelliJ IDEA der tschechischen Entwicklerfirma Jetbrains wird standardmässig mit einem AspectJ Plugin ausgeliefert. Dieses beinhaltet alles von der Integration des ajc Compilers bis hin zur Codevervollständigung.
 \subsection{Weitere}
 Auch für Netbeans, Emacs und JBuilder gibt es AspectJ Plugins.

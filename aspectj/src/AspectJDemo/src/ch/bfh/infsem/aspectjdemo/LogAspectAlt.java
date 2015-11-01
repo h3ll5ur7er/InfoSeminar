@@ -9,9 +9,9 @@ public class LogAspectAlt {
 	public void publicMethods() {}
 	@Around("publicMethods()")
 	public Object logItAll(ProceedingJoinPoint point) throws Throwable {
-		System.out.println("Executing (Alt): " + point.getSignature());
+		System.out.println("Executing(Alt):" + point.getSignature());
 		Object ret = point.proceed();
-		System.out.println("Finished (Alt): " + point.getSignature());
+		System.out.println("Finished(Alt):" + point.getSignature());
 		return ret;
 	}
 }

@@ -7,5 +7,4 @@ public aspect HelloWorld {
 	after() : MainMethod() {
 		System.out.println("World!");
 	}
-	
 }

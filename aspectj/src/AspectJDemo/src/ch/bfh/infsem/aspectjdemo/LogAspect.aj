@@ -11,10 +11,9 @@ public aspect LogAspect {
 	pointcut publicMethods() : execution(public * *.*(..));
 	
 	Object around() : publicMethods() {
-		System.out.println("Executing: " + thisJoinPoint.getSignature());
+		System.out.println("Executing:" + thisJoinPoint.getSignature());
 		Object ret = proceed();
-		System.out.println("Finished: " + thisJoinPoint.getSignature());
+		System.out.println("Finished:" + thisJoinPoint.getSignature());
 		return ret;
 	}
-	
 }

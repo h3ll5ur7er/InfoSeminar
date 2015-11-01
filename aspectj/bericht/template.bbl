@@ -5,6 +5,21 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Afterthought(2015)]{net:afterthought}
+Afterthought.
+\newblock Afterthought open source framework, 2015.
+\newblock URL \url{https://github.com/vc3/Afterthought}.
+
+\bibitem[AspectC(2015)]{net:aspectc}
+AspectC.
+\newblock Aspectc++, 2015.
+\newblock URL \url{http://www.aspectc.org/}.
+
+\bibitem[AspectSharp(2015)]{net:aspectsharp}
+AspectSharp.
+\newblock Aspectsharp framework, 2015.
+\newblock URL \url{http://sourceforge.net/projects/aspectsharp/}.
+
 \bibitem[Bruce(2001)]{bruce:alternatives}
 D.~Bruce.
 \newblock Alternatives to aspect-oriented programming, 2001.
@@ -15,6 +30,11 @@ D.~Bruce.
 Dozenten.
 \newblock Auftragsbeschreibungen informatikseminar, 2015.
 \newblock URL \url{https://moodle.bfh.ch/mod/data/view.php?d=462}.
+
+\bibitem[Eclipse(2015)]{eclipse:ajdt}
+Eclipse.
+\newblock Aspectj development tools (ajdt), 2015.
+\newblock URL \url{http://www.eclipse.org/ajdt/}.
 
 \bibitem[Laddad(2009)]{laddad:aspectj}
 R.~Laddad.
@@ -27,6 +47,11 @@ C.~V. Lopes.
 \newblock Aspect-oriented programming:an historical perspective, 2002.
 \newblock URL \url{http://isr.uci.edu/tech_reports/UCI-ISR-02-5.pdf}.
 
+\bibitem[PostSharp(2015)]{net:postsharp}
+PostSharp.
+\newblock Postsharp, 2015.
+\newblock URL \url{https://www.postsharp.net/customers}.
+
 \bibitem[Pratap(2012)]{aop:benefits}
 B.~Pratap.
 \newblock Benefits of aop, 2012.
@@ -38,31 +63,6 @@ R.~S. D.~N. (RSDN).
 \newblock Nemerle aop example, 2015.
 \newblock URL
   \url{https://github.com/rsdn/nemerle/tree/master/snippets/aop/src/ftests}.
-
-\bibitem[Unknown(2015{\natexlab{a}})]{eclipse:ajdt}
-Unknown.
-\newblock Aspectj development tools (ajdt), 2015{\natexlab{a}}.
-\newblock URL \url{http://www.eclipse.org/ajdt/}.
-
-\bibitem[Unknown(2015{\natexlab{b}})]{net:afterthought}
-Unknown.
-\newblock Afterthought open source framework, 2015{\natexlab{b}}.
-\newblock URL \url{https://github.com/vc3/Afterthought}.
-
-\bibitem[Unknown(2015{\natexlab{c}})]{net:aspectc}
-Unknown.
-\newblock Aspectc++, 2015{\natexlab{c}}.
-\newblock URL \url{http://www.aspectc.org/}.
-
-\bibitem[Unknown(2015{\natexlab{d}})]{net:aspectsharp}
-Unknown.
-\newblock Aspectsharp framework, 2015{\natexlab{d}}.
-\newblock URL \url{http://sourceforge.net/projects/aspectsharp/}.
-
-\bibitem[Unknown(2015{\natexlab{e}})]{net:postsharp}
-Unknown.
-\newblock Postsharp, 2015{\natexlab{e}}.
-\newblock URL \url{https://www.postsharp.net/customers}.
 
 \bibitem[Various(2010)]{aop:alternatives}
 Various.
