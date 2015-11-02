@@ -45,28 +45,18 @@ Mit Static crosscutting wird die statische Struktur des Programms verändert. Es
 
 \paragraph{Inner-type declaration}
 
-Mit Inter-type declarations können Variablen und Methoden an bestehende Klassen angefügt werden, auch wenn man keinen Zugrif auf deren Code hat (in APIs).\\Beispiel:\\
+Mit Inter-type declarations können Variablen und Methoden an bestehende Klassen angefügt werden, auch wenn man keinen Zugrif auf deren Code hat (in APIs).\\
+Beispiel:
 
+\lstinputlisting[language=Java, firstline=3]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/Visitor.java}
+
+\lstinputlisting[language=Java, firstline=3]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/PointVisitorAspect.aj}
 
 \begin{lstlisting}[language=Java]
-public interface Visitor{
-	void visitPoint(java.awt.Point p);
-}
-
-public aspect PointVisitor{
-	private ArrayList<Visitor> java.awt.Point.visitors = new ArrayList<Visitor>();
-
-	public void java.awt.Point.visit(Visitor v){
-		visitors.add(v);
-		v.visitPoint(this);
-	}
-}
-
 //====== Call ======
 public class SomeCallerClass{
 	public void someMethod(Visitor v){
-		java.awt.Point p = new jawa.awt.Point(0,0);
-		
+		Point p = new Point(0,0);
 		p.visit(v);
 	}
 }
@@ -81,33 +71,19 @@ Hier einige Beispiele:\\
 
 \begin{lstlisting}[language=Java]
 //====== 1 ======
+\end{lstlisting}
+\lstinputlisting[language=Java, firstline=3]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/VisitorImpl.java}
+\lstinputlisting[language=Java, firstline=3]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/VisitorImplementationAspect.aj}
 
-public class VisitorImpl{
-}
 
-public aspect VisitorImplementationAspect{
-	declare parents: VisitorImpl implements Visitor
+\begin{lstlisting}[language=Java]
+//====== 1 ======
+\end{lstlisting}
+\lstinputlisting[language=Java, firstline=3]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/PointVisitor.java}
+\lstinputlisting[language=Java, firstline=3]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/PointVisitorImpl.java}
+\lstinputlisting[language=Java, firstline=3]{../src/AspectJDemo/src/ch/bfh/infsem/aspectjdemo/PointVisitorImplementationAspect.aj}
 
-	public void VisitorImpl.visit(Visitor v){
-		void visitPoint(java.awt.Point p);
-	}
-
-}
-
-//====== 2 ======
-
-@interface PointVisitor{
-	//Custom Annotation
-}
-
-@PointVisitor
-public class PointVisitorImpl{
-}
-
-public aspect PointVisitorImplementationAspect{
-	declare parents: @PointVisitor * extends VisitorImpl;
-}
-
+\begin{lstlisting}[language=Java]
 //====== Call ======
 public class AnotherCallerClass{
 	public void anotherMethod(){
