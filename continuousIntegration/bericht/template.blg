@@ -1,0 +1,13 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: template.aux
+The style file: abbrvnat.bst
+A level-1 auxiliary file: vorspann/titelseite_mit_bild.aux
+A level-1 auxiliary file: kapitel/einleitung.aux
+A level-1 auxiliary file: kapitel/integrationContinue.aux
+A level-1 auxiliary file: kapitel/evaluation.aux
+A level-1 auxiliary file: kapitel/schlussfolgerungen.aux
+Illegal, another \bibstyle command---line 35 of file template.aux
+ : \bibstyle
+ :          {IEEEtranS}
+I'm skipping whatever remains of this command
+Database file #1: datenbanken/bibliography.bib
+(There was 1 error message)
