@@ -9,6 +9,8 @@ Le processus de developpement d'un logiciel.
 Ce que c'est CI, la definition?
 Les concepts core, quels composant faut-il qu'on parle de CI?
 
+\section{Histoire}
+
 \section{Concepts}
 
 \subsection{Construction continue}
@@ -21,21 +23,37 @@ Les concepts core, quels composant faut-il qu'on parle de CI?
 
 \subsection{Déploiment continue}
 
-\subsection{Information en retour continue}
+-> Continuous Delivery concept
 
-\section{Motivation}
+\subsection{Information en retour continue}
+\newpage
+\section{Motivation et bénéfices}
+
+La raison principale pour utiliser l'IC est de garantir le succès et le déroulement d'un projet de développement de logiciel sans accroc. Dans tous les projets il y auras des problème et dans tous les logiciels il y auras des bogues. Mais l'IC aide à minimiser  l'impact negatif que cettes erreurs ont.
+
+De plus il est possible d'automatiser des processus ennuyeux, répétitif et sensible aux défauts et comme ça économiser du temps et de la monnaie. 
 
 \subsection{Éviter des risques}
 
-\begin{itemize}
-\item Déploiement du logiciel
-\item Découverte tarde des erreurs
-\item Manque de visibilité du projet
-\item Basse qualité de logiciel
-\end{itemize}
+En dessous vous trouvez quelques risques que l'IC aide à éviter, mais seulement si elle est appliquée correctement (\nameref{sec:meuilleurespratiques}).
+
+\subsubsection{Logiciel pas déployable}
+Si on fait l'integration du système seulement à la fin du projét, la probabilité de ne pas être capable à déployer et dérouler le logiciel pour le client est très haute. Des énonces comme "Mais ça marche sur ma machine" sont très connues. Des raisons pour cela peuvent être des configurations manquantes ou differentes, ou même des dépendances qui n'ont pas été inclus pour le deploiement. Naturellement si la source ne compile pas, le logiciel ne peut non plus être déroulé.
+
+En commettre, construire et deployer le logiciel souvent ce risque peut être diminuer. On a la certitude d'avoir au moins un logiciel qui marche partiellement.
+\subsubsection{Découverte tarde des erreurs}
+Par l'exécution des testes automatiques pendant le processus de constructions des erreurs dans le code peuvent être decouvrit plus tôt. De plus il est aussi possible de determiner la couverture du code par les tests.
+\subsubsection{Manque de visibilité du projet}
+L'opération d'un serveur d'IC crée la clarté de l'état actuelle de la source et aussi de la qualité. Si il y a un problème avec les changements derniers toutes les personnes responsables seront contacter. Si une nouvelle version a été deployé pour le testing, les personnes testant le logiciels sont automatiquement informé.
+
+De plus il y a des outils qui font la visualisation du projet possible, par génerant des diagrams UML du code actuels. Ca aide a recevoir un apercu pour des developpeurs nouvels.
+\subsubsection{Logiciel de basse qualité }
+La source qui ne suit pas les règles de programmation, la source qui suit une architecture different ou le code redondant sont des erreurs potentiels dans le futur.
+
+Par executant des testes et des inspections regulièrement ces risques pour le futur sont trouvé avant de devenir un vrai problème.
 
 \section{Meuilleures pratiques}
-
+\label{sec:meuilleurespratiques}
 Peut-être c'est mieux de ne pas faire une intégration continue complet dans tous les cas. Pas introduire tout les concepts en meme temps, seulement si necessaire.
 Meuilleures pratiques
 
@@ -52,3 +70,5 @@ Meuilleures pratiques
 \paragraph{Run private builds}
 
 \paragraph{Avoid getting broken code}
+
+\paragraph{Decouple build process from IDE}

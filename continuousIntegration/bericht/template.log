@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  9 NOV 2015 16:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  16 NOV 2015 16:45
 entering extended mode
 **template.tex
 (template.tex
@@ -1013,9 +1013,9 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@dimlist=\toks32
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-(template.aux (vorspann/titelseite_mit_bild.aux) (kapitel/einleitung.aux)
-(kapitel/integrationContinue.aux) (kapitel/evaluation.aux)
-(kapitel/schlussfolgerungen.aux))
+(template.aux (vorspann/titelseite_mit_bild.aux) (vorspann/abstract.aux)
+(kapitel/einleitung.aux) (kapitel/integrationContinue.aux)
+(kapitel/evaluation.aux) (kapitel/schlussfolgerungen.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
 LaTeX Font Info:    ... okay on input line 137.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
@@ -1142,14 +1142,14 @@ less on input line 8.
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 8.
 
-<bilder/BFH_Logo_B.png, id=95, 35.4123pt x 53.9616pt>
+<bilder/BFH_Logo_B.png, id=131, 35.4123pt x 53.9616pt>
 File: bilder/BFH_Logo_B.png Graphic file (type png)
 
 <use bilder/BFH_Logo_B.png>
 Package pdftex.def Info: bilder/BFH_Logo_B.png used on input line 16.
 (pdftex.def)             Requested size: 35.41219pt x 53.96146pt.
 
-<bilder/platzhalter.jpg, id=97, 426.84468pt x 241.65282pt>
+<bilder/platzhalter.jpg, id=133, 426.84468pt x 241.65282pt>
 File: bilder/platzhalter.jpg Graphic file (type jpg)
 
 <use bilder/platzhalter.jpg>
@@ -1161,31 +1161,46 @@ Package pdftex.def Info: bilder/platzhalter.jpg used on input line 26.
 
 
  <./bilder/BFH_Logo_B.png> <./bilder/platzhalter.jpg>])
-(template.toc
-LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 5.
+(vorspann/abstract.tex)
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cmbright\omlcmbrm.fd"
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 172.
+
+
+Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
+less on input line 172.
+
+[2
+
+
+
+] (template.toc
+LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 6.
+
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cmbright\omlcmbrm.fd"
 File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
 )
-LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 5.
+LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 6.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cmbright\omscmbrs.fd"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cmbright\omscmbrs.fd"
 File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 5.
+(Font)              <7> on input line 6.
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <5> on input line 5.
+(Font)              <5> on input line 6.
 )
 \tf@toc=\write4
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 182.
+less on input line 185.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 182.
+less on input line 185.
 
 [1
 
@@ -1210,11 +1225,11 @@ Class scrreprt Warning: \float@addtolists detected!
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 182.
+less on input line 185.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 182.
+less on input line 185.
 
 [2
 
@@ -1223,11 +1238,11 @@ less on input line 182.
 chapter 2.
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 52.
+less on input line 29.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 52.
+less on input line 29.
 
 [3
 
@@ -1238,11 +1253,11 @@ chapter 3.
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 184.
+less on input line 187.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 184.
+less on input line 187.
 
 [5
 
@@ -1253,11 +1268,11 @@ chapter 4.
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 185.
+less on input line 188.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 185.
+less on input line 188.
 
 [6
 
@@ -1269,36 +1284,36 @@ LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10> not available
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 217.
+less on input line 220.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 217.
+less on input line 220.
 
 [7
 
 
 ] (template.lof)
 \tf@lof=\write5
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 230.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 230.
+less on input line 233.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 230.
+less on input line 233.
 
 [8
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 230.
- (template.aux (vorspann/titelseite_mit_bild.aux) (kapitel/einleitung.aux)
-(kapitel/integrationContinue.aux) (kapitel/evaluation.aux)
-(kapitel/schlussfolgerungen.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 230.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 230.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
+ (template.aux (vorspann/titelseite_mit_bild.aux) (vorspann/abstract.aux)
+(kapitel/einleitung.aux) (kapitel/integrationContinue.aux)
+(kapitel/evaluation.aux) (kapitel/schlussfolgerungen.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
 
 
 Package rerunfilecheck Warning: File `template.out' has changed.
@@ -1306,30 +1321,31 @@ Package rerunfilecheck Warning: File `template.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `template.out':
-(rerunfilecheck)             Before: F4079AD2AFCAF7DB371AAFF1FF36DD65;1421
-(rerunfilecheck)             After:  6074C2EF83CBA1E76D50828F6FBFFF66;1918.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Before: 1B794BA8193C1D386C36FFB070F26237;2039
+(rerunfilecheck)             After:  9DFE7AFC5E438AE4ADA7C0840128AECE;2039.
  ) 
 Here is how much of TeX's memory you used:
- 13769 strings out of 493673
- 207076 string characters out of 3141530
- 368874 words of memory out of 3000000
- 16776 multiletter control sequences out of 15000+200000
+ 13799 strings out of 493673
+ 207590 string characters out of 3141530
+ 370424 words of memory out of 3000000
+ 16791 multiletter control sequences out of 15000+200000
  32530 words of font info for 73 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  43i,11n,66p,841b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on template.pdf (9 pages, 137929 bytes).
+pdfTeX warning (dest): name{section*.16} has been referenced but does not exi
+st, replaced by a fixed one
+
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on template.pdf (10 pages, 155451 bytes).
 PDF statistics:
- 223 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 195 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 278 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
