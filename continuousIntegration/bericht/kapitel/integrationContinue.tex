@@ -1,7 +1,6 @@
 \chapter{Intégration Continue}
 \label{chap:integrationcontinue}
 
-\nocite{duvall:conint}
 
 \section{Aperçu}
 
@@ -10,6 +9,14 @@ Ce que c'est CI, la definition?
 Les concepts core, quels composant faut-il qu'on parle de CI?
 
 \section{Histoire}
+La notion \textit{Intégration Continue} etait mentionné dans un livre de Grady Booch en 1994 pour la première foi\footnote{\cite{boochooad}}. Il parlait d'une intégration continue par des publications interne et chaque publication apporte l'application plus proche à la version finale.
+
+La prochaine foi que l'intégration continue était sous les feux de l'actualité était avec la publication des concepts de \textit{Extreme Programming} en forme d'un livre en 1999.
+Là inclue est l'idée d'avoir une machine dédié à l'integration du code et les pairs de developpeurs reunissant, integrant et testant le code source après chaque changement.\footnote{\cite{robertshistory}}
+
+Une autre personne qui a gravé la notion \textit{Intégration Continue} est Martin Fowler. Il a publié un article sur le sujet en 2000 et revisé celui-ci six ans plus tard.\footnote{\cite{fowlerci}} Dans cet article il essayerait de donner une definition de l'IC et des meuilleures pratiques. Martin Fowler travaillait chez ThoughtWorks l'entreprise responsable pour la publication du première serveur d'\textit{Intégration Continue} "Cruise Control".
+
+\nocite{wikici}
 
 \section{Concepts}
 
@@ -26,49 +33,66 @@ Les concepts core, quels composant faut-il qu'on parle de CI?
 -> Continuous Delivery concept
 
 \subsection{Information en retour continue}
-\newpage
+
+\clearpage
+
 \section{Motivation et bénéfices}
 
-La raison principale pour utiliser l'IC est de garantir le succès et le déroulement d'un projet de développement de logiciel sans accroc. Dans tous les projets il y auras des problème et dans tous les logiciels il y auras des bogues. Mais l'IC aide à minimiser  l'impact negatif que cettes erreurs ont.
+La raison principale pour utiliser l'IC est de garantir le succès et le déroulement d'un projet de développement de logiciel sans accroc. Dans tous les projets il y auras des problèmes et dans tous les logiciels il y auras des bogues. Mais l'IC aide à minimiser l'impact negatif que cettes erreurs ont.
 
-De plus il est possible d'automatiser des processus ennuyeux, répétitif et sensible aux défauts et comme ça économiser du temps et de la monnaie. 
+De plus l'IC fait possible d'automatiser des processus ennuyeux, répétitif et sensible aux défauts. Par ça on peut économiser du temps et de la monnaie et les développeur se peuvent concentrer sour ce qu'ils aiment faire. L'IC compléte parfaitement les methodes de gestion de projets agile.
 
 \subsection{Éviter des risques}
-
-En dessous vous trouvez quelques risques que l'IC aide à éviter, mais seulement si elle est appliquée correctement (\nameref{sec:meuilleurespratiques}).
-
+En dessous vous trouvez quelques risques que l'IC aide à éviter, mais seulement si elle est appliquée correctement (\nameref{sec:meuilleurespratiques}).\footnote{\cite[p39]{duvallconint}} 
 \subsubsection{Logiciel pas déployable}
-Si on fait l'integration du système seulement à la fin du projét, la probabilité de ne pas être capable à déployer et dérouler le logiciel pour le client est très haute. Des énonces comme "Mais ça marche sur ma machine" sont très connues. Des raisons pour cela peuvent être des configurations manquantes ou differentes, ou même des dépendances qui n'ont pas été inclus pour le deploiement. Naturellement si la source ne compile pas, le logiciel ne peut non plus être déroulé.
+Si on fait l'integration du système seulement à la fin du projét, la probabilité de ne pas être capable à déployer et dérouler le logiciel pour le client est très haute. Des énonces comme "Mais ça marche sur ma machine" sont très connues. Des raisons pour cela peuvent être des configurations manquantes ou differentes sur la machine cible, ou même des dépendances qui n'ont pas été inclus pour le deploiement. Naturellement si le code source ne compile pas, le logiciel ne peut non plus être déroulé.
 
-En commettre, construire et deployer le logiciel souvent ce risque peut être diminuer. On a la certitude d'avoir au moins un logiciel qui marche partiellement.
+En commettre, construire et deployer le logiciel souvent ce risque peut être diminuer. En faisant ça on a la certitude d'avoir au moins un logiciel qui marche partiellement.
 \subsubsection{Découverte tarde des erreurs}
-Par l'exécution des testes automatiques pendant le processus de constructions des erreurs dans le code peuvent être decouvrit plus tôt. De plus il est aussi possible de determiner la couverture du code par les tests.
+Par l'exécution des testes automatiques pendant le processus de construction des erreurs dans le code source peuvent être decouvrit tôt. De plus il est aussi possible de determiner la couverture du code par les tests. Surement la qualité des testes doit être bonne.
 \subsubsection{Manque de visibilité du projet}
-L'opération d'un serveur d'IC crée la clarté de l'état actuelle de la source et aussi de la qualité. Si il y a un problème avec les changements derniers toutes les personnes responsables seront contacter. Si une nouvelle version a été deployé pour le testing, les personnes testant le logiciels sont automatiquement informé.
+L'opération d'un serveur d'IC crée la clarté de l'état actuelle de l'application et aussi de sa qualité. Si il y a un problème avec les changements derniers toutes les personnes responsables seront contacter. Si une nouvelle version a été deployé pour le testing, les personnes testant le logiciels seront aussi automatiquement informé.
 
-De plus il y a des outils qui font la visualisation du projet possible, par génerant des diagrams UML du code actuels. Ca aide a recevoir un apercu pour des developpeurs nouvels.
+Il existe mêmes des outils qui font la visualisation du projet possible, par génerant des diagrams UML du code courant. Ca aide à donner un apercu pour des developpeurs nouvels et garantis une documentation toujours actuel du projet.
 \subsubsection{Logiciel de basse qualité }
-La source qui ne suit pas les règles de programmation, la source qui suit une architecture different ou le code redondant sont des erreurs potentiels dans le futur.
-
-Par executant des testes et des inspections regulièrement ces risques pour le futur sont trouvé avant de devenir un vrai problème.
+Le code source qui ne suit pas les règles de programmation, le code source qui suit une architecture different ou le code redondant pourrant devenir des erreurs dans le futur.
+Par executant des testes et des inspections regulièrement ces dérogations peuvent être trouvé avant de devenir un vrai problème.
+\clearpage
 
 \section{Meuilleures pratiques}
 \label{sec:meuilleurespratiques}
-Peut-être c'est mieux de ne pas faire une intégration continue complet dans tous les cas. Pas introduire tout les concepts en meme temps, seulement si necessaire.
-Meuilleures pratiques
 
-\paragraph{Commit code frequently}
+En dessous vous trouvez quelques pratiques qui aident à optimiser l'efficacité d'un système d'IC.\footnote{CI and You \cite[p~47]{duvallconint}}
 
-\paragraph{Dont commit broken code}
+\begin{enumerate}
 
-\paragraph{Fix broken builds immediately}
+\item \textbf{Étendue de l'implementation (Scope of implementation)}\\
+Avant de commencer l'implementation d'un système de l'IC c'est absolument necessaire de savoir de quelles composants on a besoin. Pas tous les projets necessite les mêmes mesures, ça dépends fortement de la taille, de la complexité du projet et du nombre de personnes impliqué. 
+De plus il est conseillé de ne pas configurer tous les composant en même temps, mais de faire ça par étappes (p.ex. build, testing, review, deploy). 
 
-\paragraph{Write automated developer tests}
+\item\textbf{Commettre le code souvent (Commit code frequently)}\\
+Il est conséillé de commettre le code source au moins une foi par jour. Essaie de fragmenter le travail dans des morceaux petits et de commettre après chaque partie.
 
-\paragraph{All tests and inspections must pass}
+\item\textbf{Ne jamais commettre du code non-compilable (Dont commit broken code)}
 
-\paragraph{Run private builds}
+\item\textbf{Éviter le code non-fonctionnnant (Avoid getting broken code)}
 
-\paragraph{Avoid getting broken code}
+\item\textbf{Faire la construction localement (Run private builds)}
 
-\paragraph{Decouple build process from IDE}
+\item\textbf{Découpler le processus de construction de l'IDE (Decouple build process from IDE)}\\
+L'IDE peut faire des pas dans le processus de construction qui ne sont pas transparent pour le developpeur ou les developpeur utilises des different IDE. C'est pour ça que la construction doit être possible et fait à dehors d'une IDE.
+
+\item\textbf{Reparer des constructions non-fonnctionnant immédiatement (Fix broken builds immediately)}\\
+Si quelque chose ne marche pas la reparation doit avoir la première priorité.
+
+\item\textbf{Écrire des testes automatisé (Write automated developer tests)}
+
+\item\textbf{Tous les testes doivent réussir (All tests and inspections must pass)}\\
+Si on ignore des testes qui ne réuissent pas on diminue la visibilité du projét.
+
+\item\textbf{Des constructions vite(Keep builds fast)}\\
+
+\end{enumerate}
+
+
+

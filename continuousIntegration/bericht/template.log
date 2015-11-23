@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  16 NOV 2015 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  23 NOV 2015 17:19
 entering extended mode
 **template.tex
 (template.tex
@@ -1236,19 +1236,30 @@ less on input line 185.
 
 ] (kapitel/integrationContinue.tex
 chapter 2.
+LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10> not available
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 12.
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 29.
+less on input line 37.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 29.
+less on input line 37.
 
 [3
 
 
 
-]) [4] (kapitel/evaluation.tex
+] [4
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+) [5
+
+] (kapitel/evaluation.tex
 chapter 3.
 )
 
@@ -1259,7 +1270,7 @@ less on input line 187.
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 187.
 
-[5
+[6
 
 
 
@@ -1274,13 +1285,20 @@ less on input line 188.
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 188.
 
-[6
+[7
 
 
 
 ] (template.bbl
-LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 11.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 26.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\t1aett.fd"
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+[]\T1/aess/m/n/10 M. Fow-ler.  Conti-nuous in-te-gra-tion, 2006.  URL [][]$\T1/
+aett/m/n/10 http : / / www . martinfowler . com / articles /$
+ []
+
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
@@ -1290,7 +1308,7 @@ less on input line 220.
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 220.
 
-[7
+[8
 
 
 ] (template.lof)
@@ -1305,7 +1323,7 @@ less on input line 233.
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 233.
 
-[8
+[9
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
@@ -1314,38 +1332,29 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
 (kapitel/evaluation.aux) (kapitel/schlussfolgerungen.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
-
-
-Package rerunfilecheck Warning: File `template.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `template.out':
-(rerunfilecheck)             Before: 1B794BA8193C1D386C36FFB070F26237;2039
-(rerunfilecheck)             After:  9DFE7AFC5E438AE4ADA7C0840128AECE;2039.
+Package rerunfilecheck Info: File `template.out' has not changed.
+(rerunfilecheck)             Checksum: 486EB6ECE3C364EF4994CE28153A0199;2037.
  ) 
 Here is how much of TeX's memory you used:
- 13799 strings out of 493673
- 207590 string characters out of 3141530
- 370424 words of memory out of 3000000
- 16791 multiletter control sequences out of 15000+200000
- 32530 words of font info for 73 fonts, out of 3000000 for 9000
+ 13854 strings out of 493673
+ 208354 string characters out of 3141530
+ 370531 words of memory out of 3000000
+ 16826 multiletter control sequences out of 15000+200000
+ 35649 words of font info for 80 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  43i,11n,66p,841b,439s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{section*.16} has been referenced but does not exi
-st, replaced by a fixed one
-
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-Output written on template.pdf (10 pages, 155451 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on template.pdf (11 pages, 184321 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 61 named destinations out of 1000 (max. 500000)
+ 316 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
  267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
