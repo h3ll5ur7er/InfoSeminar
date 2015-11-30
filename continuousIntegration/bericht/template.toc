@@ -6,35 +6,36 @@
 \contentsline {section}{\numberline {1.1}Mission}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Approche}{2}{section.1.2}
 \contentsline {chapter}{\numberline {2}Int\IeC {\'e}gration Continue}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Aper\IeC {\c c}u}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Histoire}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}Concepts}{3}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Construction continue}{3}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Int\IeC {\'e}gration continue de base de donn\IeC {\'e}e}{3}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Test continue}{3}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Inspection continue}{3}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}D\IeC {\'e}ploiment continue}{3}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}Information en retour continue}{3}{subsection.2.3.6}
-\contentsline {section}{\numberline {2.4}Motivation et b\IeC {\'e}n\IeC {\'e}fices}{4}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}\IeC {\'E}viter des risques}{4}{subsection.2.4.1}
-\contentsline {subsubsection}{\nonumberline Logiciel pas d\IeC {\'e}ployable}{4}{section*.3}
-\contentsline {subsubsection}{\nonumberline D\IeC {\'e}couverte tarde des erreurs}{4}{section*.4}
-\contentsline {subsubsection}{\nonumberline Manque de visibilit\IeC {\'e} du projet}{4}{section*.5}
-\contentsline {subsubsection}{\nonumberline Logiciel de basse qualit\IeC {\'e}}{4}{section*.6}
-\contentsline {section}{\numberline {2.5}Meuilleures pratiques}{5}{section.2.5}
-\contentsline {chapter}{\numberline {3}\IeC {\'E}valuation}{6}{chapter.3}
-\contentsline {section}{\numberline {3.1}Outils necessaire pour CI}{6}{section.3.1}
-\contentsline {section}{\numberline {3.2}Logiciels de construction}{6}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Ant}{6}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Maven}{6}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Serveur de l'int\IeC {\'e}gration continue}{6}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Jenkins}{6}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}TeamCity}{6}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Bamboo}{6}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Hudson}{6}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Autre outils}{6}{section.3.4}
-\contentsline {chapter}{\numberline {4}Conclusion}{7}{chapter.4}
-\contentsline {section}{\numberline {4.1}Bilan}{7}{section.4.1}
-\contentsline {chapter}{Bibliographie}{8}{section*.7}
-\contentsline {chapter}{Table des figures}{8}{section*.9}
+\contentsline {section}{\numberline {2.1}Histoire}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Aper\IeC {\c c}u}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Archit\IeC {\'e}cture exemplaire}{5}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Concepts de l'Int\IeC {\'e}gration Continue}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Construction continue}{6}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Int\IeC {\'e}gration continue de base de donn\IeC {\'e}e}{6}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Test continue}{6}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Inspection continue}{6}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Information en retour continue}{6}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}D\IeC {\'e}ploiment continue}{6}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}Motivation et b\IeC {\'e}n\IeC {\'e}fices}{7}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}\IeC {\'E}viter des risques}{7}{subsection.2.4.1}
+\contentsline {subsubsection}{\nonumberline Logiciel pas d\IeC {\'e}ployable}{7}{section*.5}
+\contentsline {subsubsection}{\nonumberline D\IeC {\'e}couverte tarde des erreurs}{7}{section*.6}
+\contentsline {subsubsection}{\nonumberline Manque de visibilit\IeC {\'e} du projet}{7}{section*.7}
+\contentsline {subsubsection}{\nonumberline Logiciel de basse qualit\IeC {\'e}}{7}{section*.8}
+\contentsline {section}{\numberline {2.5}Meuilleures pratiques}{8}{section.2.5}
+\contentsline {chapter}{\numberline {3}\IeC {\'E}valuation}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Outils necessaire pour CI}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Logiciels de construction}{9}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Ant}{9}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Maven}{9}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Serveur de l'int\IeC {\'e}gration continue}{9}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Jenkins}{9}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}TeamCity}{9}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Bamboo}{9}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Hudson}{9}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}Autre outils}{9}{section.3.4}
+\contentsline {chapter}{\numberline {4}Conclusion}{10}{chapter.4}
+\contentsline {section}{\numberline {4.1}Bilan}{10}{section.4.1}
+\contentsline {chapter}{Bibliographie}{11}{section*.9}
+\contentsline {chapter}{Table des figures}{11}{section*.11}
 \save@tocdepth \setcounter {tocdepth}{1}

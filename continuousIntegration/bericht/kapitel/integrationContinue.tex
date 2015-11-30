@@ -1,24 +1,60 @@
 \chapter{Intégration Continue}
 \label{chap:integrationcontinue}
 
-
-\section{Aperçu}
-
-Le processus de developpement d'un logiciel.
-Ce que c'est CI, la definition?
-Les concepts core, quels composant faut-il qu'on parle de CI?
-
 \section{Histoire}
 La notion \textit{Intégration Continue} etait mentionné dans un livre de Grady Booch en 1994 pour la première foi\footnote{\cite{boochooad}}. Il parlait d'une intégration continue par des publications interne et chaque publication apporte l'application plus proche à la version finale.
 
 La prochaine foi que l'intégration continue était sous les feux de l'actualité était avec la publication des concepts de \textit{Extreme Programming} en forme d'un livre en 1999.
 Là inclue est l'idée d'avoir une machine dédié à l'integration du code et les pairs de developpeurs reunissant, integrant et testant le code source après chaque changement.\footnote{\cite{robertshistory}}
 
-Une autre personne qui a gravé la notion \textit{Intégration Continue} est Martin Fowler. Il a publié un article sur le sujet en 2000 et revisé celui-ci six ans plus tard.\footnote{\cite{fowlerci}} Dans cet article il essayerait de donner une definition de l'IC et des meuilleures pratiques. Martin Fowler travaillait chez ThoughtWorks l'entreprise responsable pour la publication du première serveur d'\textit{Intégration Continue} "Cruise Control".
+Une autre personne qui a gravé la notion \textit{Intégration Continue} est Martin Fowler. Il a publié un article sur le sujet en 2000 et revisé celui-ci six ans plus tard.\footnote{\cite{fowlerci}} Dans cet article il essayerait de donner une definition de l'IC et des meuilleures pratiques. Martin Fowler travaillait chez ThoughtWorks l'entreprise responsable pour la publication du première serveur d'\textit{Intégration Continue} "Cruise Control". Il est souvent cité comme personne-clé si on parle de l'IC.
+
+Le premier livre publié sur la matière était "Continous Integration"\footnote{\cite{duvallconint}} en 2007. Naturellement il y a beaucoup d'autre livres traitant des technologie ou outils concrètes. Aujourd'hui le plus part d'entreprises implementes quelques ou tous les aspects de l'IC.
 
 \nocite{wikici}
+\newpage
 
-\section{Concepts}
+\section{Aperçu}
+Pour pouvoir comprendre le concept de base de l'Intégration Continue il est necessaire de connaitre le processus de development logiciel ordinaire. L'Intégration Continue n'éxige pas de méthode de gestion de projets specifique mais est souvent utilisé avec des approches agiles, car elle les complètent parfaitement. Voici un diagram d'un processus pareil. \footnote{Source http://www.techtipsnapps.com/2015/04/most-successful-software-development.html}
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.25]{bilder/agile_methodology}
+	\caption{Processus de developpement logiciel}
+	\label{fig:processus}
+\end{figure}
+
+L'idée principale de L'IC est d'automatiser des devoirs ou d'offrir de l'aide pendants les étappes de developpment. Pendant presque tous les projets de developpement on travaille en équippe. Tous les développeurs font des changements et ajoute de la fonctionnalité chaque jour. C'est pourquoi c'est necessaire de réunir ces changements regulièrement et de verifier si tous les composants marche et coopére comme voulu.\\\\
+Ce processus de réunification s'appelle l'intégration. Si l'intégration est faite continuellement on parle de l'\textbf{Intégration Continue}. Mais une Intégration Continue à la lettre, chaque minute ou même en temp réel, n'est pas faisable ou aidant. C'est pour ça qu'une intégration executer au moins une foi par jour est suffisante.\\
+De plus cette intégration doit être facile et automatisée, comme pousser un bouton. Tous le reste est controlé par le système IC. De plus la définition et l'étendue de l'IC est ouverte et pas strictement limité. Mais il y a quelques elements qui apparaissent dans tous les systèmes d'IC.
+\newpage
+
+\subsection{Architécture exemplaire}
+Voici une architécture normale en travaillant avec un système d'Integration Continue.
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.6]{bilder/architecture_exemplaire}
+	\caption{Architécture exemplaire}
+	\label{fig:processus}
+\end{figure}
+
+\textbf{Developpement locale}\\
+Tous les developpeurs travaille sur ses machines privées ou des machines de l'entreprise. Avant d'ajouter de la fonctionalité la version la plus actuelle est téléchargé du dépot centrale. Après changer le code il est necessaire de faire un build et d'executer les testes unitaires. Si tout fonctionne les changements sont commit sur le dépot centrale.\\\\
+\textbf{Dépot centrale}\\
+Le dépot centrale est normalement un système de gestion de versions comme Subversion ou Git. Il est installé sur un serveur dédié. Tous les developpeur recoivent de l'accès pour commettre des changements là dessus. Ce faisant il est possible d'identifier qui a changé quoi en cas que quelque chose ne marche plus.\\\\
+\textbf{Serveur de l'Intégration Continue} \\
+Le serveur de l'Intégration Continue est la partie centrale du système. Il est aussi installé sur un serveur dédie, quelque foi sur la même machine que le dépot centrale. Le serveur IC controle reulièrement s'il y a une nouvelle version dans le dépot centrale. Si c'est le cas le serveur prends le code et démarre le processus d'intégration. Les étappes du processus doivent normalement être configurer une fois par projet. Quelques exemples pour des étappes possibles:
+\begin{itemize}
+\item Construction du code
+\item Testes unitaires, testes d'intégration ou testes fonctionelle
+\item Inspections
+\item Création de sous-système ou deploiement
+\end{itemize}
+Si on inclue le deploiment dans le processus d'integration, il ne s'agit plus seulement de l'Intégration Continue, mais aussi du \textbf{Déploiment et de la Livraison Continue} (Continous Deployment, Continuous Delivery). 
+\\\\
+\textbf{Information en retour}\\
+Après finir ce processus d'intégration les résultats des étappes est affiché sur un interface d'utilisateur centrale, souvent une page web. Pour toutes les étappes il est possible de configurer si l'échec de l'étappe amene l'échec du processus complet. Si il y a des erreurs les developpeurs et les personnes responsable peuvent être informer par des emails. Quelques entreprises installe des écrans dans les bureaux qui affichent les dernières résultats en temps réele.\\\\
+Ces concepts seront discuter en détail pendant le prochain chapitre.
+\section{Concepts de l'Intégration Continue}
 
 \subsection{Construction continue}
 
@@ -28,11 +64,13 @@ Une autre personne qui a gravé la notion \textit{Intégration Continue} est Mar
 
 \subsection{Inspection continue}
 
+\subsection{Information en retour continue}
+
 \subsection{Déploiment continue}
 
 -> Continuous Delivery concept
 
-\subsection{Information en retour continue}
+
 
 \clearpage
 
@@ -40,12 +78,12 @@ Une autre personne qui a gravé la notion \textit{Intégration Continue} est Mar
 
 La raison principale pour utiliser l'IC est de garantir le succès et le déroulement d'un projet de développement de logiciel sans accroc. Dans tous les projets il y auras des problèmes et dans tous les logiciels il y auras des bogues. Mais l'IC aide à minimiser l'impact negatif que cettes erreurs ont.
 
-De plus l'IC fait possible d'automatiser des processus ennuyeux, répétitif et sensible aux défauts. Par ça on peut économiser du temps et de la monnaie et les développeur se peuvent concentrer sour ce qu'ils aiment faire. L'IC compléte parfaitement les methodes de gestion de projets agile.
+De plus l'IC fait possible d'automatiser des processus ennuyeux, répétitif et sensible aux défauts. Par ça on peut économiser du temps et de la monnaie et les développeur se peuvent concentrer sour ce qu'ils aiment faire.
 
 \subsection{Éviter des risques}
-En dessous vous trouvez quelques risques que l'IC aide à éviter, mais seulement si elle est appliquée correctement (\nameref{sec:meuilleurespratiques}).\footnote{\cite[p39]{duvallconint}} 
+En dessous vous trouvez quelques risques que l'IC aide à éviter, mais seulement si la méthodologie est appliquée correctement (\nameref{sec:meuilleurespratiques}).\footnote{\cite[p39]{duvallconint}} 
 \subsubsection{Logiciel pas déployable}
-Si on fait l'integration du système seulement à la fin du projét, la probabilité de ne pas être capable à déployer et dérouler le logiciel pour le client est très haute. Des énonces comme "Mais ça marche sur ma machine" sont très connues. Des raisons pour cela peuvent être des configurations manquantes ou differentes sur la machine cible, ou même des dépendances qui n'ont pas été inclus pour le deploiement. Naturellement si le code source ne compile pas, le logiciel ne peut non plus être déroulé.
+Si on fait l'integration d'un système seulement à la fin du projét, la probabilité de ne pas être capable à déployer et dérouler le logiciel pour le client est très haute. Des énonces comme "Mais ça marche sur ma machine" sont très connues. Des raisons pour cela peuvent être des configurations manquantes ou differentes sur la machine cible, ou même des dépendances qui n'ont pas été inclus pour le deploiement. Naturellement si le code source ne compile pas, le logiciel ne peut non plus être déroulé.
 
 En commettre, construire et deployer le logiciel souvent ce risque peut être diminuer. En faisant ça on a la certitude d'avoir au moins un logiciel qui marche partiellement.
 \subsubsection{Découverte tarde des erreurs}

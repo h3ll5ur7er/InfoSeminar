@@ -3,30 +3,31 @@
 \BOOKMARK [1][-]{section.1.1}{Mission}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.2}{Approche}{chapter.1}% 4
 \BOOKMARK [0][-]{chapter.2}{Int\351gration Continue}{}% 5
-\BOOKMARK [1][-]{section.2.1}{Aper\347u}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{Histoire}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.3}{Concepts}{chapter.2}% 8
-\BOOKMARK [2][-]{subsection.2.3.1}{Construction continue}{section.2.3}% 9
-\BOOKMARK [2][-]{subsection.2.3.2}{Int\351gration continue de base de donn\351e}{section.2.3}% 10
-\BOOKMARK [2][-]{subsection.2.3.3}{Test continue}{section.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.3.4}{Inspection continue}{section.2.3}% 12
-\BOOKMARK [2][-]{subsection.2.3.5}{D\351ploiment continue}{section.2.3}% 13
-\BOOKMARK [2][-]{subsection.2.3.6}{Information en retour continue}{section.2.3}% 14
-\BOOKMARK [1][-]{section.2.4}{Motivation et b\351n\351fices}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.4.1}{\311viter des risques}{section.2.4}% 16
-\BOOKMARK [1][-]{section.2.5}{Meuilleures pratiques}{chapter.2}% 17
-\BOOKMARK [0][-]{chapter.3}{\311valuation}{}% 18
-\BOOKMARK [1][-]{section.3.1}{Outils necessaire pour CI}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.2}{Logiciels de construction}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.2.1}{Ant}{section.3.2}% 21
-\BOOKMARK [2][-]{subsection.3.2.2}{Maven}{section.3.2}% 22
-\BOOKMARK [1][-]{section.3.3}{Serveur de l'int\351gration continue}{chapter.3}% 23
-\BOOKMARK [2][-]{subsection.3.3.1}{Jenkins}{section.3.3}% 24
-\BOOKMARK [2][-]{subsection.3.3.2}{TeamCity}{section.3.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.3}{Bamboo}{section.3.3}% 26
-\BOOKMARK [2][-]{subsection.3.3.4}{Hudson}{section.3.3}% 27
-\BOOKMARK [1][-]{section.3.4}{Autre outils}{chapter.3}% 28
-\BOOKMARK [0][-]{chapter.4}{Conclusion}{}% 29
-\BOOKMARK [1][-]{section.4.1}{Bilan}{chapter.4}% 30
-\BOOKMARK [0][-]{section*.7}{Bibliographie}{}% 31
-\BOOKMARK [0][-]{section*.9}{Table des figures}{}% 32
+\BOOKMARK [1][-]{section.2.1}{Histoire}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{Aper\347u}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.1}{Archit\351cture exemplaire}{section.2.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Concepts de l'Int\351gration Continue}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.3.1}{Construction continue}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.2}{Int\351gration continue de base de donn\351e}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.3}{Test continue}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.4}{Inspection continue}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.5}{Information en retour continue}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.6}{D\351ploiment continue}{section.2.3}% 15
+\BOOKMARK [1][-]{section.2.4}{Motivation et b\351n\351fices}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.4.1}{\311viter des risques}{section.2.4}% 17
+\BOOKMARK [1][-]{section.2.5}{Meuilleures pratiques}{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{\311valuation}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Outils necessaire pour CI}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{Logiciels de construction}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.2.1}{Ant}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.2}{Maven}{section.3.2}% 23
+\BOOKMARK [1][-]{section.3.3}{Serveur de l'int\351gration continue}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{Jenkins}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.2}{TeamCity}{section.3.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.3}{Bamboo}{section.3.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.4}{Hudson}{section.3.3}% 28
+\BOOKMARK [1][-]{section.3.4}{Autre outils}{chapter.3}% 29
+\BOOKMARK [0][-]{chapter.4}{Conclusion}{}% 30
+\BOOKMARK [1][-]{section.4.1}{Bilan}{chapter.4}% 31
+\BOOKMARK [0][-]{section*.9}{Bibliographie}{}% 32
+\BOOKMARK [0][-]{section*.11}{Table des figures}{}% 33
