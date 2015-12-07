@@ -58,16 +58,59 @@ Ces concepts seront discuter en détail pendant le prochain chapitre.
 
 \subsection{Construction continue}
 
-\subsection{Intégration continue de base de donnée}
+Ema
+
+\subsection{Intégration continue de base de données}
+
+Le plus part de logiciel utilisent une méthode pour persister des données, beaucoup de fois des bases de données. Le code source pour générer cette base de données doit être traiter comme tous le reste du code d'un projet. C'est necessaire qu'il soit aussi commit sur le dépot centrale et qu'on teste et fait des inspections là dessus.
+
+\subsubsection{Automatisation de l'intégration}
+Si le code de la base de données est aussi mis sur le dépot centrale, le processus de l'intégration de base de données peut être automatisé. Ce processus peut devenir assez complexe avec different environnements. Les serveurs, les noms d'utilisateur, les mots de passe ou bien les données de test ou de système peuvent differer pour chaque environnement.
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=1]{bilder/database_integration}
+	\caption{Processus de l'intégration de base de données}
+	\label{fig:processus}
+\end{figure}
+
+C'est pour ca qu'une automatisation de ce processus est indispensable. Une automation est réalisé en insérant une section dans le script de construction uniquement pour les operations de l'intégration de base de données. L'interval et l'étendue de l'éxécution de ce processus sont pas les mêmes pour tous les projets. Pour quelques projets ca pourrait être trop lourds de recrée la base de données à chaque changement sur le dépot centrale. Avec l'outil de construction Maven et le plug-in "sql-maven-plugin" il est possible de definir quelle base de données est visé et quelles commandes sont exécuté. Voici une partie d'un tel script.\footnote{Pour l'éxample complète \cite{mvnsql}}
+
+\lstinputlisting[language=XML]{./anhang/db_mvn_sql.xml}
+
+\subsubsection{Instance de base de donnée locale}
+
+Pour que cette approche fonctionne tous les développeurs doivent avoir l'autorisation de changer la base de données. Pour éviter des conflits pendant le développement tous les développeurs ont besoin d'une instance de cette base de données sur ses machines locales. Si on travaille avec une instance centrale à chaque changement il y a le danger de casser le code que quelqu'un d'autre est en train de développer.
 
 \subsection{Test continue}
 
+Ema
+
 \subsection{Inspection continue}
+
+La difference entre les testes et les inspections est que les inspections analyse la forme et la structure du code source et pas la fonctionnalité. Ces inspections sont introduit dans le processus de construction par differents plug-in. Les inspections ne remplacent pas les code review manuelles, mais dans ces reviews il y aura moins de défauts banale à traiter. Les objectifs des inspections sont là dessous.
+
+\begin{enumerate}
+
+\item \textit{Réduire la complexité du code source} \\ La complexité du code source peut être mesurée par la métrique "Cyclomatic Complexity Number (CCN)", qui compte le nombre de chemins distincts dans une méthode. Comme ça les endroits qui nécessite un changement peuvent être identifié (Maven Plugin JavaNCSS, PMD). $http://www.mojohaus.org/javancss-maven-plugin/$
+
+\item \textit{Determiner la dépendance} \\ Les métriques de couplage (Afferent/Efferent Coupling) et l'instabilité d'un package de logiciel peuvent être des indications à comme important on package est. Les packages qui sont utilisé très souvent il vaut mieux les tester très exactement (JDepend).
+
+\item \textit{Imposer les standards de l'entreprise}\\ Dans chaque entreprise il y a des régles comment il faut écrire le code. Des examples très fréquemment sont que les variables n'ose pas avoir des noms trop courts et non-descriptive ou que les déclarations conditionel doivent toujours être écrit avec des parenthèses (PMD).
+\item \textit{Reduire le code copié} \\ Le code source copié doit être avouer. Il y a des outils qui identifie des sections de code identique (PMD-CMD).
+
+\item \textit{Determiner la couverture de code} \\ La couverture de code par les testes est une métrique qui aide à determiner quelles partie du code ont été negliger pendant écrire les testes (Cobertura).
+
+\end{enumerate}
+
+Picture of interface with results or smth
 
 \subsection{Information en retour continue}
 
+Ema
+
 \subsection{Déploiment continue}
 
+Ema
 -> Continuous Delivery concept
 
 
@@ -128,7 +171,7 @@ Si quelque chose ne marche pas la reparation doit avoir la première priorité.
 \item\textbf{Tous les testes doivent réussir (All tests and inspections must pass)}\\
 Si on ignore des testes qui ne réuissent pas on diminue la visibilité du projét.
 
-\item\textbf{Des constructions vite(Keep builds fast)}\\
+\item\textbf{Des constructions vite (Keep builds fast)}\\
 
 \end{enumerate}
 

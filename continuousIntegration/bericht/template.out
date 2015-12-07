@@ -8,7 +8,7 @@
 \BOOKMARK [2][-]{subsection.2.2.1}{Archit\351cture exemplaire}{section.2.2}% 8
 \BOOKMARK [1][-]{section.2.3}{Concepts de l'Int\351gration Continue}{chapter.2}% 9
 \BOOKMARK [2][-]{subsection.2.3.1}{Construction continue}{section.2.3}% 10
-\BOOKMARK [2][-]{subsection.2.3.2}{Int\351gration continue de base de donn\351e}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{Int\351gration continue de base de donn\351es}{section.2.3}% 11
 \BOOKMARK [2][-]{subsection.2.3.3}{Test continue}{section.2.3}% 12
 \BOOKMARK [2][-]{subsection.2.3.4}{Inspection continue}{section.2.3}% 13
 \BOOKMARK [2][-]{subsection.2.3.5}{Information en retour continue}{section.2.3}% 14
@@ -22,12 +22,12 @@
 \BOOKMARK [2][-]{subsection.3.2.1}{Ant}{section.3.2}% 22
 \BOOKMARK [2][-]{subsection.3.2.2}{Maven}{section.3.2}% 23
 \BOOKMARK [1][-]{section.3.3}{Serveur de l'int\351gration continue}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.3.1}{Jenkins}{section.3.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.2}{TeamCity}{section.3.3}% 26
-\BOOKMARK [2][-]{subsection.3.3.3}{Bamboo}{section.3.3}% 27
-\BOOKMARK [2][-]{subsection.3.3.4}{Hudson}{section.3.3}% 28
-\BOOKMARK [1][-]{section.3.4}{Autre outils}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.3.1}{Apercu de l'\351valuation}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.2}{Jenkins}{section.3.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.3}{TeamCity}{section.3.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.4}{Travis CI}{section.3.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.5}{Team Foundation Server}{section.3.3}% 29
 \BOOKMARK [0][-]{chapter.4}{Conclusion}{}% 30
 \BOOKMARK [1][-]{section.4.1}{Bilan}{chapter.4}% 31
-\BOOKMARK [0][-]{section*.9}{Bibliographie}{}% 32
-\BOOKMARK [0][-]{section*.11}{Table des figures}{}% 33
+\BOOKMARK [0][-]{section*.13}{Bibliographie}{}% 32
+\BOOKMARK [0][-]{section*.15}{Table des figures}{}% 33
