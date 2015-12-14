@@ -17,17 +17,16 @@
 \BOOKMARK [2][-]{subsection.2.4.1}{\311viter des risques}{section.2.4}% 17
 \BOOKMARK [1][-]{section.2.5}{Meuilleures pratiques}{chapter.2}% 18
 \BOOKMARK [0][-]{chapter.3}{\311valuation}{}% 19
-\BOOKMARK [1][-]{section.3.1}{Outils necessaire pour CI}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.2}{Logiciels de construction}{chapter.3}% 21
-\BOOKMARK [2][-]{subsection.3.2.1}{Ant}{section.3.2}% 22
-\BOOKMARK [2][-]{subsection.3.2.2}{Maven}{section.3.2}% 23
-\BOOKMARK [1][-]{section.3.3}{Serveur de l'int\351gration continue}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.3.1}{Apercu de l'\351valuation}{section.3.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.2}{Jenkins}{section.3.3}% 26
-\BOOKMARK [2][-]{subsection.3.3.3}{TeamCity}{section.3.3}% 27
-\BOOKMARK [2][-]{subsection.3.3.4}{Travis CI}{section.3.3}% 28
-\BOOKMARK [2][-]{subsection.3.3.5}{Team Foundation Server}{section.3.3}% 29
-\BOOKMARK [0][-]{chapter.4}{Conclusion}{}% 30
-\BOOKMARK [1][-]{section.4.1}{Bilan}{chapter.4}% 31
-\BOOKMARK [0][-]{section*.13}{Bibliographie}{}% 32
-\BOOKMARK [0][-]{section*.15}{Table des figures}{}% 33
+\BOOKMARK [1][-]{section.3.1}{Logiciels de construction}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.1.1}{Ant}{section.3.1}% 21
+\BOOKMARK [2][-]{subsection.3.1.2}{Maven}{section.3.1}% 22
+\BOOKMARK [1][-]{section.3.2}{Serveur de l'int\351gration continue}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{Apercu de l'\351valuation}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{Jenkins}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.3}{TeamCity}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.4}{Travis CI}{section.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.2.5}{Team Foundation Server}{section.3.2}% 28
+\BOOKMARK [0][-]{chapter.4}{Conclusion}{}% 29
+\BOOKMARK [1][-]{section.4.1}{Bilan}{chapter.4}% 30
+\BOOKMARK [0][-]{section*.13}{Bibliographie}{}% 31
+\BOOKMARK [0][-]{section*.15}{Table des figures}{}% 32

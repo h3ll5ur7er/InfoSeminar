@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  7 DEC 2015 17:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  14 DEC 2015 17:10
 entering extended mode
 **template.tex
 (template.tex
@@ -757,6 +757,21 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count112
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip65
@@ -875,6 +890,20 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 142.
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen150
+\extrarowheight=\dimen151
+\NC@list=\toks32
+\extratabsurround=\skip71
+\backup@length=\skip72
+)
+\everycr=\toks33
+\minrowclearance=\skip73
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -892,8 +921,7 @@ Package ifluatex Info: LuaTeX not detected.
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -922,16 +950,13 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen150
+\@linkdim=\dimen152
 \Hy@linkcounter=\count125
 \Hy@pagecounter=\count126
 
@@ -965,10 +990,10 @@ Package hyperref Info: Bookmarks ON on input line 4688.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen151
+\XeTeXLinkMargin=\dimen153
 \Fld@menulength=\count129
-\Field@Width=\dimen152
-\Fld@charsize=\dimen153
+\Field@Width=\dimen154
+\Fld@charsize=\dimen155
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -995,22 +1020,22 @@ Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip71
+\Hy@SectionHShift=\skip74
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count135
 \Gm@cntv=\count136
 \c@Gm@tempcnt=\count137
-\Gm@bindingoffset=\dimen154
-\Gm@wd@mp=\dimen155
-\Gm@odd@mp=\dimen156
-\Gm@even@mp=\dimen157
-\Gm@layoutwidth=\dimen158
-\Gm@layoutheight=\dimen159
-\Gm@layouthoffset=\dimen160
-\Gm@layoutvoffset=\dimen161
-\Gm@dimlist=\toks32
+\Gm@bindingoffset=\dimen156
+\Gm@wd@mp=\dimen157
+\Gm@odd@mp=\dimen158
+\Gm@even@mp=\dimen159
+\Gm@layoutwidth=\dimen160
+\Gm@layoutheight=\dimen161
+\Gm@layouthoffset=\dimen162
+\Gm@layoutvoffset=\dimen163
+\Gm@dimlist=\toks34
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 (template.aux (vorspann/titelseite_mit_bild.aux) (vorspann/abstract.aux)
@@ -1022,55 +1047,55 @@ LaTeX Warning: Label `fig:processus' multiply defined.
 LaTeX Warning: Label `fig:processus' multiply defined.
 
 ) (kapitel/evaluation.aux) (kapitel/schlussfolgerungen.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 137.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 147.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Try loading font information for T1+aess on input line 137.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
+LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 147.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ae\t1aess.fd"
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
-LaTeX Info: Redefining \degres on input line 137.
-LaTeX Info: Redefining \dots on input line 137.
+LaTeX Info: Redefining \degres on input line 147.
+LaTeX Info: Redefining \dots on input line 147.
 
 
 Package frenchb.ldf Warning: Please load the "natbib" package
-(frenchb.ldf)                BEFORE babel/frenchb; reported on input line 137.
+(frenchb.ldf)                BEFORE babel/frenchb; reported on input line 147.
 
-LaTeX Info: Redefining \up on input line 137.
+LaTeX Info: Redefining \up on input line 147.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count138
-\scratchdimen=\dimen162
+\scratchdimen=\dimen164
 \scratchbox=\box35
 \nofMPsegments=\count139
 \nofMParguments=\count140
-\everyMPshowfont=\toks33
+\everyMPshowfont=\toks35
 \MPscratchCnt=\count141
-\MPscratchDim=\dimen163
+\MPscratchDim=\dimen165
 \MPnumerator=\count142
 \makeMPintoPDFobject=\count143
-\everyMPtoPDFconversion=\toks34
+\everyMPtoPDFconversion=\toks36
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
@@ -1079,7 +1104,7 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count144
  ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box36
-Package hyperref Info: Link coloring ON on input line 137.
+Package hyperref Info: Link coloring ON on input line 147.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1089,9 +1114,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count145
 )
-LaTeX Info: Redefining \ref on input line 137.
-LaTeX Info: Redefining \pageref on input line 137.
-LaTeX Info: Redefining \nameref on input line 137.
+LaTeX Info: Redefining \ref on input line 147.
+LaTeX Info: Redefining \pageref on input line 147.
+LaTeX Info: Redefining \nameref on input line 147.
 
 (template.out) (template.out)
 \@outlinefile=\write3
@@ -1133,11 +1158,11 @@ LaTeX Info: Redefining \nameref on input line 137.
 (vorspann/titel.tex) (vorspann/version.tex)
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 162.
+less on input line 172.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 162.
+less on input line 172.
 
 (vorspann/titelseite_mit_bild.tex
 
@@ -1148,33 +1173,33 @@ less on input line 8.
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
 less on input line 8.
 
-<bilder/BFH_Logo_B.png, id=135, 35.4123pt x 53.9616pt>
+<bilder/BFH_Logo_B.png, id=131, 35.4123pt x 53.9616pt>
 File: bilder/BFH_Logo_B.png Graphic file (type png)
 
 <use bilder/BFH_Logo_B.png>
 Package pdftex.def Info: bilder/BFH_Logo_B.png used on input line 16.
 (pdftex.def)             Requested size: 35.41219pt x 53.96146pt.
 
-<bilder/platzhalter.jpg, id=137, 426.84468pt x 241.65282pt>
-File: bilder/platzhalter.jpg Graphic file (type jpg)
+<bilder/CI_titleImage.png, id=133, 677.53125pt x 376.40625pt>
+File: bilder/CI_titleImage.png Graphic file (type png)
 
-<use bilder/platzhalter.jpg>
-Package pdftex.def Info: bilder/platzhalter.jpg used on input line 26.
-(pdftex.def)             Requested size: 426.84364pt x 241.65222pt.
+<use bilder/CI_titleImage.png>
+Package pdftex.def Info: bilder/CI_titleImage.png used on input line 26.
+(pdftex.def)             Requested size: 406.52188pt x 225.84547pt.
  [1{E:/Users/david/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 
 
- <./bilder/BFH_Logo_B.png> <./bilder/platzhalter.jpg>])
+ <./bilder/BFH_Logo_B.png> <./bilder/CI_titleImage.png>])
 (vorspann/abstract.tex)
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 172.
+less on input line 182.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 172.
+less on input line 182.
 
 [2
 
@@ -1202,11 +1227,11 @@ LaTeX Font Info:    External font `cmex7' loaded for size
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 185.
+less on input line 195.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 185.
+less on input line 195.
 
 [1
 
@@ -1231,11 +1256,11 @@ Class scrreprt Warning: \float@addtolists detected!
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 185.
+less on input line 195.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 185.
+less on input line 195.
 
 [2
 
@@ -1256,7 +1281,7 @@ less on input line 15.
 
 
 
-] <bilder/agile_methodology.jpg, id=222, 1606.0pt x 1206.5075pt>
+] <bilder/agile_methodology.jpg, id=217, 1606.0pt x 1206.5075pt>
 File: bilder/agile_methodology.jpg Graphic file (type jpg)
 
 <use bilder/agile_methodology.jpg>
@@ -1280,7 +1305,7 @@ Overfull \hbox (4.18782pt too wide) in paragraph at lines 26--29
  []
 
 [4 <./bilder/agile_methodology.jpg>]
-<bilder/architecture_exemplaire.png, id=229, 485.14583pt x 396.14667pt>
+<bilder/architecture_exemplaire.png, id=224, 485.14583pt x 396.14667pt>
 File: bilder/architecture_exemplaire.png Graphic file (type png)
 
 <use bilder/architecture_exemplaire.png>
@@ -1308,7 +1333,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--57
  []
 
 [5 <./bilder/architecture_exemplaire.png>]
-<bilder/database_integration.png, id=237, 465.07083pt x 40.48459pt>
+<bilder/database_integration.png, id=232, 465.07083pt x 40.48459pt>
 File: bilder/database_integration.png Graphic file (type png)
 
 <use bilder/database_integration.png>
@@ -1333,31 +1358,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
 ] (kapitel/evaluation.tex
 chapter 3.
-)
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 187.
+less on input line 37.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 187.
+less on input line 37.
 
 [10
 
 
+
+] [11
+
+]) [12
 
 ] (kapitel/schlussfolgerungen.tex
 chapter 4.
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 188.
+less on input line 198.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 188.
+less on input line 198.
 
-[11
+[13
 
 
 
@@ -1374,38 +1402,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--27
 )
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 220.
+less on input line 230.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 220.
+less on input line 230.
 
-[12
+[14
 
 
 ] (template.lof)
 \tf@lof=\write5
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 233.
+less on input line 243.
 
 
 Package Fancyhdr Warning: \fancyfoot's `E' option without twoside option is use
-less on input line 233.
+less on input line 243.
 
-[13
+[15
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
  (template.aux (vorspann/titelseite_mit_bild.aux) (vorspann/abstract.aux)
 (kapitel/einleitung.aux) (kapitel/integrationContinue.aux)
 (kapitel/evaluation.aux) (kapitel/schlussfolgerungen.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
 Package rerunfilecheck Info: File `template.out' has not changed.
-(rerunfilecheck)             Checksum: 8E790963DFE96BC610DB92727B8665D0;2189.
+(rerunfilecheck)             Checksum: 4D7BE89FFF775915BD19689B771B1826;2116.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1415,10 +1443,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14299 strings out of 493673
- 213273 string characters out of 3141530
- 386180 words of memory out of 3000000
- 17216 multiletter control sequences out of 15000+200000
+ 14458 strings out of 493673
+ 215765 string characters out of 3141530
+ 389007 words of memory out of 3000000
+ 17353 multiletter control sequences out of 15000+200000
  35649 words of font info for 80 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  43i,11n,66p,841b,1128s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1435,9 +1463,9 @@ blic/amsfonts/cm/cmssbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmssi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmtt10.pfb>
-Output written on template.pdf (15 pages, 598469 bytes).
+Output written on template.pdf (17 pages, 730163 bytes).
 PDF statistics:
- 432 PDF objects out of 1000 (max. 8388607)
- 112 named destinations out of 1000 (max. 500000)
- 290 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 449 PDF objects out of 1000 (max. 8388607)
+ 118 named destinations out of 1000 (max. 500000)
+ 282 words of extra memory for PDF output out of 10000 (max. 10000000)
 

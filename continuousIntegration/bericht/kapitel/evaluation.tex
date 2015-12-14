@@ -1,13 +1,6 @@
 \chapter{Évaluation}
 \label{eval}
 
-\section{Outils necessaire pour CI}
-
-Logiciel de construction
-Source Control
-CI Server
-Plugins for CI Server
-
 \section{Logiciels de construction}
 
 \subsection{Ant}
@@ -16,31 +9,66 @@ Plugins for CI Server
 
 \section{Serveur de l'intégration continue}
 
-Les critères de l'évaluation
+En dessous vous trouvez les critères avec une bref déscription qui seront utilisé pour evaluer les quatres serveurs de l'intégration continue. \footnote{\cite{ibmciserver}}
 
 \begin{enumerate}
+\item Caractéristiques du produit \\
+Les charactéristiques du produit sont l'aspect le plus important quand on choisit un serveur d'IC. On doit savoir les éxigences qu'une entreprise a et de ce point de vue selectionner un logiciel. Quelques aspects important sont:
+\begin{itemize}
+\item Intégration avec les outils de gestion des versions
+\item Intégration avec l'outil de construction
+\item Information en retour
+\item Labeling
+\item Extensibilité
+\end{itemize}
+\item Fiabilité et longévité
+\item Environnement cible
+\item Infrastructure
+\item Taille de la communauté
+\begin{itemize}
 \item Nombre d'utilisateurs
 \item Nombre de plug-ins
-\item Nombre de langages supporté
+\end{itemize}
+\item Facilité d'utilisation
 \item Complexité de l'installation
-\item Integration avec d'autre outils de développement 
-\item Couts , modèle de licence (Open Source)
+\item Couts
+\item Type de logiciel
 \end{enumerate}
-
+\newpage
+\begin{landscape}
 \subsection{Apercu de l'évaluation}
-
 \begin{table}[H]
 	\centering
-		\begin{tabular}{lll} \toprule
-			\textbf{Product} & \textbf{Nombre d'utilisateurs} & \textbf{Nombre de plugin} \\ \midrule
-			Jenkins & alfred.kaufmann@bfh.ch & Auftraggeber, Projektleitung, Ergänzungen \\ \midrule
-			TeamCity & in Pension & Tipps zur Struktur und Layout \\ \midrule
-			Travis CI & in Pension & Tipps zur Struktur und Layout \\ \midrule
-			TFS & ausgetreten & Erstellung der Vorlage \\ \bottomrule
+		\begin{tabular}{lp{4cm}p{4cm}p{4cm}p{4cm}} \toprule
+			\textbf{Critères} & \href{https://jenkins-ci.org}{\textbf{Jenkins}} & \href{https://www.jetbrains.com/teamcity/}{\textbf{TeamCity}} & \href{https://travis-ci.org}{\textbf{Travis CI}} & \href{https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx}{\textbf{Team Foundation Server}} \\ \midrule
+			\rowcolor{GrayRow}\textbf{Caractéristique du produit} &  &  &  &  \\ \midrule[0.16em]
+			Outils de gestion des versions & & & & \\ \midrule
+			Outils de construction & & & & \\ \midrule
+			Information en retour & & & & \\ \midrule
+			Labeling & & & & \\ \midrule
+			Extensibilité & & & & \\ \midrule
+			\rowcolor{GrayRow}\textbf{Générale} &  &  &  &  \\ \midrule[0.16em]
+			Fiabilité et longévité & many & many & many & many \\ \midrule
+			Environnement cible & many & many & many & many \\ \midrule
+			Infrastructure & On-premises & On-premises & On-premises/cloud & On-premises/cloud \\ \midrule
+			Couts & gratuit & Freemium* & Freemium* & Freemium \\ \midrule
+			Type de logiciel & Open Source & Propriétaire & Open Source & Propriétaire \\ \midrule
+			\rowcolor{GrayRow}\textbf{Taille de la communauté} & & & & \\ \midrule[0.16em]
+			Nombre d'utilisateurs & many & many & many & many \\ \midrule
+			Nombre de plugins & many & many & many & many \\ \midrule
+			\rowcolor{GrayRow}\textbf{L'utilisation} &  &  &  &  \\ \midrule[0.16em]
+			Facilité d'utilisation & many & many & many & many \\ \midrule
+			Complexité de l'installation & many & many & many & many \\
+			\bottomrule[0.16em]
 		\end{tabular}
 	\caption{Serveurs de l'IC}
 	\label{tab:serveurs_eval}
 \end{table}
+Freemium = C'est gratuit pour la version base, mais ca coute pour les grandes entreprises.\\
+* free for open source projects
+
+\end{landscape}
+\newpage
 
 \subsection{Jenkins}
 

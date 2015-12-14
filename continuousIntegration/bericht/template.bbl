@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -24,6 +24,11 @@ M.~Fowler.
 \newblock Continuous integration, 2006.
 \newblock URL
   \url{http://www.martinfowler.com/articles/continuousIntegration.html}.
+
+\bibitem[IBM(2006)]{ibmciserver}
+IBM.
+\newblock Selection of ci server, 2006.
+\newblock URL \url{http://www.ibm.com/developerworks/library/j-ap09056/}.
 
 \bibitem[Roberts(2015)]{robertshistory}
 M.~Roberts.

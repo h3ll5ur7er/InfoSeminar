@@ -40,6 +40,7 @@
 \usepackage{tocvsec2}													% provides means of controlling the sectional numbering
 \usepackage{listings}
 \usepackage{natbib}   % omit 'round' option if you prefer square brackets
+\usepackage{pdflscape}
 \bibliographystyle{abbrvnat}
 \setcitestyle{authoryear,open={(},close={)}}
 %---------------------------------------------------------------------------
@@ -56,6 +57,13 @@
 % Custom commands
 %---------------------------------------------------------------------------
 %\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+
+%\makeatletter
+%\newcommand{\thickhline}{%
+%    \noalign {\ifnum 0=`}\fi \hrule height 2pt
+%    \futurelet \reserved@a \@xhline
+%}
+%\makeatother
 
 %\newcommand{\CS}{C\nolinebreak\hspace{-.05em}\raisebox{.6ex}{\scriptsize\bf \#}}
 %---------------------------------------------------------------------------
@@ -75,6 +83,8 @@
 \definecolor{bfhgrey}{rgb}{0.41,0.49,0.57}      % BFH grey
 %\definecolor{linkcolor}{rgb}{0,0,0.8}     			% Blue for the web- and cd-version!
 \definecolor{linkcolor}{rgb}{0,0,0}        			% Black for the print-version!
+\definecolor{GrayRow}{gray}{0.9}
+\usepackage{colortbl}
 %---------------------------------------------------------------------------
 
 % Hyperref Package (Create links in a pdf)
