@@ -16,6 +16,7 @@ Le premier livre publié sur la matière était "Continous Integration"\footnote
 
 \section{Aperçu}
 Pour pouvoir comprendre le concept de base de l'Intégration Continue il est necessaire de connaitre le processus de development logiciel ordinaire. L'Intégration Continue n'éxige pas de méthode de gestion de projets specifique mais est souvent utilisé avec des approches agiles, car elle les complètent parfaitement. Voici un diagram d'un processus pareil. \footnote{Source http://www.techtipsnapps.com/2015/04/most-successful-software-development.html}
+
 \begin{figure}[H]
 	\centering
 		\includegraphics[scale=0.25]{bilder/agile_methodology}
@@ -87,22 +88,22 @@ Ema
 
 \subsection{Inspection continue}
 
-La difference entre les testes et les inspections est que les inspections analyse la forme et la structure du code source et pas la fonctionnalité. Ces inspections sont introduit dans le processus de construction par differents plug-in. Les inspections ne remplacent pas les code review manuelles, mais dans ces reviews il y aura moins de défauts banale à traiter. Les objectifs des inspections sont là dessous.
+La difference entre les testes et les inspections est que les inspections analyse la forme et la structure du code source et pas la fonctionnalité. Ces inspections sont introduit dans le processus de construction par differents plug-in. Les inspections ne remplacent pas les code review manuelles, mais dans ces reviews il y aura moins de défauts banale à traiter. Les objectifs des inspections sont engrèné là dessous.
 
 \begin{enumerate}
 
-\item \textit{Réduire la complexité du code source} \\ La complexité du code source peut être mesurée par la métrique "Cyclomatic Complexity Number (CCN)", qui compte le nombre de chemins distincts dans une méthode. Comme ça les endroits qui nécessite un changement peuvent être identifié (Maven Plugin JavaNCSS, PMD). $http://www.mojohaus.org/javancss-maven-plugin/$
+\item \textit{Réduire la complexité du code source} \\ La complexité du code source peut être mesurée par la métrique "Cyclomatic Complexity Number (CCN)", qui compte le nombre de chemins distincts dans une méthode. Comme ça les endroits qui nécessite un changement peuvent être identifié (JavaNCSS, PMD \footnote{\citep{pluginpmd}}).
 
-\item \textit{Determiner la dépendance} \\ Les métriques de couplage (Afferent/Efferent Coupling) et l'instabilité d'un package de logiciel peuvent être des indications à comme important on package est. Les packages qui sont utilisé très souvent il vaut mieux les tester très exactement (JDepend).
+\item \textit{Determiner la dépendance} \\ Les métriques de couplage (Afferent/Efferent Coupling) et l'instabilité d'un package de logiciel peuvent être des indications à comme important on package est. Les packages qui sont utilisé très souvent il vaut mieux les tester très exactement (JDepend\footnote{\citep{pluginjdepend}}).
 
 \item \textit{Imposer les standards de l'entreprise}\\ Dans chaque entreprise il y a des régles comment il faut écrire le code. Des examples très fréquemment sont que les variables n'ose pas avoir des noms trop courts et non-descriptive ou que les déclarations conditionel doivent toujours être écrit avec des parenthèses (PMD).
-\item \textit{Reduire le code copié} \\ Le code source copié doit être avouer. Il y a des outils qui identifie des sections de code identique (PMD-CMD).
+\item \textit{Reduire le code copié} \\ Le code source copié doit être avouer. Il y a des outils qui identifie des sections de code identique (PMD).
 
-\item \textit{Determiner la couverture de code} \\ La couverture de code par les testes est une métrique qui aide à determiner quelles partie du code ont été negliger pendant écrire les testes (Cobertura).
+\item \textit{Determiner la couverture de code} \\ La couverture de code par les testes est une métrique qui aide à determiner quelles partie du code ont été negliger pendant écrire les testes (Cobertura\footnote{\citep{plugincobertura}}).
 
 \end{enumerate}
 
-Picture of interface with results or smth
+TODO: Picture of interface with results or smth
 
 \subsection{Information en retour continue}
 
