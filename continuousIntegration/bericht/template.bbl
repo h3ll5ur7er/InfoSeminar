@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{15}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -72,6 +72,16 @@ TFS.
 \newblock Tfs version control, 2015.
 \newblock URL
   \url{https://msdn.microsoft.com/en-us/Library/vs/alm/code/overview}.
+
+\bibitem[TravisCI(2015{\natexlab{a}})]{traviscidocs}
+TravisCI.
+\newblock Traviscidocs, 2015{\natexlab{a}}.
+\newblock URL \url{https://docs.travis-ci.com/user/getting-started}.
+
+\bibitem[TravisCI(2015{\natexlab{b}})]{traviscinotification}
+TravisCI.
+\newblock Travis ci notification, 2015{\natexlab{b}}.
+\newblock URL \url{https://docs.travis-ci.com/user/notifications/}.
 
 \bibitem[various(2015)]{wikici}
 various.

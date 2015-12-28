@@ -33,15 +33,19 @@
 \contentsline {subsection}{\numberline {3.2.1}Definition des crit\IeC {\`e}res}{10}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Apercu des resultats}{11}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Jenkins}{12}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}TeamCity}{12}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Travis CI}{13}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.4}TeamCity}{13}{subsection.3.2.4}
 \contentsline {paragraph}{\nonumberline Characteristique du produit}{13}{section*.14}
 \contentsline {paragraph}{\nonumberline G\IeC {\'e}n\IeC {\'e}rale}{13}{section*.15}
 \contentsline {paragraph}{\nonumberline Taille de la communaut\IeC {\'e}}{13}{section*.16}
 \contentsline {paragraph}{\nonumberline Utilisation}{13}{section*.17}
-\contentsline {subsection}{\numberline {3.2.6}Team Foundation Server}{14}{subsection.3.2.6}
-\contentsline {chapter}{\numberline {4}Conclusion}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}Bilan}{15}{section.4.1}
-\contentsline {chapter}{Bibliographie}{16}{section*.19}
-\contentsline {chapter}{Table des figures}{16}{section*.21}
+\contentsline {subsection}{\numberline {3.2.5}Travis CI}{14}{subsection.3.2.5}
+\contentsline {paragraph}{\nonumberline Characteristique du produit}{14}{section*.20}
+\contentsline {paragraph}{\nonumberline G\IeC {\'e}n\IeC {\'e}rale}{14}{section*.21}
+\contentsline {paragraph}{\nonumberline Taille de la communaut\IeC {\'e}}{14}{section*.22}
+\contentsline {paragraph}{\nonumberline Utilisation}{14}{section*.23}
+\contentsline {subsection}{\numberline {3.2.6}Team Foundation Server}{15}{subsection.3.2.6}
+\contentsline {chapter}{\numberline {4}Conclusion}{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}Bilan}{16}{section.4.1}
+\contentsline {chapter}{Bibliographie}{17}{section*.25}
+\contentsline {chapter}{Table des figures}{17}{section*.27}
 \save@tocdepth \setcounter {tocdepth}{1}

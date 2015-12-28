@@ -56,22 +56,22 @@ En dessous vous trouvez les critères avec une bref déscription qui seront util
 			\textbf{Critères} & \href{https://jenkins-ci.org}{\textbf{Jenkins}} & \href{https://www.jetbrains.com/teamcity/}{\textbf{TeamCity}} & \href{https://travis-ci.org}{\textbf{Travis CI}} & \href{https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx}{\textbf{Team Foundation Server}} \\ \midrule
 			\rowcolor{GrayRow}\textbf{Caractéristique du produit} &  &  &  &  \\ \midrule[0.16em]
 			Outils de gestion des versions & Subversion/CVS(+plugins) & Subversion/CVS(+plugins) & github/Git & Git/TFVC \\ \midrule
-			Outils de construction & & & + & \\ \midrule
-			Information en retour & & & + & \\ \midrule
-			Labeling & & & - & \\ \midrule
+			Outils de construction & & ++ (CLI) & + & \\ \midrule
+			Information en retour & & + & ++ & \\ \midrule
+			Labeling & & \checkmark & x & \\ \midrule
 			Extensibilité & ++ & + & - & -- \\ \midrule
 			\rowcolor{GrayRow}\textbf{Générale} &  &  &  &  \\ \midrule[0.16em]
-			Fiabilité et longévité & ++ & ++ & ++ & ++ \\ \midrule
+			Fiabilité et longévité & \checkmark & \checkmark & \checkmark & \checkmark \\ \midrule
 			Environnement cible & tous & tous & Linux & Microsoft Windows \\ \midrule
 			Infrastructure & On-premises & On-premises & On-premises/SaaS & On-premises/SaaS \\ \midrule
 			Couts & gratuit & Freemium* & Freemium* & Freemium \\ \midrule
 			Type de logiciel & Open Source (MIT) & Propriétaire & Open Source (MIT) & Propriétaire \\ \midrule
 			\rowcolor{GrayRow}\textbf{Taille de la communauté} & & & & \\ \midrule[0.16em]
-			Nombre d'utilisateurs & many & many & medium & many \\ \midrule
-			Nombre de plugins & ++ & + & - & - \\ \midrule
+			Nombre d'utilisateurs & many & 30'000 clients & 240'000 projets & many \\ \midrule
+			Nombre de plugins & ++ & + & x & - \\ \midrule
 			\rowcolor{GrayRow}\textbf{Utilisation} &  &  &  &  \\ \midrule[0.16em]
-			Facilité d'utilisation & many & many & facile & many \\ \midrule
-			Complexité de l'installation & many & many & facile & many \\
+			Facilité d'utilisation & many & + & ++ & many \\ \midrule
+			Complexité de l'installation & many & + & ++ & many \\
 			\bottomrule[0.16em]
 		\end{tabular}
 	\caption{Serveurs de l'IC}
@@ -85,9 +85,36 @@ Freemium = C'est gratuit pour la version base, mais ca coute pour des editions p
 \newpage
 
 \subsection{Jenkins}
-
+\clearpage
 \subsection{TeamCity}
-\newpage
+\begin{wrapfigure}{r}{0.2\textwidth}
+  \begin{center}
+    \includegraphics[width=0.18\textwidth]{bilder/teamcity512}
+  \end{center}
+  \caption{TeamCity Logo}
+\end{wrapfigure}
+\paragraph{Characteristique du produit} TeamCity est un serveur de l'intégration continue de JetBrains, les fabricants d'une grande nombre d'outil de developpment (comme IntelliJ). Il est optimisé pour construire des projets de Java ou .NET, mais supporte aussi Python, Ruby et beaucoup d'autre langage avec des plugins. De plus il existe l'option de travailler avec la ligne de commande. TeamCity est très adaptable et peut être individualiser extensivement. \\
+Tous les configurations et tous l'utilisation est effectué par l'interface web. Comme voies d'information en retour TeamCity supporte des émails, des messages Jabber ou directement dans l'IDE. De plus TeamCity supporte des "Build Tag" pour identifier des constructions. Si la functionalité de TeamCity ne suffice pas, il est facilement possible d'écrire un plugin.
+
+\paragraph{Générale} L'infrastructure pour soutenir TeamCity doit être mis en place par l'entreprise. Il existe trois options de licence de TeamCity.
+\begin{itemize}
+	\item TeamCity Professional (20 configurations et 3 agent de construction)
+	\item TeamCity Enterprise (3-100 agent packs)
+	\item TeamCity Additional Build Agent (+ 1 agent de construction)
+\end{itemize}
+La licence TeamCity Professional est gratuite mais limité. Pour les versions TeamCity Enterprise le nombre de projets est illimité, mais on peu incrementer le nombre d'agent de construction pour atteindre une meilleure pérformance quand il y a beaucoup de processus de construction en même temps. Pour des projéts Open Source TeamCity est gratuite, pour des jeunes pousses il y a des rabais.\footnote{\citep{teamcitybuy}}
+\paragraph{Taille de la communauté}
+JetBrains affirme que 30'000+ clients utilise TeamCity pour executer l'intégration continue (Boeing, HP...). Il y a une grande nombre de plugins disponible sur le page web de TeamCity.\footnote{\citep{teamcityplugins}}
+\paragraph{Utilisation}
+L'installation de TeamCity est assez facile. Il existe des archive des fichiers exprès pour des installations rapide. TeamCity est basé sur Java et utilise un serveur Tomcat. Pour l'installation rapide, tous ce qu'on devait faire est télécharger et extraire l'archive, et puis executer un script et completer la configuration intiale. Pour un système productive une installation un peu plus complexe est prévu.\\
+En utilisant TeamCity en premier on est confondu par la grande nombre d'options de configuration. Mais quand-même il était possible et pas très difficile de construire et mettre en rapport notre environment teste. TeamCity est très volumineux, mais bien structuré et agréable pour l'utilisateur. Le faite qu'on peut faire toute la configuration sur l'interface web est un grande plus.
+\begin{figure}[H]
+	\centering
+		\includegraphics[scale=0.35]{bilder/teamcityadmin}
+	\caption{TeamCity intérface d'administration}
+	\label{fig:travisgui}
+\end{figure}
+\clearpage
 \subsection{Travis CI}
 \begin{wrapfigure}{r}{0.4\textwidth}
   \begin{center}
@@ -97,7 +124,7 @@ Freemium = C'est gratuit pour la version base, mais ca coute pour des editions p
 \end{wrapfigure}
 \paragraph{Characteristique du produit}
 Travis CI est un serveur de l'intégration continue très facile à mettre en service et avec une intégration excellente avec \href{https://github.com/}{github.com}. Il supporte beaucoup de différent langage et outil de construction. La liste complète peuvent être trouver dans la documentation\footnote{\citep{traviscidocs}}. Mais il seulement supporte git comme outil de gestion des versions.\\
-De plus il offre multiple voies d'information en retour. Le plus facile est par email, mais il y a aussi la possibilité d'envoyer des messages par IRC, Slack, HipChat etc.\footnote{traviscinotification}. Chaque construction recoit un identificateur numerique, mais il n'est pas possible de le changer. Il y a une API pour accéder à Travis (SaaS), mais l'extensibilité semble limité.
+De plus il offre multiple voies d'information en retour. Le plus facile est par email, mais il y a aussi la possibilité d'envoyer des messages par IRC, Slack, HipChat etc.\footnote{\citep{traviscinotification}}. Chaque construction recoit un identificateur numerique, mais il n'est pas possible de le changer. Il y a une API pour accéder à Travis (SaaS), mais l'extensibilité semble limité.
 
 \paragraph{Générale}
 Il existe trois version de Travis CI.
@@ -106,10 +133,10 @@ Il existe trois version de Travis CI.
 	\item \href{https://travis-ci.com/}{Travis Pro}
 	\item \href{https://enterprise.travis-ci.com/}{Travis Enterprise}
 \end{itemize}
-Les deux première versions sont accessible comme SaaS. Une version est pour des projets Open Source qui est gratuite et l'autre est pour des projets avec un dépot de github privée qui coute. La troisième version est pour des entreprises qui veulent mettre l'infrastructure comme des serveurs à disposition eux-mêmes.
+Les deux première versions sont accessible comme SaaS. Une version est pour des projets Open Source qui est gratuite et l'autre est pour des projets avec un dépot de github privée qui coute. La troisième version est pour des entreprises qui veulent mettre l'infrastructure comme des serveurs à disposition eux-mêmes (Linux).
 
 \paragraph{Taille de la communauté}
-Travis CI affirme sur la page web qu'il y a 246506 projets Open Source qui sont testé et intégré sur leur platform. Sur la nombre d'utilisateurs des deux versions commercial il n'y a pas d'information.
+Travis CI affirme sur la page web qu'il y a 246'506 projets Open Source qui sont testé et intégré sur leur platform. Sur la nombre d'utilisateurs des deux versions commercial il n'y a pas d'information.
 
 \paragraph{Utilisation}
 L'utilisation de Travis CI est très pratiques est facile. Si on a déja un dépot sur github, il faut seulement trois pas pour lancer l'intégration continue avec Travis.
@@ -128,7 +155,7 @@ Après ça chaque fois qu'il y a un changement sur le dépot les testes et la co
 	\caption{Travis intérface d'administration et yml fichier}
 	\label{fig:travisgui}
 \end{figure}
-
+\clearpage
 \subsection{Team Foundation Server}
 
 
