@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  9 JAN 2016 16:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.28)  9 JAN 2016 17:33
 entering extended mode
 **template.tex
 (template.tex
@@ -1336,12 +1336,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--47
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--58
+Underfull \hbox (badness 10000) in paragraph at lines 53--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--58
+Underfull \hbox (badness 10000) in paragraph at lines 53--57
 
  []
 
@@ -1378,7 +1378,7 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 File: bilder/database_integration.png Graphic file (type png)
 
 <use bilder/database_integration.png>
-Package pdftex.def Info: bilder/database_integration.png used on input line 99.
+Package pdftex.def Info: bilder/database_integration.png used on input line 98.
 
 (pdftex.def)             Requested size: 465.06969pt x 40.48448pt.
 
@@ -1393,21 +1393,21 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 File: bilder/Coverage.png Graphic file (type png)
 
 <use bilder/Coverage.png>
-Package pdftex.def Info: bilder/Coverage.png used on input line 157.
+Package pdftex.def Info: bilder/Coverage.png used on input line 156.
 (pdftex.def)             Requested size: 426.79134pt x 170.48073pt.
  [10 <./bilder/Coverage.png>]
 <bilder/Continuous_Delivery.png, id=384, 1101.11375pt x 788.9475pt>
 File: bilder/Continuous_Delivery.png Graphic file (type png)
 
 <use bilder/Continuous_Delivery.png>
-Package pdftex.def Info: bilder/Continuous_Delivery.png used on input line 179.
+Package pdftex.def Info: bilder/Continuous_Delivery.png used on input line 178.
 
 (pdftex.def)             Requested size: 426.79134pt x 305.79826pt.
  [11 <./bilder/Continuous_Delivery.png>]
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
 
  []
 
@@ -1597,7 +1597,7 @@ iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on template.pdf (25 pages, 1946805 bytes).
+Output written on template.pdf (25 pages, 1946633 bytes).
 PDF statistics:
  726 PDF objects out of 1000 (max. 8388607)
  243 named destinations out of 1000 (max. 500000)

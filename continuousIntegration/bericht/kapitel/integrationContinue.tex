@@ -7,7 +7,7 @@ La notion \textit{Intégration Continue} était mentionné dans un livre de Grad
 La prochaine foi que l'intégration continue était sous les feux de l'actualité était avec la publication des concepts de \textit{Extreme Programming} en forme d'un livre en 1999.
 Là inclue est l'idée d'avoir une machine dédié à l'intégration du code et les pairs de développeurs réunissant, intégrant et testant le code source après chaque changement.\footnote{\cite{robertshistory}}
 
-Une autre personne qui a gravé la notion \textit{Intégration Continue} est Martin Fowler. Il a publié un article sur le sujet en 2000 et révisé celui-ci six ans plus tard.\footnote{\cite{fowlerci}} Dans cet article il essayerait de donner une définition de l'IC et des meilleures pratiques. Martin Fowler travaillait chez ThoughtWorks l'entreprise responsable pour la publication du première serveur d'\textit{Intégration Continue} "Cruise Control". Il est souvent cité comme personne-clé si on parle de l'IC.
+Une autre personne qui a gravé la notion \textit{Intégration Continue} est Martin Fowler. Il a publié un article sur le sujet en 2000 et révisé celui-ci six ans plus tard.\footnote{\cite{fowlerci}} Dans cet article il essayerait de donner une définition de l'IC et des meilleures pratiques. Martin Fowler travaillait chez ThoughtWorks, l'entreprise responsable pour la publication du première serveur d'\textit{Intégration Continue} "Cruise Control". Il est souvent cité comme personne-clé si on parle de l'IC.
 
 Le premier livre publié sur la matière était "Continous Integration"\footnote{\cite{duvallconint}} en 2007. Naturellement il y a beaucoup d'autre livres traitant des technologie ou outils concrètes. Aujourd'hui le plus part d'entreprises implémentes quelques ou tous les aspects de l'IC.
 
@@ -15,7 +15,7 @@ Le premier livre publié sur la matière était "Continous Integration"\footnote
 \newpage
 
 \section{Aperçu}
-Pour pouvoir comprendre le concept de base de l'intégration Continue il est nécessaire de connaitre le processus de développement logiciel ordinaire. L'intégration Continue n'exige pas de méthode de gestion de projets spécifique mais est souvent utilisé avec des approches agiles, car elle les complètent parfaitement. Voici un diagramme d'un processus pareil. \footnote{Source http://www.techtipsnapps.com/2015/04/most-successful-software-development.html}
+Pour pouvoir comprendre le concept de base de l'intégration continue il est nécessaire de connaitre le processus de développement logiciel ordinaire. L'intégration Continue n'exige pas de méthode de gestion de projets spécifique, mais est souvent utilisé avec des approches agiles, car elle les complètent parfaitement. Voici un diagramme d'un processus pareil. \footnote{Source http://www.techtipsnapps.com/2015/04/most-successful-software-development.html}
 
 \begin{figure}[H]
 	\centering
@@ -24,13 +24,14 @@ Pour pouvoir comprendre le concept de base de l'intégration Continue il est né
 	\label{fig:processus}
 \end{figure}
 
-L'idée principale de L'IC est d'automatiser des devoirs ou d'offrir de l'aide pendants les étapes de développement. Pendant presque tous les projets de développement on travaille en équipe. Tous les développeurs font des changements et ajoute de la fonctionnalité chaque jour. C'est pourquoi c'est nécessaire de réunir ces changements régulièrement et de vérifier si tous les composants marche et coopère comme voulu.\\\\
-Ce processus de réunification s'appelle l'intégration. Si l'intégration est faite continuellement on parle de l'\textbf{Intégration Continue}. Mais une Intégration Continue à la lettre, chaque minute ou même en temps réel, n'est pas faisable ou aidant. C'est pour ça qu'une intégration exécuter au moins une foi par jour est suffisante.\\
-De plus cette intégration doit être facile et automatisée, comme pousser un bouton. Tous le reste est contrôlé par le système IC. De plus la définition et l'étendue de l'IC est ouverte et pas strictement limité. Mais il y a quelques éléments qui apparaissent dans tous les systèmes d'IC.
+Les étapes récurrent sont le développement, les testes, les contrôles, le déploiement, la réaction du client et après ça une nouvelle itération. L'idée principale de L'IC est d'automatiser des devoirs des développeurs ou d'offrir des aides pendants tous ces étapes du processus de développement.
+Pendant presque tous les projets de développement on travaille en équipe. Tous les développeurs font des changements et ajoutent de la fonctionnalité chaque jour. C'est pour cela qu'il est nécessaire de réunir ces changements régulièrement et de vérifier si tous les composants marche et coopère comme voulu (testes).\\\\
+Ce processus de réunification s'appelle l'intégration. Si l'intégration est faite continuellement on parle de l'\textbf{Intégration Continue}. Mais une Intégration Continue à la lettre, chaque minute ou même en temps réel, n'est pas faisable ou aidant. C'est pour ça qu'une intégration exécuter au moins une foi par jour est normalement considéré suffisante, naturellement le plus souvent le mieux.\\
+De plus cette intégration doit être facile et automatisée, comme pousser un bouton. Après lancer le processus d'intégration tous le reste doit être contrôlé par le système IC. La définition et l'étendue de l'IC est ouverte et pas strictement limité est fortement dépendant de l'application à développer. Mais il y a quelques éléments qui apparaissent dans tous les systèmes d'IC.
 \newpage
 
 \subsection{Architecture exemplaire}
-Voici une architecture normale en travaillant avec un système d'intégration Continue.
+Voici une architecture normale en travaillant avec un système d'intégration continue.
 \begin{figure}[H]
 	\centering
 		\includegraphics[scale=0.6]{bilder/architecture_exemplaire}
@@ -39,7 +40,7 @@ Voici une architecture normale en travaillant avec un système d'intégration Co
 \end{figure}
 
 \textbf{Développement locale}\\
-Tous les développeurs travaille sur ses machines privées ou des machines de l'entreprise. Avant d'ajouter de la fonctionnalité la version la plus actuelle est téléchargé du dépôt centrale. Après changer le code il est nécessaire de faire une construction et d'exécuter les testes unitaires. Si tout fonctionne les changements sont commit sur le dépôt centrale.\\\\
+Tous les développeurs travaillent sur ses machines privées ou des machines de l'entreprise. Avant d'ajouter de la fonctionnalité la version la plus actuelle est téléchargé du dépôt centrale. Après changer le code il est nécessaire de faire une construction et d'exécuter les testes unitaires localement. Si tout fonctionne les changements sont commit sur le dépôt centrale.\\\\
 \textbf{Dépôt centrale}\\
 Le dépôt centrale est normalement un système de gestion de versions comme Subversion ou Git. Il est installé sur un serveur dédié. Tous les développeur reçoivent de l'accès pour commettre des changements là dessus. Ce faisant il est possible d'identifier qui a changé quoi en cas que quelque chose ne marche plus.\\\\
 \textbf{Serveur de l'intégration Continue} \\
@@ -53,8 +54,7 @@ Le serveur de l'intégration Continue est la partie centrale du système. Il est
 Si on inclue le déploiement dans le processus d'intégration, il ne s'agit plus seulement de l'intégration Continue, mais aussi du \textbf{Déploiement et de la Livraison Continue} (Continous Deployment, Continuous Delivery). 
 \\\\
 \textbf{Information en retour}\\
-Après finir ce processus d'intégration les résultats des étapes est affiché sur un interface d'utilisateur centrale, souvent une page web. Pour toutes les étapes il est possible de configurer si l'échec de l'étape amène l'échec du processus complet. Si il y a des erreurs les développeurs et les personnes responsable peuvent être informer par des emails. Quelques entreprises installe des écrans dans les bureaux qui affichent les dernières résultats en temps réelle.\\\\
-Ces concepts seront discuter en détail pendant le prochain chapitre.
+Après finir ce processus d'intégration les résultats des étapes est affiché sur un interface d'utilisateur centrale, souvent une page web. Pour toutes les étapes il est possible de configurer si l'échec de l'étape amène l'échec du processus complet. Si il y a des erreurs les développeurs et les personnes responsable peuvent être informer par des emails. Quelques entreprises installe des écrans dans les bureaux qui affichent les dernières résultats en temps réelle.\\
 \section{Concepts de l'intégration Continue}
 
 \subsection{Construction continue}
