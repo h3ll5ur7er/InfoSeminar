@@ -2,11 +2,41 @@
 \label{eval}
 
 \section{Logiciels de construction}
-
+Pour tester les logiciels de construction nous avons compilé des projets de test de différent largeur sur les systèmes mesurant le temps.
 \subsection{Ant}
-
+\begin{tabular}{l|c}
+	Largeur&Temps(secondes)\\
+		Petit1&7.54\\
+		Petit2&8.01\\
+		Petit3&7.57\\
+		Grand1&27.42\\
+		Grand2&35.25\\
+		Grand3&28.17\\
+\end{tabular}
 \subsection{Maven}
+\begin{tabular}{l|c}
+	Largeur&Temps(secondes)\\
+	Petit1&6.56\\
+	Petit2&7.10\\
+	Petit3&6.49\\
+	Grand1&24.32\\
+	Grand2&23.45\\
+	Grand3&25.01\\
+\end{tabular}
+\subsection{Gradle}
+\begin{tabular}{l|c}
+	Largeur&Temps(secondes)\\
+	Petit1&3.26\\
+	Petit2&3.37\\
+	Petit3&3.41\\
+	Grand1&11.43\\
+	Grand2&12.25\\
+	Grand3&12.05\\
+\end{tabular}
 
+\subsubsection{Conclusion}
+Gradle a des resultats meilleur que Ant et Maven, mais c'est plus compliqué a apprendre. Aussi la documentation de gradle n'est pas tres facile a comprendre parce-que elle est trops détaillé.
+\newpage
 \section{Serveur de l'intégration continue}
 
 \subsection{Definition des critères}
@@ -84,7 +114,40 @@ Freemium = C'est gratuit pour la version base, mais ca coute pour des editions p
 \end{landscape}
 \newpage
 
+
+
+
 \subsection{Jenkins}
+\begin{wrapfigure}{r}{0.2\textwidth}
+  \begin{center}
+    \includegraphics[width=0.18\textwidth]{bilder/JENKINS}
+  \end{center}
+  \caption{Jenkins Logo}
+\end{wrapfigure}
+\paragraph{Characteristique du produit} Bien que Jenkins est écrit en Java il est capable de construire beaucoup des langues différents (PHP, Ruby, .Net avec des plugins et tout les autres lancent un script batch ou shellscript dépendent au système d'exploitation). Il y a une nouvelle version de Jenkins chaque semaine (utilisant IC avec soi-même trouvé sur https://www.jenkins-ci.org/).
+
+\paragraph{Générale} Jenkins est un fork de l'outil Hudson qui était développe par Kohsuke Kawaguchi chez Sun Microsystems en 2008. Deux ans plus tardes Kohsuke a eu des différences avec son nouveau employeur Oracle. Il a quité et en 2011 présente la première version de Jenkins. Jenkins est un logiciel code source ouvert écrit en Java licenciée MIT. 
+\paragraph{Taille de la communauté} Aujourd'hui Jenkins est installé sur 127000 machines\footnote{\citep{jenkinsstats}}. Sur la site web officielle de Jenkins il y a des plug-ins à toutes fins.(1000++) 
+\paragraph{Utilisation} Âpres lancer le service de Jenkins on peut ouvrir l' interface web sur 127.0.0.1:8080. Là on peut definer des build-jobs, gérer les droits d'accès, changer des paramètres et plus. Au début le systeme gestion de version Git n'est pas inclue, seulement CVS et SVN mais il y a un plugin. L'interface d'administration est très facile à utiliser.
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=15cm]{bilder/JenkinsGui}
+	\caption{Jenkins intérface d'administration}
+	\label{fig:jenkinsgui}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
 \clearpage
 \subsection{TeamCity}
 \begin{wrapfigure}{r}{0.2\textwidth}
@@ -114,6 +177,11 @@ En utilisant TeamCity en premier on est confondu par la grande nombre d'options 
 	\caption{TeamCity intérface d'administration}
 	\label{fig:travisgui}
 \end{figure}
+
+
+
+
+
 \clearpage
 \subsection{Travis CI}
 \begin{wrapfigure}{r}{0.4\textwidth}
@@ -155,8 +223,34 @@ Après ça chaque fois qu'il y a un changement sur le dépot les testes et la co
 	\caption{Travis intérface d'administration et yml fichier}
 	\label{fig:travisgui}
 \end{figure}
+
+
+
+
+
 \clearpage
 \subsection{Team Foundation Server}
+\paragraph{Characteristique du produit} TFS est la forge logicielle de Microsoft. Le cycle de vie entier du logiciel agile est couvert. La gestion des versions(TFVC ou Git), des builds, des résultats de test et beaucoup plus depuis on peut installer des plug-in gratuit et payée facilement. Il y a une version "On-premises" qui est installé sur une machine/un serveur de l'entreprise mise a jour une fou par trimestre par Windows Update Services. Si on veut avoir la version la plus actuelle à n'importe quel temps il y a un service en ligne, fourni par Microsoft sur la nuage Azure.
 
+\paragraph{Générale}  Le prix pour la version "On-premises" est calculé le même que pour la version SaaS listé en bas.
+\begin{itemize}
+\item[<5 personnes] Gratuit, Temps de construction inclue 240 minutes/mois
+\item[6-10 personnes] CHF 5.40/personne et mois
+\item[11-100 personnes]  CHF 7.20/personne et mois
+\item[101-1000 personnes]  CHF 3.60/personne et mois
+\item[>1001 personnes]  CHF 1.80/personne et mois
+\item[Agent de construction additionnel (hosted)]  CHF 36.10/agent
+\item[Agent de construction additionnel (locale)]  CHF 13.50/agent
+\end{itemize}
+Combiné avec une suscription MSDN beaucoup des services VisualStudio et Azure sont inclue.
+\paragraph{Taille de la communauté} Sur le nouveau magasin en ligne on peut télécharger nombreux plug-ins publié par Microsoft ou des développeurs indépendantes. Il y a des addons pour Visual Studio, VisualStudioCode et VisualStudio TeamServices gratuit et payé.
+\paragraph{Utilisation} L'interface utilisateur es très intuitive. Apres la registration on peut lié un projet locale avec le projet team en ligne. Si on veut configurer la construction ou le déploiement automatisé il faut ouvrir l'interface web et suivre les instructions. 
+la partie test est un peu confus au debut, parce que les tests unitaires et les tests d'integration sont inclue dans la construction et dans le chapitre test sont les tests d'acceptation recordé.
 
+\begin{figure}[H]
+	\centering
+		\includegraphics[height=10cm]{bilder/vso}
+	\caption{Visualstudio Online interface d'administration}
+	\label{fig:vsogui}
+\end{figure}
 

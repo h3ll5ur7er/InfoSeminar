@@ -1,0 +1,16 @@
+all: hello
+
+hello: main.o factorial.o squared.o
+    g++ main.o factorial.o squared.o -o hello
+
+main.o: main.cpp
+    g++ -c main.cpp
+
+factorial.o: factorial.c
+    g++ -c factorial.c
+
+squared.o: squared.cpp
+    g++ -c squared.cpp
+
+clean:
+    rm *o hello

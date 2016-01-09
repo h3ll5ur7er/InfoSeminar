@@ -58,8 +58,35 @@ Ces concepts seront discuter en détail pendant le prochain chapitre.
 \section{Concepts de l'Intégration Continue}
 
 \subsection{Construction continue}
+\subsubsection{C/C++}
+Le premier logiciel de construction était make, qui existes depuis 1976 (Stuart Feldman, Bell Labs). Sur les plateformes basé sur Unix make est encore utilisé pour construire des exécutables.
+Pour construire une application avec make if faut fournir un fichier makefile qui contiens les instructions de compilation. Supposant on a un logiciel avec les fichiers: 
 
-Ema
+\lstinputlisting[language=C,caption={functions.h}]{../project/cpp_make_sample/functions.h}
+\lstinputlisting[language=C,caption={factorial.c}]{../project/cpp_make_sample/factorial.c}
+\lstinputlisting[language=C,caption={squared.c}]{../project/cpp_make_sample/squared.c}
+\lstinputlisting[language=C,caption={main.cpp}]{../project/cpp_make_sample/main.cpp}
+
+La commande pour compiler ce projet manuellement est:
+$$g++\;main.cpp\;squared.cpp\;factorial.cpp\;-o\;hello$$
+Pour un projet si petit c'est assez simple mais avec plus des fichiers ca se confus très vite.
+Par exemple si on a beaucoup des dependences ou une application multi-plateforme c'est tres difficile de ne pas oublier quelque chose.
+\newpage
+\lstinputlisting[language=make,caption={Makefile sans variables}]{../project/cpp_make_sample/Makefile1.}
+Si on regarde le fichier Makefile correspondant on voit que ca ne simplifie pas encore notre vie. Une prochaine étape est d'introduire des variables.
+\lstinputlisting[language=make,caption={Makefile avec variables}]{../project/cpp_make_sample/Makefile2.}
+
+Ce fichier est plus court et tres adaptable, mais il n est pas très lisible.
+Utilisant l'outil cmake on peut générer les fichiers Makefile automatiquement (et autres fichiers de projet comme ".sln").
+Dans le fichier CMakeLists.txt on définit quelles fichiers il faut compiler, quel sont les descendances...
+\lstinputlisting[language=make,caption={CMakeLists.txt}]{../project/cpp_make_sample/CMakeLists.txt}
+
+
+\subsubsection{Java}
+Ant (Another neat tool) a apparu 2000, le premier logiciel de construction pour Java.
+Aujourd'hui Ant et ses produits de concurrence Maven(2002) et Gradle(2012) sont inévitable si on utilise Java.
+Dans ce moment environ 70 \% des développeurs Java utilisent Maven, 15 \% Ant et 15\% Gradle. Le concept est pareille comme en C++.
+
 
 \subsection{Intégration continue de base de données}
 
@@ -74,21 +101,43 @@ Si le code de la base de données est aussi mis sur le dépot centrale, le proce
 	\label{fig:processus}
 \end{figure}
 
-C'est pour ca qu'une automatisation de ce processus est indispensable. Une automation est réalisé en insérant une section dans le script de construction uniquement pour les operations de l'intégration de base de données. L'interval et l'étendue de l'éxécution de ce processus sont pas les mêmes pour tous les projets. Pour quelques projets ca pourrait être trop lourds de recrée la base de données à chaque changement sur le dépot centrale. Avec l'outil de construction Maven et le plug-in "sql-maven-plugin" il est possible de definir quelle base de données est visé et quelles commandes sont exécuté. Voici une partie d'un tel script.\footnote{Pour l'éxample complète \cite{mvnsql}}
+C'est pour ca qu'une automatisation de ce processus est indispensable. Une automation est réalisé en insérant une section dans le script de construction uniquement pour les operations de l'intégration de base de données. L'interval et l'étendue de l'exécution de ce processus sont pas les mêmes pour tous les projets. Pour quelques projets ca pourrait être trop lourds de recrée la base de données à chaque changement sur le dépôt centrale. Avec l'outil de construction Maven et le plug-in "sql-maven-plugin" il est possible de definir quelle base de données est visé et quelles commandes sont exécuté. Voici une partie d'un tel script.\footnote{Pour l'éxample complète \cite{mvnsql}}
 
 \lstinputlisting[language=XML]{./anhang/db_mvn_sql.xml}
 
 \subsubsection{Instance de base de donnée locale}
 
 Pour que cette approche fonctionne tous les développeurs doivent avoir l'autorisation de changer la base de données. Pour éviter des conflits pendant le développement tous les développeurs ont besoin d'une instance de cette base de données sur ses machines locales. Si on travaille avec une instance centrale à chaque changement il y a le danger de casser le code que quelqu'un d'autre est en train de développer.
+\newpage
+
 
 \subsection{Test continue}
+Le premier principe de base pour des tests automatisés est "Fail fast" (Échouer vite).
+C'est pourquoi on distingue trois types différents. Comme réglé d'or on  peut dire que les test unitaires prend des secondes, les tests d'intégration prend des minutes et les tests d'acceptation prend des heures.\nocite{artofunittesting}
+\subsubsection{Tests unitaires}
+Les tests unitaires vérifient le bon fonctionnement d' un bout de code. Pour les parties du code qui ne sont pas testable atomiquement on introduit des objets mock qui permettent des tests de fonctionnement vite et sans effets secondaires. 
+\subsubsection{Tests d'intégration}
+Pour tester l' interaction des parties testé avec les tests unitaires. Aussi l'interaction avec le système de fichier ou une base de données est testé ici. Apres les tests d'intégration les erreurs logiques doivent être éliminé.
+\subsubsection{Tests d'acceptation automatisées}
+Il y a différents types de test d' acceptation:
+\begin{itemize}
+ \item Tests d'interface utilisateur codé
+ \\Pour ces tests il faut enregistrer des scénario. Les outils de test permettent de cliquer des boutons, entrer de text etc. 
+ \item Tests de performance
+ \\Ces tests montrent quelles parties du code prennent la plupart des ressources.
+ \item Tests d'exploitabilité 
+ \\Si le logiciel utilise une base de données on peut par exemple tester la vulnérabilité contre des attaques injection SQL.
+ \item Tests de charge
+ \\Par exemple: On a un magasin en ligne qui doit resister 100 utilisateurs à n'importe quel moment, testé avec les scenarios "login", "recherche des articles", "caisse", "login, ajouter, logout, login, effacer"
+\end{itemize}
 
-Ema
+
+
+
 
 \subsection{Inspection continue}
 
-La difference entre les testes et les inspections est que les inspections analyse la forme et la structure du code source et pas la fonctionnalité. Ces inspections sont introduit dans le processus de construction par differents plug-in. Les inspections ne remplacent pas les code review manuelles, mais dans ces reviews il y aura moins de défauts banale à traiter. Les objectifs des inspections sont engrèné là dessous.
+La difference entre les testes et les inspections est que les inspections analyse la forme et la structure du code source et pas la fonctionnalité. Ces inspections sont introduit dans le processus de construction par différents plug-in. Les inspections ne remplacent pas les code review manuelles, mais dans ces reviews il y aura moins de défauts banale à traiter. Les objectifs des inspections sont engrèné là dessous.
 
 \begin{enumerate}
 
@@ -103,16 +152,36 @@ La difference entre les testes et les inspections est que les inspections analys
 
 \end{enumerate}
 
-TODO: Picture of interface with results or smth
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{bilder/Coverage}
+\caption{Couverture de code exemplaire} \cite{codecoverage}
+\label{fig:coverage}
+\end{figure}
+
 
 \subsection{Information en retour continue}
 
-Ema
+Pendant le processus de construction c'est indispensable de savoir ce que se passe. Chaque etape de construction doit fournir des informations à tout-le-monde affecté. Classiquement c'est réalisé par envoyer un courriel. Les possibilités plus modernes sont des plug-ins directement dans l'environnement de développement(Team Explorer for TFS intégré dans Visual Studio), dans une application de online-chat(TravisCI native, TeamCity, Jenkins avec plugins), comme notification sur l'ordiphone ou dans le système d exploitation(Native dans Windows 10 ou avec differents apps tierce partie)...
 
-\subsection{Déploiment continue}
 
-Ema
--> Continuous Delivery concept
+
+
+
+\newpage
+\subsection{Déploiement continue}
+
+Le déploiement continue est un moyen pour délivrer la version actuelle aux utilisateurs immédiatement. Si un développeur fait un changement, la construction est initié automatiquement. Après ca les testes unitaires sont exécuté. Si tout les tests sont verts le développeur es informé et l'exécution des testes d'acceptation automatisées commence. Si la fonctionnalité du logiciel est assuré une nouvelle version est déployé immédiatement.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{bilder/Continuous_Delivery}
+\caption{Graphique déploiement continue}\cite{wikicd}
+\label{fig:continousdelivery}
+\end{figure}
+
+
 
 
 
