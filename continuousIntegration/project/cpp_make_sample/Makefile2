@@ -1,0 +1,13 @@
+CC=g++
+CFLAGS=-c -Wall
+SOURCES=main.cpp factorisl.c squared.c
+OBJECTS=OBJECTS=$(SOURCES:=.o)
+EXECUTABLE=hello
+
+all: $(SOURCES) $(EXECUTABLE)
+    
+$(EXECUTABLE): $(OBJECTS) 
+    $(CC) $(OBJECTS) -o $@
+
+.o:
+    $(CC) $(CFLAGS) $< -o $@
