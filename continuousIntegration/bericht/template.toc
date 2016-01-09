@@ -1,0 +1,66 @@
+
+\select@language {french}
+\save@tocdepth \setcounter {tocdepth}{2}
+\contentsline {chapter}{Abstract}{ii}{Doc-Start}
+\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Mission}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Approche}{2}{section.1.2}
+\contentsline {chapter}{\numberline {2}Int\IeC {\'e}gration Continue}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Histoire}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Aper\IeC {\c c}u}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Architecture exemplaire}{5}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Concepts de l'int\IeC {\'e}gration Continue}{6}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Construction continue}{6}{subsection.2.3.1}
+\contentsline {subsubsection}{\nonumberline C/C++}{6}{section*.5}
+\contentsline {subsubsection}{\nonumberline Java}{7}{section*.6}
+\contentsline {subsection}{\numberline {2.3.2}Int\IeC {\'e}gration continue de base de donn\IeC {\'e}es}{8}{subsection.2.3.2}
+\contentsline {subsubsection}{\nonumberline Automatisation de l'int\IeC {\'e}gration}{8}{section*.7}
+\contentsline {subsubsection}{\nonumberline Instance de base de donn\IeC {\'e}e locale}{8}{section*.9}
+\contentsline {subsection}{\numberline {2.3.3}Test continue}{9}{subsection.2.3.3}
+\contentsline {subsubsection}{\nonumberline Tests unitaires}{9}{section*.10}
+\contentsline {subsubsection}{\nonumberline Tests d'int\IeC {\'e}gration}{9}{section*.11}
+\contentsline {subsubsection}{\nonumberline Tests d'acceptation automatis\IeC {\'e}es}{9}{section*.12}
+\contentsline {subsection}{\numberline {2.3.4}Inspection continue}{9}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Information en retour continue}{10}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}D\IeC {\'e}ploiement continue}{11}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}Motivation et b\IeC {\'e}n\IeC {\'e}fices}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}\IeC {\'E}viter des risques}{12}{subsection.2.4.1}
+\contentsline {subsubsection}{\nonumberline Logiciel pas pr\IeC {\`e}s pour le d\IeC {\'e}ploiement}{12}{section*.15}
+\contentsline {subsubsection}{\nonumberline D\IeC {\'e}couverte tarde des erreurs}{12}{section*.16}
+\contentsline {subsubsection}{\nonumberline Manque de visibilit\IeC {\'e} du projet}{12}{section*.17}
+\contentsline {subsubsection}{\nonumberline Logiciel de basse qualit\IeC {\'e}}{12}{section*.18}
+\contentsline {section}{\numberline {2.5}Meilleures pratiques}{13}{section.2.5}
+\contentsline {chapter}{\numberline {3}\IeC {\'E}valuation}{14}{chapter.3}
+\contentsline {section}{\numberline {3.1}Logiciels de construction}{14}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Ant}{14}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Maven}{14}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Gradle}{14}{subsection.3.1.3}
+\contentsline {subsubsection}{\nonumberline Conclusion}{14}{section*.19}
+\contentsline {section}{\numberline {3.2}Serveur de l'int\IeC {\'e}gration continue}{15}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}D\IeC {\'e}finition des crit\IeC {\`e}res}{15}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Apercu des resultats}{16}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Jenkins}{17}{subsection.3.2.3}
+\contentsline {paragraph}{\nonumberline Caract\IeC {\'e}ristique du produit}{17}{section*.22}
+\contentsline {paragraph}{\nonumberline G\IeC {\'e}n\IeC {\'e}rale}{17}{section*.23}
+\contentsline {paragraph}{\nonumberline Taille de la communaut\IeC {\'e}}{17}{section*.24}
+\contentsline {paragraph}{\nonumberline Utilisation}{17}{section*.25}
+\contentsline {subsection}{\numberline {3.2.4}TeamCity}{18}{subsection.3.2.4}
+\contentsline {paragraph}{\nonumberline Caract\IeC {\'e}ristique du produit}{18}{section*.28}
+\contentsline {paragraph}{\nonumberline G\IeC {\'e}n\IeC {\'e}rale}{18}{section*.29}
+\contentsline {paragraph}{\nonumberline Taille de la communaut\IeC {\'e}}{18}{section*.30}
+\contentsline {paragraph}{\nonumberline Utilisation}{18}{section*.31}
+\contentsline {subsection}{\numberline {3.2.5}Travis CI}{19}{subsection.3.2.5}
+\contentsline {paragraph}{\nonumberline Caract\IeC {\'e}ristique du produit}{19}{section*.34}
+\contentsline {paragraph}{\nonumberline G\IeC {\'e}n\IeC {\'e}rale}{19}{section*.35}
+\contentsline {paragraph}{\nonumberline Taille de la communaut\IeC {\'e}}{19}{section*.36}
+\contentsline {paragraph}{\nonumberline Utilisation}{19}{section*.37}
+\contentsline {subsection}{\numberline {3.2.6}Team Foundation Server}{20}{subsection.3.2.6}
+\contentsline {paragraph}{\nonumberline Caract\IeC {\'e}ristique du produit}{20}{section*.39}
+\contentsline {paragraph}{\nonumberline G\IeC {\'e}n\IeC {\'e}rale}{20}{section*.40}
+\contentsline {paragraph}{\nonumberline Taille de la communaut\IeC {\'e}}{20}{section*.41}
+\contentsline {paragraph}{\nonumberline Utilisation}{20}{section*.42}
+\contentsline {chapter}{\numberline {4}Conclusion}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Bilan}{21}{section.4.1}
+\contentsline {chapter}{Bibliographie}{22}{section*.44}
+\contentsline {chapter}{Table des figures}{22}{section*.46}
+\save@tocdepth \setcounter {tocdepth}{1}

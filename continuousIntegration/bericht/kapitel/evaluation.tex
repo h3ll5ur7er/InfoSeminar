@@ -35,17 +35,17 @@ Pour tester les logiciels de construction nous avons compilé des projets de tes
 \end{tabular}
 
 \subsubsection{Conclusion}
-Gradle a des resultats meilleur que Ant et Maven, mais c'est plus compliqué a apprendre. Aussi la documentation de gradle n'est pas tres facile a comprendre parce-que elle est trops détaillé.
+Gradle a des résultats meilleur que Ant et Maven, mais c'est plus compliqué a apprendre. Aussi la documentation de Gradle n'est pas très facile a comprendre parce-que elle est trop détaillé.
 \newpage
 \section{Serveur de l'intégration continue}
 
-\subsection{Definition des critères}
+\subsection{Définition des critères}
 
-En dessous vous trouvez les critères avec une bref déscription qui seront utilisé pour evaluer les quatres serveurs de l'intégration continue qui ont été choisit pour ce travail. \footnote{\cite{ibmciserver}}
+En dessous vous trouvez les critères avec une bref description qui seront utilisé pour évaluer les quatre serveurs de l'intégration continue qui ont été choisit pour ce travail. \footnote{\cite{ibmciserver}}
 
 \begin{enumerate}
 \item \textbf{Caractéristiques du produit} \\
-\textit{Les charactéristiques du produit sont l'aspect le plus important quand on choisit un serveur d'IC. On doit savoir les éxigences qu'une entreprise a et de ce point de vue selectionner un logiciel.}
+\textit{Les caractéristiques du produit sont l'aspect le plus important quand on choisit un serveur d'IC. On doit savoir les exigences qu'une entreprise a et de ce point de vue sélectionner un logiciel.}
 	\begin{itemize}
 		\item Intégration avec des outils de gestion des versions \\
 		\textit{Est l'outil que nous utilisons supporté? Quelles outils sont supporté?}
@@ -54,9 +54,9 @@ En dessous vous trouvez les critères avec une bref déscription qui seront util
 		\item Information en retour \\
 		\textit{Quelles méthodes de l'information en retour existe et sont ils suffisant pour nous?}
 		\item Labeling \\
-		\textit{Est-il possible de donner des identifiers à des versions d'un logiciel?}
+		\textit{Est-il possible de donner des identifiant à des versions d'un logiciel?}
 		\item Extensibilité \\
-		\textit{Est-il possible d'écrire des extension propre pour le serveur si necessaire?}
+		\textit{Est-il possible d'écrire des extension propre pour le serveur si nécessaire?}
 	\end{itemize}
 \item \textbf{Générale}
 	\begin{itemize}
@@ -69,7 +69,7 @@ En dessous vous trouvez les critères avec une bref déscription qui seront util
 \item \textbf{Taille de la communauté}
 	\begin{itemize}
 		\item Nombre d'utilisateurs
-		\item Nombre de plug-ins
+		\item Nombre de plugins
 	\end{itemize}
 \item \textbf{Utilisation}
 	\begin{itemize}
@@ -108,7 +108,7 @@ En dessous vous trouvez les critères avec une bref déscription qui seront util
 	\label{tab:serveurs_eval}
 \end{table}
 Freemium = C'est gratuit pour la version base, mais ca coute pour des editions plus grande (entreprise).\\
-* free for open source projects
+* gratuit pour des projets Open Source
 \footnote{\citep{jenkinsplugins} \citep{teamcityenv} \citep{tfsversioncontrol}}
 
 \end{landscape}
@@ -124,11 +124,11 @@ Freemium = C'est gratuit pour la version base, mais ca coute pour des editions p
   \end{center}
   \caption{Jenkins Logo}
 \end{wrapfigure}
-\paragraph{Characteristique du produit} Bien que Jenkins est écrit en Java il est capable de construire beaucoup des langues différents (PHP, Ruby, .Net avec des plugins et tout les autres lancent un script batch ou shellscript dépendent au système d'exploitation). Il y a une nouvelle version de Jenkins chaque semaine (utilisant IC avec soi-même trouvé sur https://www.jenkins-ci.org/).
+\paragraph{Caractéristique du produit} Bien que Jenkins est écrit en Java il est capable de construire beaucoup des langues différents (PHP, Ruby, .Net avec des plugins et tout les autres lancent un script batch ou shellscript dépendent au système d'exploitation). Il y a une nouvelle version de Jenkins chaque semaine (utilisant IC avec soi-même trouvé sur https://www.jenkins-ci.org/).
 
-\paragraph{Générale} Jenkins est un fork de l'outil Hudson qui était développe par Kohsuke Kawaguchi chez Sun Microsystems en 2008. Deux ans plus tardes Kohsuke a eu des différences avec son nouveau employeur Oracle. Il a quité et en 2011 présente la première version de Jenkins. Jenkins est un logiciel code source ouvert écrit en Java licenciée MIT. 
-\paragraph{Taille de la communauté} Aujourd'hui Jenkins est installé sur 127000 machines\footnote{\citep{jenkinsstats}}. Sur la site web officielle de Jenkins il y a des plug-ins à toutes fins.(1000++) 
-\paragraph{Utilisation} Âpres lancer le service de Jenkins on peut ouvrir l' interface web sur 127.0.0.1:8080. Là on peut definer des build-jobs, gérer les droits d'accès, changer des paramètres et plus. Au début le systeme gestion de version Git n'est pas inclue, seulement CVS et SVN mais il y a un plugin. L'interface d'administration est très facile à utiliser.
+\paragraph{Générale} Jenkins est un fork de l'outil Hudson qui était développe par Kohsuke Kawaguchi chez Sun Microsystems en 2008. Deux ans plus tard Kohsuke a eu des différences avec son nouveau employeur Oracle. Il a quitté et en 2011 présente la première version de Jenkins. Jenkins est un logiciel code source ouvert écrit en Java licenciée MIT. 
+\paragraph{Taille de la communauté} Aujourd'hui Jenkins est installé sur 127000 machines\footnote{\citep{jenkinsstats}}. Sur la site web officielle de Jenkins il y a des plugins à toutes fins.(1000++) 
+\paragraph{Utilisation} Après lancer le service de Jenkins on peut ouvrir l'interface web sur 127.0.0.1:8080. Là on peut définir des jobs de construction, gérer les droits d'accès, changer des paramètres et beaucoup plus. Au début le système gestion de version Git n'était pas inclue, seulement CVS et SVN mais aujourd'hui il y a un plugin. L'interface d'administration est très facile à utiliser.
 \begin{figure}[H]
 	\centering
 		\includegraphics[width=15cm]{bilder/JenkinsGui}
@@ -156,8 +156,8 @@ Freemium = C'est gratuit pour la version base, mais ca coute pour des editions p
   \end{center}
   \caption{TeamCity Logo}
 \end{wrapfigure}
-\paragraph{Characteristique du produit} TeamCity est un serveur de l'intégration continue de JetBrains, les fabricants d'une grande nombre d'outil de developpment (comme IntelliJ). Il est optimisé pour construire des projets de Java ou .NET, mais supporte aussi Python, Ruby et beaucoup d'autre langage avec des plugins. De plus il existe l'option de travailler avec la ligne de commande. TeamCity est très adaptable et peut être individualiser extensivement. \\
-Tous les configurations et tous l'utilisation est effectué par l'interface web. Comme voies d'information en retour TeamCity supporte des émails, des messages Jabber ou directement dans l'IDE. De plus TeamCity supporte des "Build Tag" pour identifier des constructions. Si la functionalité de TeamCity ne suffice pas, il est facilement possible d'écrire un plugin.
+\paragraph{Caractéristique du produit} TeamCity est un serveur de l'intégration continue de JetBrains, les fabricants d'une grande nombre d'outil de développement (comme IntelliJ). Il est optimisé pour construire des projets de Java ou .NET, mais supporte aussi Python, Ruby et beaucoup d'autre langage avec des plugins. De plus il existe l'option de travailler avec la ligne de commande. TeamCity est très adaptable et peut être individualiser extensivement. \\
+Tous les configurations et tous l'utilisation est effectué par l'interface web. Comme voies d'information en retour TeamCity supporte des emails, des messages Jabber ou directement dans l'IDE. De plus TeamCity supporte des "Build Tag" pour identifier des constructions. Si la fonctionnalité de TeamCity ne suffit pas, il est facilement possible d'écrire un plugin.
 
 \paragraph{Générale} L'infrastructure pour soutenir TeamCity doit être mis en place par l'entreprise. Il existe trois options de licence de TeamCity.
 \begin{itemize}
@@ -165,16 +165,16 @@ Tous les configurations et tous l'utilisation est effectué par l'interface web.
 	\item TeamCity Enterprise (3-100 agent packs)
 	\item TeamCity Additional Build Agent (+ 1 agent de construction)
 \end{itemize}
-La licence TeamCity Professional est gratuite mais limité. Pour les versions TeamCity Enterprise le nombre de projets est illimité, mais on peu incrementer le nombre d'agent de construction pour atteindre une meilleure pérformance quand il y a beaucoup de processus de construction en même temps. Pour des projéts Open Source TeamCity est gratuite, pour des jeunes pousses il y a des rabais.\footnote{\citep{teamcitybuy}}
+La licence TeamCity Professional est gratuite mais limité. Pour les versions TeamCity Enterprise le nombre de projets est illimité, mais on peu incrémenter le nombre d'agent de construction pour atteindre une meilleure performance quand il y a beaucoup de processus de construction parallèle. Pour des projets Open Source TeamCity est gratuite, pour des jeunes pousses il y a des rabais.\footnote{\citep{teamcitybuy}}
 \paragraph{Taille de la communauté}
-JetBrains affirme que 30'000+ clients utilise TeamCity pour executer l'intégration continue (Boeing, HP...). Il y a une grande nombre de plugins disponible sur le page web de TeamCity.\footnote{\citep{teamcityplugins}}
+JetBrains affirme que 30'000+ clients utilise TeamCity pour exécuter l'intégration continue (Boeing, HP...). Il y a une grande nombre de plugins disponible sur le page web de TeamCity.\footnote{\citep{teamcityplugins}}
 \paragraph{Utilisation}
-L'installation de TeamCity est assez facile. Il existe des archive des fichiers exprès pour des installations rapide. TeamCity est basé sur Java et utilise un serveur Tomcat. Pour l'installation rapide, tous ce qu'on devait faire est télécharger et extraire l'archive, et puis executer un script et completer la configuration intiale. Pour un système productive une installation un peu plus complexe est prévu.\\
-En utilisant TeamCity en premier on est confondu par la grande nombre d'options de configuration. Mais quand-même il était possible et pas très difficile de construire et mettre en rapport notre environment teste. TeamCity est très volumineux, mais bien structuré et agréable pour l'utilisateur. Le faite qu'on peut faire toute la configuration sur l'interface web est un grande plus.
+L'installation de TeamCity est assez facile. Il existe des archive des fichiers exprès pour des installations rapide. TeamCity est basé sur Java et utilise un serveur Tomcat. Pour l'installation rapide, tous ce qu'on doit faire est télécharger et extraire l'archive, et puis exécuter un script et compléter la configuration initiale. Pour un système productive une installation un peu plus complexe est prévu.\\
+En utilisant TeamCity en premier on est confondu par la grande nombre d'options de configuration. Mais quand-même il était possible et pas très difficile de construire et mettre en rapport notre environnement teste. TeamCity est très volumineux, mais bien structuré et agréable pour l'utilisateur. Le faite qu'on peut faire toute la configuration sur l'interface web est un grande plus.
 \begin{figure}[H]
 	\centering
 		\includegraphics[scale=0.35]{bilder/teamcityadmin}
-	\caption{TeamCity intérface d'administration}
+	\caption{TeamCity interface d'administration}
 	\label{fig:travisgui}
 \end{figure}
 
@@ -190,9 +190,9 @@ En utilisant TeamCity en premier on est confondu par la grande nombre d'options 
   \end{center}
   \caption{Travis CI Logo}
 \end{wrapfigure}
-\paragraph{Characteristique du produit}
+\paragraph{Caractéristique du produit}
 Travis CI est un serveur de l'intégration continue très facile à mettre en service et avec une intégration excellente avec \href{https://github.com/}{github.com}. Il supporte beaucoup de différent langage et outil de construction. La liste complète peuvent être trouver dans la documentation\footnote{\citep{traviscidocs}}. Mais il seulement supporte git comme outil de gestion des versions.\\
-De plus il offre multiple voies d'information en retour. Le plus facile est par email, mais il y a aussi la possibilité d'envoyer des messages par IRC, Slack, HipChat etc.\footnote{\citep{traviscinotification}}. Chaque construction recoit un identificateur numerique, mais il n'est pas possible de le changer. Il y a une API pour accéder à Travis (SaaS), mais l'extensibilité semble limité.
+De plus il offre multiple voies d'information en retour. Le plus facile est par email, mais il y a aussi la possibilité d'envoyer des messages par IRC, Slack, HipChat etc.\footnote{\citep{traviscinotification}}. Chaque construction reçoit un identificateur numérique, mais il n'est pas possible de le changer. Il y a une API pour accéder à Travis (SaaS), mais l'extensibilité semble limité.
 
 \paragraph{Générale}
 Il existe trois version de Travis CI.
@@ -201,21 +201,21 @@ Il existe trois version de Travis CI.
 	\item \href{https://travis-ci.com/}{Travis Pro}
 	\item \href{https://enterprise.travis-ci.com/}{Travis Enterprise}
 \end{itemize}
-Les deux première versions sont accessible comme SaaS. Une version est pour des projets Open Source qui est gratuite et l'autre est pour des projets avec un dépot de github privée qui coute. La troisième version est pour des entreprises qui veulent mettre l'infrastructure comme des serveurs à disposition eux-mêmes (Linux).
+Les deux première versions sont accessible comme SaaS. Une version est pour des projets Open Source qui est gratuite et l'autre est pour des projets avec un dépôt de github privée qui coute. La troisième version est pour des entreprises qui veulent mettre l'infrastructure à disposition eux-mêmes (Linux).
 
 \paragraph{Taille de la communauté}
-Travis CI affirme sur la page web qu'il y a 246'506 projets Open Source qui sont testé et intégré sur leur platform. Sur la nombre d'utilisateurs des deux versions commercial il n'y a pas d'information.
+Travis CI affirme sur la page web qu'il y a 246'506 projets Open Source qui sont testé et intégré sur leur plateforme. Sur la nombre d'utilisateurs des deux versions commercial il n'y a pas d'information.
 
 \paragraph{Utilisation}
-L'utilisation de Travis CI est très pratiques est facile. Si on a déja un dépot sur github, il faut seulement trois pas pour lancer l'intégration continue avec Travis.
+L'utilisation de Travis CI est très pratiques est facile. Si on a déjà un dépôt sur github, il faut seulement trois pas pour lancer l'intégration continue avec Travis.
 
 \begin{enumerate}
 	\item Login avec le compte de github sur travis
-	\item Choisir le dépot
+	\item Choisir le dépôt
 	\item Écrire un fichier .travis.yml pour définir la configuration
 \end{enumerate}
 
-Après ça chaque fois qu'il y a un changement sur le dépot les testes et la construction seras executé automatiquement. Pour construire notre projet de test en java (maven), d'executer les testes avec trois différent version de java et envoyer un email à une adresse si quelque chose ne marche pas, le fichier en bas suffisait. De plus vous trouver un apercu de l'interface d'administration de travis.
+Après ça chaque fois qu'il y a un changement sur le dépôt les testes et la construction seras exécuté automatiquement. Pour construire notre projet de test en java (maven), d'exécuter les testes avec trois différent version de java et envoyer un email à une adresse si quelque chose ne marche pas, le fichier en bas suffisait. De plus vous trouver un aperçu de l'interface d'administration de Travis.
 
 \begin{figure}[H]
 	\centering
@@ -230,7 +230,7 @@ Après ça chaque fois qu'il y a un changement sur le dépot les testes et la co
 
 \clearpage
 \subsection{Team Foundation Server}
-\paragraph{Characteristique du produit} TFS est la forge logicielle de Microsoft. Le cycle de vie entier du logiciel agile est couvert. La gestion des versions(TFVC ou Git), des builds, des résultats de test et beaucoup plus depuis on peut installer des plug-in gratuit et payée facilement. Il y a une version "On-premises" qui est installé sur une machine/un serveur de l'entreprise mise a jour une fou par trimestre par Windows Update Services. Si on veut avoir la version la plus actuelle à n'importe quel temps il y a un service en ligne, fourni par Microsoft sur la nuage Azure.
+\paragraph{Caractéristique du produit} TFS est la forge logicielle de Microsoft. Le cycle de vie entier du logiciel agile est couvert. La gestion des versions (TFVC ou Git), des constructions, des résultats de test et beaucoup plus depuis on peut installer des plugins gratuit et payée facilement. Il y a une version "On-premises" qui est installé sur une machine/un serveur de l'entreprise mise a jour une foi par trimestre par Windows Update Services. Si on veut avoir la version la plus actuelle à n'importe quel temps il y a un service en ligne, fourni par Microsoft sur la nuage Azure.
 
 \paragraph{Générale}  Le prix pour la version "On-premises" est calculé le même que pour la version SaaS listé en bas.
 \begin{itemize}
@@ -243,9 +243,9 @@ Après ça chaque fois qu'il y a un changement sur le dépot les testes et la co
 \item[Agent de construction additionnel (locale)]  CHF 13.50/agent
 \end{itemize}
 Combiné avec une suscription MSDN beaucoup des services VisualStudio et Azure sont inclue.
-\paragraph{Taille de la communauté} Sur le nouveau magasin en ligne on peut télécharger nombreux plug-ins publié par Microsoft ou des développeurs indépendantes. Il y a des addons pour Visual Studio, VisualStudioCode et VisualStudio TeamServices gratuit et payé.
-\paragraph{Utilisation} L'interface utilisateur es très intuitive. Apres la registration on peut lié un projet locale avec le projet team en ligne. Si on veut configurer la construction ou le déploiement automatisé il faut ouvrir l'interface web et suivre les instructions. 
-la partie test est un peu confus au debut, parce que les tests unitaires et les tests d'integration sont inclue dans la construction et dans le chapitre test sont les tests d'acceptation recordé.
+\paragraph{Taille de la communauté} Sur le nouveau magasin en ligne on peut télécharger nombreux plugins publié par Microsoft ou des développeurs indépendantes. Il y a des addons pour Visual Studio, VisualStudioCode et VisualStudio TeamServices gratuit et payé.
+\paragraph{Utilisation} L'interface utilisateur est très intuitive. Après l'enregistrement on peut lier un projet locale avec le projet team en ligne. Si on veut configurer la construction ou le déploiement automatisé il faut ouvrir l'interface web et suivre les instructions. 
+La partie test est un peu confus au début, parce que les tests unitaires et les tests d'intégration sont inclue dans la construction et dans le chapitre test sont les tests d'acceptation recordé.
 
 \begin{figure}[H]
 	\centering
