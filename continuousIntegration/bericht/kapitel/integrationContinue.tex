@@ -27,7 +27,7 @@ Pour pouvoir comprendre le concept de base de l'intégration continue il est né
 Les étapes récurrent sont le développement, les testes, les contrôles, le déploiement, la réaction du client et après ça une nouvelle itération. L'idée principale de L'IC est d'automatiser des devoirs des développeurs ou d'offrir des aides pendants tous ces étapes du processus de développement.
 Pendant presque tous les projets de développement on travaille en équipe. Tous les développeurs font des changements et ajoutent de la fonctionnalité chaque jour. C'est pour cela qu'il est nécessaire de réunir ces changements régulièrement et de vérifier si tous les composants marche et coopère comme voulu (testes).\\\\
 Ce processus de réunification s'appelle l'intégration. Si l'intégration est faite continuellement on parle de l'\textbf{Intégration Continue}. Mais une Intégration Continue à la lettre, chaque minute ou même en temps réel, n'est pas faisable ou aidant. C'est pour ça qu'une intégration exécuter au moins une foi par jour est normalement considéré suffisante, naturellement le plus souvent le mieux.\\
-De plus cette intégration doit être facile et automatisée, comme pousser un bouton. Après lancer le processus d'intégration tous le reste doit être contrôlé par le système IC. La définition et l'étendue de l'IC est ouverte et pas strictement limité est fortement dépendant de l'application à développer. Mais il y a quelques éléments qui apparaissent dans tous les systèmes d'IC.
+De plus cette intégration doit être facile et automatisée, comme pousser un bouton. Après lancer le processus d'intégration tous le reste doit être contrôlé par le système IC. La définition et l'étendue de l'IC est ouverte, pas strictement limité et fortement dépendant de l'application à développer. Mais il y a quelques éléments qui apparaissent dans tous les systèmes d'IC.
 \newpage
 
 \subsection{Architecture exemplaire}
@@ -51,14 +51,21 @@ Le serveur de l'intégration Continue est la partie centrale du système. Il est
 \item Inspections
 \item Création de sous-système ou déploiement
 \end{itemize}
-Si on inclue le déploiement dans le processus d'intégration, il ne s'agit plus seulement de l'intégration Continue, mais aussi du \textbf{Déploiement et de la Livraison Continue} (Continous Deployment, Continuous Delivery). 
+Si on inclue le déploiement dans le processus d'intégration, il ne s'agit strictement plus de l'intégration Continue, mais aussi du \textbf{Déploiement et de la Livraison Continue} (Continous Deployment, Continuous Delivery). 
 \\\\
 \textbf{Information en retour}\\
-Après finir ce processus d'intégration les résultats des étapes est affiché sur un interface d'utilisateur centrale, souvent une page web. Pour toutes les étapes il est possible de configurer si l'échec de l'étape amène l'échec du processus complet. Si il y a des erreurs les développeurs et les personnes responsable peuvent être informer par des emails. Quelques entreprises installe des écrans dans les bureaux qui affichent les dernières résultats en temps réelle.\\
+Après finir ce processus d'intégration les résultats des étapes sont affiché sur un interface d'utilisateur centrale, souvent une page web. Pour toutes les étapes il est possible de configurer si l'échec de l'étape amène l'échec du processus complet. Si il y a des erreurs les développeurs et les personnes responsable peuvent être informer par des emails. Quelques entreprises installe des écrans dans les bureaux qui affichent les dernières résultats en temps réelle.\\
 \section{Concepts de l'intégration Continue}
 
 \subsection{Construction continue}
+L'idée de la construction continue est de définir le processus de construction une foi, normalement dans un fichier de construction, qui est ensuite utilisé par le serveur d'IC de construire le projet à chaque intégration. Dans le fichier de construction les fichiers source et les dépendances sont définit. Tous les langages de programmations utilisent des outils de construction différents. Voici deux example.
+
+\subsubsection{Java}
+Ant (Another neat tool) a apparu 2000, le premier logiciel de construction pour Java.
+Aujourd'hui Ant et ses produits de concurrence Maven(2002) et Gradle(2012) sont inévitable si on utilise Java.
+Dans ce moment environ 70 \% des développeurs Java utilisent Maven, 15 \% Ant et 15\% Gradle. Le concept est pareille comme en C++. EMAAA Quelle?
 \subsubsection{C/C++}
+EMAAA code snippets hei chli viu lücke/lines
 Le premier logiciel de construction était make, qui existes depuis 1976 (Stuart Feldman, Bell Labs). Sur les plateformes basé sur Unix make est encore utilisé pour construire des exécutables.
 Pour construire une application avec make if faut fournir un fichier makefile qui contiens les instructions de compilation. Supposant on a un logiciel avec les fichiers: 
 
@@ -69,24 +76,21 @@ Pour construire une application avec make if faut fournir un fichier makefile qu
 
 La commande pour compiler ce projet manuellement est:
 $$g++\;main.cpp\;squared.cpp\;factorial.cpp\;-o\;hello$$
-Pour un projet si petit c'est assez simple mais avec plus des fichiers ça se confus très vite.
-Par exemple si on a beaucoup des dépendances ou une application multi-plateforme c'est très difficile de ne pas oublier quelque chose.
+Pour un projet si petit c'est assez simple, mais avec plus de fichiers ça devient déroulant très vite.
+Par exemple si on a beaucoup de dépendances ou une application multi-plateforme c'est très difficile de ne pas oublier un élément.
 \newpage
+C'est pour ça qu'il existe l'option de créer des makefile. Le makefile liste tous les fichiers et dépendances du projet.
 \lstinputlisting[language=make,caption={Makefile sans variables}]{../project/cpp_make_sample/Makefile1.}
-Si on regarde le fichier Makefile correspondant on voit que ça ne simplifie pas encore notre vie. Une prochaine étape est d'introduire des variables.
+Si on regarde le fichier Makefile correspondant, on voit que ça ne simplifie pas encore notre vie. Une prochaine étape est l'introduction des variables dans le makefile.
 \lstinputlisting[language=make,caption={Makefile avec variables}]{../project/cpp_make_sample/Makefile2.}
 
-Ce fichier est plus court et très adaptable, mais il n est pas très lisible.
-Utilisant l'outil cmake on peut générer les fichiers Makefile automatiquement (et autres fichiers de projet comme ".sln").
-Dans le fichier CMakeLists.txt on définit quelles fichiers il faut compiler, quel sont les descendances...
+Ce fichier est plus court et très adaptable, mais il n'est pas lisible.
+En utilisant l'outil cmake on peut générer les fichiers Makefile automatiquement (et autres fichiers de projet comme ".sln").
+Dans le fichier CMakeLists.txt on définit quels fichiers il faut compiler et quels sont les dépendances.
 \lstinputlisting[language=make,caption={CMakeLists.txt}]{../project/cpp_make_sample/CMakeLists.txt}
 
-
-\subsubsection{Java}
-Ant (Another neat tool) a apparu 2000, le premier logiciel de construction pour Java.
-Aujourd'hui Ant et ses produits de concurrence Maven(2002) et Gradle(2012) sont inévitable si on utilise Java.
-Dans ce moment environ 70 \% des développeurs Java utilisent Maven, 15 \% Ant et 15\% Gradle. Le concept est pareille comme en C++.
-
+Tous ses étapes de construction peuvent être automatiser avec un serveur d'IC.
+\newpage
 
 \subsection{Intégration continue de base de données}
 
@@ -107,73 +111,69 @@ C'est pour ça qu'une automatisation de ce processus est indispensable. Une auto
 
 \subsubsection{Instance de base de donnée locale}
 
-Pour que cette approche fonctionne tous les développeurs doivent avoir l'autorisation de changer la base de données. Pour éviter des conflits pendant le développement tous les développeurs ont besoin d'une instance de cette base de données sur ses machines locales. Si on travaille avec une instance centrale à chaque changement il y a le danger de casser le code que quelqu'un d'autre est en train de développer.
+Pour que cette approche fonctionne optimalement tous les développeurs doivent avoir l'autorisation de changer la définition de la base de données. Pour éviter des conflits pendant le développement tous les développeurs ont besoin d'une instance de cette base de données sur leur machines locales. Si on travaille avec une instance centrale à chaque changement il y a le danger de casser le code que quelqu'un d'autre est en train de développer.
 \newpage
 
 
-\subsection{Test continue}
-Le premier principe de base pour des tests automatisés est "Fail fast" (Échouer vite).
-C'est pourquoi on distingue trois types différents. Comme réglé d'or on  peut dire que les test unitaires prend des secondes, les tests d'intégration prend des minutes et les tests d'acceptation prend des heures.\nocite{artofunittesting}
+\subsection{Tests continue}
+Les tests existes pour contrôler la fonctionnalité d'un bout de code, d'un système ou d'une application complète. Le premier principe de base pour des tests automatisés est "Fail fast" (Échouer vite). On distingue trois types de tests différents. Comme règle d'or on peut dire que les tests unitaires prend des secondes, les testes d'intégration prend des minutes et les tests d'acceptation prend des heures.\footnote{\citep{artofunittesting}}
+
 \subsubsection{Tests unitaires}
-Les tests unitaires vérifient le bon fonctionnement d' un bout de code. Pour les parties du code qui ne sont pas testable atomiquement on introduit des objets mock qui permettent des tests de fonctionnement vite et sans effets secondaires. 
+Les tests unitaires vérifient le bon fonctionnement d'un bout de code. Pour les parties du code qui ne sont pas testable atomiquement on introduit des objets mock qui permettent des tests de fonctionnement vite et sans effets secondaires. 
 \subsubsection{Tests d'intégration}
-Pour tester l' interaction des parties testé avec les tests unitaires. Aussi l'interaction avec le système de fichier ou une base de données est testé ici. Après les tests d'intégration les erreurs logiques doivent être éliminé.
-\subsubsection{Tests d'acceptation automatisées}
-Il y a différents types de test d' acceptation:
-\begin{itemize}
- \item Tests d'interface utilisateur codé
- \\Pour ces tests il faut enregistrer des scénario. Les outils de test permettent de cliquer des boutons, entrer de text etc. 
- \item Tests de performance
+Après avoir tester les composant atomiquement, il est aussi nécessaire de tester l'interaction de ces composant avec des systèmes secondaire comme le système de fichier ou une base de données. Après ces tests d'intégration les erreurs logiques et d'intégration doivent être éliminé.
+\subsubsection{Tests d'acceptation}
+Les testes d'acceptation contrôle si les exigences du client sont respecté. \\
+Il y a différents types de test d'acceptation:
+\begin{enumerate}
+ \item \textit{Tests d'interface utilisateur automatisé (code)}
+ \\Pour ces tests il faut spécifier des scénario. Une programme teste accède l'application et exécute le scénario avec des interactions avec l'interface d'utilisateur.
+ \item \textit{Tests de performance}
  \\Ces tests montrent quelles parties du code prennent la plupart des ressources.
- \item Tests d'exploitabilité 
+ \item \textit{Tests d'exploitabilité}
  \\Si le logiciel utilise une base de données on peut par exemple tester la vulnérabilité contre des attaques injection SQL.
- \item Tests de charge
+ \item \textit{Tests de charge}
  \\Par exemple: On a un magasin en ligne qui doit résister 100 utilisateurs à n'importe quel moment, testé avec les scénarios "login", "recherche des articles", "caisse", "login, ajouter, logout, login, effacer"
-\end{itemize}
-
-
-
-
+\end{enumerate}
+\ \\
+Le concept tests continue décrit le fait, que les tests doivent être exécuter régulièrement ou mêmes continuellement. Le serveur d'IC est configuré de lancer les tests après la construction quand il y a un changement sur le dépôt centrale. Car les trois différent types de tests ont une durée différent, on se restreinte normalement au tests unitaires pour des constructions normale. Les testes d'intégration ou d'acceptation sont exécuté par le serveur d'IC pendant la nuit ou le weekend. C'est pour cela qu'il faut avoir multiple configuration de construction et de tests par projet.
+\newpage
 
 \subsection{Inspection continue}
 
-La différence entre les testes et les inspections est que les inspections analyse la forme et la structure du code source et pas la fonctionnalité. Ces inspections sont introduit dans le processus de construction par différents plugin. Les inspections ne remplacent pas les contrôles code manuelles, mais dans ces contrôles il y aura moins de défauts banale à traiter. Les objectifs des inspections sont engrené là dessous.
+La différence entre les tests et les inspections est que les inspections analyse la forme et la structure du code source et pas la fonctionnalité. Ces inspections sont introduit dans le processus de construction par différents plugins. Les inspections ne remplacent pas les contrôles code manuelles, mais dans ces contrôles il y aura moins de défauts banale à traiter. Les objectifs des inspections sont engrené là dessous.
 
 \begin{enumerate}
 
-\item \textit{Réduire la complexité du code source} \\ La complexité du code source peut être mesurée par la métrique "Cyclomatic Complexity Number (CCN)", qui compte le nombre de chemins distincts dans une méthode. Comme ça les endroits qui nécessite un changement peuvent être identifié (JavaNCSS, PMD \footnote{\citep{pluginpmd}}).
+\item \textit{Réduire la complexité du code source} \\ La complexité du code source peut être mesurée par la métrique "Cyclomatic Complexity Number (CCN)", qui compte le nombre de chemins distincts dans une méthode. Comme ça les endroits qui nécessite un changement peuvent être identifié (Plugin: JavaNCSS, PMD \footnote{\citep{pluginpmd}}).
 
-\item \textit{Déterminer la dépendance} \\ Les métriques de couplage (Afferent/Efferent Coupling) et l'instabilité d'un paquet de logiciel peuvent être des indications à comme important on paquet est. Les paquet qui sont utilisé très souvent il vaut mieux les tester très exactement (JDepend\footnote{\citep{pluginjdepend}}).
+\item \textit{Déterminer la dépendance} \\ Les métriques de couplage (Afferent/Efferent Coupling) et l'instabilité d'un paquet de logiciel peuvent être des indications à comme important un paquet est. Les paquet qui sont utilisé très souvent il vaut mieux les tester très exactement et être prudent avec des changements (Plugin: JDepend\footnote{\citep{pluginjdepend}}).
 
-\item \textit{Imposer les standards de l'entreprise}\\ Dans chaque entreprise il y a des règles comment il faut écrire le code. Des exemples très fréquemment sont que les variables n'ose pas avoir des noms trop courts et non-descriptive ou que les déclarations conditionnel doivent toujours être écrit avec des parenthèses (PMD).
-\item \textit{Réduire le code copié} \\ Le code source copié doit être avouer. Il y a des outils qui identifie des sections de code identique (PMD).
+\item \textit{Imposer les standards de l'entreprise}\\ Dans chaque entreprise il y a des règles comment il faut écrire le code. Des exemples très fréquemment sont que les variables n'ose pas avoir des noms trop courts et non-descriptive ou que les déclarations conditionnel doivent toujours être écrit avec des parenthèses (Plugin: PMD).
 
-\item \textit{Déterminer la couverture de code} \\ La couverture de code par les testes est une métrique qui aide à déterminer quelles partie du code ont été négliger pendant écrire les testes (Cobertura\footnote{\citep{plugincobertura}}).
+\item \textit{Réduire le code copié} \\ Le code source copié doit être avouer. Il y a des outils qui identifie des sections de code identique (Plugin: PMD).
+
+\item \textit{Déterminer la couverture de code} \\ La couverture de code par les testes est une métrique qui aide à déterminer quelles partie du code ont été négliger pendant écrire les testes (Plugin: Cobertura\footnote{\citep{plugincobertura}}).
 
 \end{enumerate}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=15cm]{bilder/Coverage}
-\caption{Couverture de code exemplaire} \cite{codecoverage}
+\caption{Couverture du code exemplaire} \cite{codecoverage}
 \label{fig:coverage}
 \end{figure}
 
 
 \subsection{Information en retour continue}
 
-Pendant le processus de construction c'est indispensable de savoir ce que se passe. Chaque étape de construction doit fournir des informations à tout-le-monde affecté. Classiquement c'est réalisé par envoyer un courriel. Les possibilités plus modernes sont des plugins directement dans l'environnement de développement(Team Explorer for TFS intégré dans Visual Studio), dans une application de online-chat(TravisCI native, TeamCity, Jenkins avec plugins), comme notification sur l'ordiphone ou dans le système d exploitation(Native dans Windows 10 ou avec différents applications tierce partie)...
-
-
-
-
+Pendant le processus de construction il est indispensable de savoir ce qui se passe. Chaque étape de construction doit fournir des informations à tous les personnes affecté. Classiquement c'est réalisé par envoyer un courriel aux personnes clés. Les possibilités plus modernes sont des plugins et notifications directement dans l'environnement de développement(Team Explorer for TFS intégré dans Visual Studio), dans une application de online-chat (TravisCI native, TeamCity, Jenkins avec plugins), comme message sur l'ordiphone ou dans le système d'exploitation (Native dans Windows 10 ou avec différents applications tierce partie).
 
 \newpage
 \subsection{Déploiement continue}
 
-Le déploiement continue est un moyen pour délivrer la version actuelle aux utilisateurs immédiatement. Si un développeur fait un changement, la construction est initié automatiquement. Après ça les testes unitaires sont exécuté. Si tout les tests sont verts le développeur es informé et l'exécution des testes d'acceptation automatisées commence. Si la fonctionnalité du logiciel est assuré une nouvelle version est déployé immédiatement.
-
-
+Le déploiement continue est un moyen pour délivrer la version actuelle d'une application aux utilisateurs immédiatement. Si un développeur fait un changement, la construction est initié automatiquement. Après ça les testes unitaires sont exécuté. Si tout les tests complète avec succès  le développeur est informé et l'exécution des testes d'acceptation automatisées commence. Si la fonctionnalité du logiciel est assuré une nouvelle version est déployé immédiatement.
+Il est très probable que ce processus est différent dans une autre entreprise ou applications. Les testes d'utilisateur ou des autre contrôles manuelles pourrait être exiger.\\
 \begin{figure}[H]
 \centering
 \includegraphics[width=15cm]{bilder/Continuous_Delivery}
@@ -181,69 +181,11 @@ Le déploiement continue est un moyen pour délivrer la version actuelle aux uti
 \label{fig:continousdelivery}
 \end{figure}
 
+Un autre scénario très fréquent est qu'on a plusieurs environnements et serveurs pour déployer une application (local, development, testing, production). Un déploiement sur la plateforme development seras moins critiques qu'un déploiement sur la production.
 
-
-
-
-\clearpage
-
-\section{Motivation et bénéfices}
-
-La raison principale pour utiliser l'IC est de garantir le succès et le déroulement d'un projet de développement de logiciel sans accroc. Dans tous les projets il y auras des problèmes et dans tous les logiciels il y auras des bogues. Mais l'IC aide à minimiser l'impact négatif que ces erreurs ont.
-
-De plus l'IC fait possible d'automatiser des processus ennuyeux, répétitif et sensible aux défauts. Par ça on peut économiser du temps et de la monnaie et les développeur se peuvent concentrer sur ce qu'ils aiment faire.
-
-\subsection{Éviter des risques}
-En dessous vous trouvez quelques risques que l'IC aide à éviter, mais seulement si la méthodologie est appliquée correctement (\nameref{sec:meuilleurespratiques}).\footnote{\cite[p39]{duvallconint}} 
-\subsubsection{Logiciel pas près pour le déploiement}
-Si on fait l'intégration d'un système seulement à la fin du projet, la probabilité de ne pas être capable à déployer et dérouler le logiciel pour le client est très haute. Des énonces comme "Mais ça marche sur ma machine" sont très connues. Des raisons pour cela peuvent être des configurations manquantes ou différentes sur la machine cible, ou même des dépendances qui n'ont pas été inclus pour le déploiement. Naturellement si le code source ne compile pas, le logiciel ne peut non plus être déroulé.
-
-En commettre, construire et déployer le logiciel souvent ce risque peut être diminuer. En faisant ça on a la certitude d'avoir au moins un logiciel qui marche partiellement.
-\subsubsection{Découverte tarde des erreurs}
-Par l'exécution des testes automatiques pendant le processus de construction des erreurs dans le code source peuvent être découvrit tôt. De plus il est aussi possible de déterminer la couverture du code par les tests. Surement la qualité des testes doit être bonne.
-\subsubsection{Manque de visibilité du projet}
-L'opération d'un serveur d'IC crée la clarté de l'état actuelle de l'application et aussi de sa qualité. Si il y a un problème avec les changements derniers toutes les personnes responsables seront contacter. Si une nouvelle version a été déployé pour les testes, les personnes testant le logiciels seront aussi automatiquement informé.
-
-Il existe mêmes des outils qui font la visualisation du projet possible, par générant des diagrammes UML du code courant. Ça aide à donner un aperçu pour des développeurs nouvelles et garantis une documentation toujours actuel du projet.
-\subsubsection{Logiciel de basse qualité }
-Le code source qui ne suit pas les règles de programmation, le code source qui suit une architecture différent ou le code redondant pourront devenir des erreurs dans le futur.
-Par exécutant des testes et des inspections régulièrement ces dérogations peuvent être trouvé avant de devenir un vrai problème.
-\clearpage
-
-\section{Meilleures pratiques}
-\label{sec:meuilleurespratiques}
-
-En dessous vous trouvez quelques pratiques qui aident à optimiser l'efficacité d'un système d'IC.\footnote{CI and You \cite[p~47]{duvallconint}}
-
-\begin{enumerate}
-
-\item \textbf{Étendue de l'implémentation (Scope of implementation)}\\
-Avant de commencer l'implémentation d'un système de l'IC c'est absolument nécessaire de savoir de quelles composants on a besoin. Pas tous les projets nécessite les mêmes mesures, ça dépends fortement de la taille, de la complexité du projet et du nombre de personnes impliqué. 
-De plus il est conseillé de ne pas configurer tous les composant en même temps, mais de faire ça par étapes (p.ex. build, testing, review, deploy). 
-
-\item\textbf{Commettre le code souvent (Commit code frequently)}\\
-Il est conseillé de commettre le code source au moins une foi par jour. Essaie de fragmenter le travail dans des morceaux petits et de commettre après chaque partie.
-
-\item\textbf{Ne jamais commettre du code non-compilable (Dont commit broken code)}
-
-\item\textbf{Éviter le code non-fonctionnant (Avoid getting broken code)}
-
-\item\textbf{Faire la construction localement (Run private builds)}
-
-\item\textbf{Découpler le processus de construction de l'IDE (Decouple build process from IDE)}\\
-L'IDE peut faire des pas dans le processus de construction qui ne sont pas transparent pour le développeur ou les développeur utilises des différents IDE. C'est pour ça que la construction doit être possible et fait à dehors d'une IDE.
-
-\item\textbf{Réparer des constructions non-fonctionnant immédiatement (Fix broken builds immediately)}\\
-Si quelque chose ne marche pas la réparation doit avoir la première priorité.
-
-\item\textbf{Écrire des testes automatisé (Write automated developer tests)}
-
-\item\textbf{Tous les testes doivent réussir (All tests and inspections must pass)}\\
-Si on ignore des testes qui ne réunissent pas on diminue la visibilité du projet.
-
-\item\textbf{Des constructions vite (Keep builds fast)}\\
-
-\end{enumerate}
-
-
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{bilder/Deployment_ci}
+\caption{Déploiement continue - Environnements}\cite{bizagigraphique}
+\label{fig:continousdelivery}
+\end{figure}
