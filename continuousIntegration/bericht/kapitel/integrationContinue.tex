@@ -63,16 +63,24 @@ L'idée de la construction continue est de définir le processus de construction
 \subsubsection{Java}
 Ant (Another neat tool) a apparu 2000, le premier logiciel de construction pour Java.
 Aujourd'hui Ant et ses produits de concurrence Maven(2002) et Gradle(2012) sont inévitable si on utilise Java.
-Dans ce moment environ 70 \% des développeurs Java utilisent Maven, 15 \% Ant et 15\% Gradle. Le concept est pareille comme en C++. EMAAA Quelle?
+Dans ce moment environ 70 \% des développeurs Java utilisent Maven, 15 \% Ant et 15\% Gradle. Le concept est pareille comme en C++. 
+%EMAAA Quelle? VIDDY Ke ahnig me woni das uf em netz gfunde ha, weiss nur no das es veraltet isch gsi.. wahrschinlich isch gradle inzwüsche no höcher.. ha keni aktuelle statistike gfunde.. drum hani ja "environ" gschribe..
 \subsubsection{C/C++}
-EMAAA code snippets hei chli viu lücke/lines
 Le premier logiciel de construction était make, qui existes depuis 1976 (Stuart Feldman, Bell Labs). Sur les plateformes basé sur Unix make est encore utilisé pour construire des exécutables.
-Pour construire une application avec make if faut fournir un fichier makefile qui contiens les instructions de compilation. Supposant on a un logiciel avec les fichiers: 
+Pour construire une application avec make if faut fournir un fichier makefile qui contiens les instructions de compilation. Supposant on a un logiciel avec les fichiers: \\ \\
 
-\lstinputlisting[language=C,caption={functions.h}]{../project/cpp_make_sample/functions.h}
-\lstinputlisting[language=C,caption={factorial.c}]{../project/cpp_make_sample/factorial.c}
-\lstinputlisting[language=C,caption={squared.c}]{../project/cpp_make_sample/squared.c}
-\lstinputlisting[language=C,caption={main.cpp}]{../project/cpp_make_sample/main.cpp}
+\begin{tabular}{ll}
+functions.h&squared.c\\
+{\lstinputlisting[language=C]{../project/cpp_make_sample/functions.h}}&{\lstinputlisting[language=C,]{../project/cpp_make_sample/squared.c}}\\
+\end{tabular}
+
+
+factorial.c
+\lstinputlisting[language=C]{../project/cpp_make_sample/factorial.c}
+
+
+main.cpp
+\lstinputlisting[language=C]{../project/cpp_make_sample/main.cpp}
 
 La commande pour compiler ce projet manuellement est:
 $$g++\;main.cpp\;squared.cpp\;factorial.cpp\;-o\;hello$$
@@ -89,7 +97,7 @@ En utilisant l'outil cmake on peut générer les fichiers Makefile automatiqueme
 Dans le fichier CMakeLists.txt on définit quels fichiers il faut compiler et quels sont les dépendances.
 \lstinputlisting[language=make,caption={CMakeLists.txt}]{../project/cpp_make_sample/CMakeLists.txt}
 
-Tous ses étapes de construction peuvent être automatiser avec un serveur d'IC.
+Tous ses types de construction peuvent être automatiser avec un serveur d'IC.
 \newpage
 
 \subsection{Intégration continue de base de données}

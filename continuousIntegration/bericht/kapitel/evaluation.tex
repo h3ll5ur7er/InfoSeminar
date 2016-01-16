@@ -22,8 +22,10 @@ Pour tester les logiciels de construction nous avons compilé des projets de tes
 Gradle a des résultats meilleur que Ant et Maven, mais c'est plus compliqué a apprendre. Aussi la documentation de Gradle n'est pas très facile a comprendre parce-que elle est très détaillé.
 
 \subsubsection{Comparaison de Syntaxe}
-
-Ema e churze verglich (bild zwüsche syntax war doch no toll
+	\paragraph{Maven et Ant - pom.xml et build.xml}
+		Tout les deux utilisent xml pour structurer les données. Le fichier pom.xml utilisé par Maven est court et net. Si on dit que Maven est comme une voiture, Ant est une collection des composants pour construire un véhicule. Il faut dire Ant exactement ce que il y a à faire. Pour cette raison le fichier build.xml deviens long et embrouillé très vite.
+	\paragraph{Gradle - build.gradle}
+		Gradle utilise un format basé sur JSON qui restes lisible aussi pour des projets grands. C'est possible d' ajouter des librairies dépendent construit avec Maven ou Ivy et de publier sur ces deux formes des répositoires.
 
 \newpage
 \section{Serveur de l'intégration continue}
@@ -74,10 +76,10 @@ En dessous vous trouvez les critères avec une bref description qui seront utili
 			\textbf{Critères} & \href{https://jenkins-ci.org}{\textbf{Jenkins}} & \href{https://www.jetbrains.com/teamcity/}{\textbf{TeamCity}} & \href{https://travis-ci.org}{\textbf{Travis CI}} & \href{https://www.visualstudio.com/en-us/products/tfs-overview-vs.aspx}{\textbf{Team Foundation Server}} \\ \midrule
 			\rowcolor{GrayRow}\textbf{Caractéristique du produit} &  &  &  &  \\ \midrule[0.16em]
 			Outils de gestion des versions & Subversion/CVS(+plugins) & Subversion/CVS(+plugins) & github/Git & Git/TFVC \\ \midrule
-			Outils de construction & EMA & \checkmark\checkmark (CLI) & \checkmark & \\ \midrule
-			Information en retour & & \checkmark & \checkmark\checkmark & \\ \midrule
-			Labeling & & \checkmark & - - & \\ \midrule
-			Extensibilité & \checkmark\checkmark & \checkmark & - & - - \\ \midrule
+			Outils de construction &  \checkmark & \checkmark\checkmark (CLI) & \checkmark & \checkmark \\ \midrule
+			Information en retour & \checkmark (Courriel, Plugins) & \checkmark & \checkmark\checkmark & \checkmark\checkmark \\ \midrule
+			Labeling &  \checkmark\checkmark & \checkmark & - - &\checkmark\checkmark \\ \midrule
+			Extensibilité & \checkmark\checkmark & \checkmark & - & \checkmark \\ \midrule
 			\rowcolor{GrayRow}\textbf{Générale} &  &  &  &  \\ \midrule[0.16em]
 			Fiabilité et longévité & \checkmark\checkmark & \checkmark\checkmark & \checkmark\checkmark & \checkmark\checkmark \\ \midrule
 			Environnement cible & multi-plateforme & multi-plateforme & Linux & Microsoft Windows \\ \midrule
@@ -85,11 +87,11 @@ En dessous vous trouvez les critères avec une bref description qui seront utili
 			Couts & gratuit & Freemium* & Freemium* & Freemium \\ \midrule
 			Type de logiciel & Open Source (MIT) & Propriétaire & Open Source (MIT) & Propriétaire \\ \midrule
 			\rowcolor{GrayRow}\textbf{Taille de la communauté} & & & & \\ \midrule[0.16em]
-			Nombre d'utilisateurs &  & 30'000 clients & 240'000 projets &  \\ \midrule
+			Nombre d'utilisateurs & 127'000 & 30'000 clients & 240'000 projets & Many \\ \midrule
 			Nombre de plugins & \checkmark\checkmark & \checkmark & - - & - \\ \midrule
 			\rowcolor{GrayRow}\textbf{Utilisation} &  &  &  &  \\ \midrule[0.16em]
-			Facilité d'utilisation &  & \checkmark & \checkmark\checkmark &  \\ \midrule
-			Complexité de l'installation &  & \checkmark & \checkmark\checkmark &  \\
+			Facilité d'utilisation & \checkmark & \checkmark & \checkmark\checkmark & \checkmark\checkmark \\ \midrule
+			Complexité de l'installation & \checkmark & \checkmark & \checkmark\checkmark &  \checkmark\checkmark\\
 			\bottomrule[0.16em]
 		\end{tabular}
 	\caption{Serveurs de l'IC}
@@ -229,10 +231,9 @@ Combiné avec une suscription MSDN beaucoup des services VisualStudio et Azure s
 \paragraph{Utilisation} L'interface utilisateur est très intuitive. Après l'enregistrement on peut lier un projet locale avec le projet team en ligne. Si on veut configurer la construction ou le déploiement automatisé il faut ouvrir l'interface web et suivre les instructions. 
 La partie test est un peu confus au début, parce que les tests unitaires et les tests d'intégration sont inclue dans la construction et dans le chapitre test sont les tests d'acceptation recordé.
 
-EMAAA chasch uf ei site
 \begin{figure}[H]
 	\centering
-		\includegraphics[height=10cm]{bilder/vso}
+		\includegraphics[height=8cm]{bilder/vso}
 	\caption{Visualstudio Online interface d'administration}
 	\label{fig:vsogui}
 \end{figure}
