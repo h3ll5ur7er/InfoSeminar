@@ -1,0 +1,130 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bizagi(2015)]{bizagigraphique}
+Bizagi.
+\newblock Bizagi, 2015.
+\newblock URL
+  \url{http://help.bizagi.com/bpmsuite/en/deployment01_releasecandidateproduction_zoom85.png}.
+
+\bibitem[Booch(1993)]{boochooad}
+G.~Booch.
+\newblock \emph{Object-Oriented Analysis and Design with Applications},
+  volume~1.
+\newblock Addison-Wesley, 1993.
+\newblock ISBN 978-0805353402.
+
+\bibitem[Cobertura(2015)]{plugincobertura}
+Cobertura.
+\newblock Cobertura - code coverage plugin, 2015.
+\newblock URL \url{http://cobertura.github.io/cobertura/}.
+
+\bibitem[Duvall(2007)]{duvallconint}
+P.~M. Duvall.
+\newblock \emph{Continuous Integration: Improving Software Quality and Reducing
+  Risk}, volume~1.
+\newblock Addison-Wesley Professional, 2007.
+\newblock ISBN 978-0321336385.
+
+\bibitem[fiji.sc(2015)]{codecoverage}
+fiji.sc.
+\newblock Coverage example, 2015.
+\newblock URL \url{http://fiji.sc/_images/1/17/Coverage-file.png}.
+
+\bibitem[Fowler(2006)]{fowlerci}
+M.~Fowler.
+\newblock Continuous integration, 2006.
+\newblock URL
+  \url{http://www.martinfowler.com/articles/continuousIntegration.html}.
+
+\bibitem[Humble(2015)]{wikicd}
+J.~Humble.
+\newblock Continous delivery diagramm, 2015.
+\newblock URL \url{https://en.wikipedia.org/wiki/Continuous_delivery}.
+
+\bibitem[IBM(2006)]{ibmciserver}
+IBM.
+\newblock Selection of ci server, 2006.
+\newblock URL \url{http://www.ibm.com/developerworks/library/j-ap09056/}.
+
+\bibitem[JDepend(2015)]{pluginjdepend}
+JDepend.
+\newblock Jdepend - design quality metrics, 2015.
+\newblock URL \url{http://www.clarkware.com/software/JDepend.html}.
+
+\bibitem[Jenkins(2015{\natexlab{a}})]{jenkinsplugins}
+Jenkins.
+\newblock Plugins jenkins, 2015{\natexlab{a}}.
+\newblock URL \url{https://wiki.jenkins-ci.org/display/JENKINS/Plugins}.
+
+\bibitem[Jenkins(2015{\natexlab{b}})]{jenkinsstats}
+Jenkins.
+\newblock Jenkins statistics, 2015{\natexlab{b}}.
+\newblock URL
+  \url{http://stats.jenkins-ci.org/jenkins-stats/svg/total-jenkins.svg}.
+
+\bibitem[Osherove(2013)]{artofunittesting}
+R.~Osherove.
+\newblock \emph{The art of unit testing - Second Edition}.
+\newblock Manning, 2013.
+\newblock ISBN 978-1617290893.
+
+\bibitem[PMD(2015)]{pluginpmd}
+PMD.
+\newblock Pmd - code inspection plugin, 2015.
+\newblock URL \url{https://pmd.github.io/}.
+
+\bibitem[Roberts(2015)]{robertshistory}
+M.~Roberts.
+\newblock 15 years of ci, 2015.
+\newblock URL \url{http://bit.ly/18EMkmW}.
+
+\bibitem[SQLMavenPlugin(2015)]{mvnsql}
+SQLMavenPlugin.
+\newblock Sql maven plugin, 2015.
+\newblock URL
+  \url{http://www.mojohaus.org/sql-maven-plugin/examples/execute.html}.
+
+\bibitem[TeamCity(2015{\natexlab{a}})]{teamcitybuy}
+TeamCity.
+\newblock Teamcity buy, 2015{\natexlab{a}}.
+\newblock URL \url{https://www.jetbrains.com/teamcity/buy/}.
+
+\bibitem[TeamCity(2015{\natexlab{b}})]{teamcityenv}
+TeamCity.
+\newblock Teamcity environment, 2015{\natexlab{b}}.
+\newblock URL
+  \url{https://confluence.jetbrains.com/display/TCD9/Supported+Platforms+and+Environments}.
+
+\bibitem[TeamCity(2015{\natexlab{c}})]{teamcityplugins}
+TeamCity.
+\newblock Teamcity plugins, 2015{\natexlab{c}}.
+\newblock URL
+  \url{https://confluence.jetbrains.com/display/TW/TeamCity+Plugins}.
+
+\bibitem[TFS(2015)]{tfsversioncontrol}
+TFS.
+\newblock Tfs version control, 2015.
+\newblock URL
+  \url{https://msdn.microsoft.com/en-us/Library/vs/alm/code/overview}.
+
+\bibitem[TravisCI(2015{\natexlab{a}})]{traviscidocs}
+TravisCI.
+\newblock Traviscidocs, 2015{\natexlab{a}}.
+\newblock URL \url{https://docs.travis-ci.com/user/getting-started}.
+
+\bibitem[TravisCI(2015{\natexlab{b}})]{traviscinotification}
+TravisCI.
+\newblock Travis ci notification, 2015{\natexlab{b}}.
+\newblock URL \url{https://docs.travis-ci.com/user/notifications/}.
+
+\bibitem[various(2015)]{wikici}
+various.
+\newblock Continuous integration, 2015.
+\newblock URL \url{https://en.wikipedia.org/wiki/Continuous_integration}.
+
+\end{thebibliography}

@@ -1,0 +1,34 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Mission et Abstract}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Approche}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Int\351gration Continue}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Histoire}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Aper\347u}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.2.1}{Architecture exemplaire}{section.2.2}% 7
+\BOOKMARK [1][-]{section.2.3}{Concepts de l'int\351gration continue}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.3.1}{Construction continue}{section.2.3}% 9
+\BOOKMARK [2][-]{subsection.2.3.2}{Int\351gration continue de base de donn\351es}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.3}{Tests continue}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.4}{Inspection continue}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.5}{Information en retour continue}{section.2.3}% 13
+\BOOKMARK [2][-]{subsection.2.3.6}{D\351ploiement continue}{section.2.3}% 14
+\BOOKMARK [0][-]{chapter.3}{Motivation et b\351n\351fices}{}% 15
+\BOOKMARK [1][-]{section.3.1}{\311viter des risques}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.1.1}{Logiciel pas pr\350s pour le d\351ploiement}{section.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.2}{D\351couverte tarde des erreurs}{section.3.1}% 18
+\BOOKMARK [2][-]{subsection.3.1.3}{Manque de visibilit\351 du projet}{section.3.1}% 19
+\BOOKMARK [2][-]{subsection.3.1.4}{Logiciel de basse qualit\351}{section.3.1}% 20
+\BOOKMARK [1][-]{section.3.2}{Meilleures pratiques}{chapter.3}% 21
+\BOOKMARK [0][-]{chapter.4}{\311valuation}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Logiciels de construction}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.1.1}{Java}{section.4.1}% 24
+\BOOKMARK [1][-]{section.4.2}{Serveur de l'int\351gration continue}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.2.1}{D\351finition des crit\350res}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.2}{Jenkins}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.3}{TeamCity}{section.4.2}% 28
+\BOOKMARK [2][-]{subsection.4.2.4}{Travis CI}{section.4.2}% 29
+\BOOKMARK [2][-]{subsection.4.2.5}{Team Foundation Server}{section.4.2}% 30
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 31
+\BOOKMARK [1][-]{section.5.1}{Bilan}{chapter.5}% 32
+\BOOKMARK [0][-]{section*.45}{Bibliographie}{}% 33
+\BOOKMARK [0][-]{section*.47}{Table des figures}{}% 34

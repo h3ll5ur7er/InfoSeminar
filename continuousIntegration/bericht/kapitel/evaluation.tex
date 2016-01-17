@@ -3,7 +3,7 @@
 
 \section{Logiciels de construction}
 \subsection{Java}
-Pour tester les logiciels de construction nous avons compilé des projets de test de différent largeur sur les systèmes mesurant le temps.
+Pour tester les logiciels de construction nous avons compilé des projets de test de différent largeur et avec des différent logiciel de construction. On as mesuré le temps qu'ils prennent pour construire.
 
 \begin{table}[H]
 \centering
@@ -19,13 +19,13 @@ Pour tester les logiciels de construction nous avons compilé des projets de tes
 \caption{Évaluation de logiciel de construction Java}
 \end{table}
 \subsubsection{Conclusion}
-Gradle a des résultats meilleur que Ant et Maven, mais c'est plus compliqué a apprendre. Aussi la documentation de Gradle n'est pas très facile a comprendre parce-que elle est très détaillé.
+Gradle a des résultats meilleurs que Ant et Maven, mais c'est plus compliqué a apprendre. Aussi la documentation de Gradle n'est pas très facile a comprendre parce-que elle est très détaillé et grande.
 
 \subsubsection{Comparaison de Syntaxe}
 	\paragraph{Maven et Ant - pom.xml et build.xml}
-		Tout les deux utilisent xml pour structurer les données. Le fichier pom.xml utilisé par Maven est court et net. Si on dit que Maven est comme une voiture, Ant est une collection des composants pour construire un véhicule. Il faut dire Ant exactement ce que il y a à faire. Pour cette raison le fichier build.xml deviens long et embrouillé très vite.
+		Maven et Ant utilisent xml pour structurer les données de configuration. Le fichier pom.xml utilisé par Maven est court et net. Si on dit que Maven est comme une voiture, Ant est une collection des composants pour construire un véhicule. Il faut dire Ant exactement ce que il y a à faire. Pour cette raison le fichier build.xml deviens long et embrouillé très vite.
 	\paragraph{Gradle - build.gradle}
-		Gradle utilise un format basé sur JSON qui restes lisible aussi pour des projets grands. C'est possible d' ajouter des librairies dépendent construit avec Maven ou Ivy et de publier sur ces deux formes des répositoires.
+		Gradle utilise un format basé sur JSON qui restes lisible aussi pour des projets grands. C'est possible d' ajouter des librairies dépendent construit avec Maven ou Ivy et de publier sur ces deux formes de dépôts.
 
 \newpage
 \section{Serveur de l'intégration continue}
@@ -44,7 +44,7 @@ En dessous vous trouvez les critères avec une bref description qui seront utili
 		\textit{Est notre langage de programmation (compilateur) et notre outil de construction supporté?}
 		\item Information en retour \\
 		\textit{Quelles méthodes de l'information en retour existe et sont-ils suffisant pour nous?}
-		\item Labeling \\
+		\item Identification \\
 		\textit{Est-il possible de donner des identifiant à des versions d'un logiciel?}
 		\item Extensibilité \\
 		\textit{Est-il possible d'écrire des extension propre ou des plugins pour le serveur si nécessaire?}
@@ -78,7 +78,7 @@ En dessous vous trouvez les critères avec une bref description qui seront utili
 			Outils de gestion des versions & Subversion/CVS(+plugins) & Subversion/CVS(+plugins) & github/Git & Git/TFVC \\ \midrule
 			Outils de construction &  \checkmark & \checkmark\checkmark (CLI) & \checkmark & \checkmark \\ \midrule
 			Information en retour & \checkmark (Courriel, Plugins) & \checkmark & \checkmark\checkmark & \checkmark\checkmark \\ \midrule
-			Labeling &  \checkmark\checkmark & \checkmark & - - &\checkmark\checkmark \\ \midrule
+			Identification &  \checkmark\checkmark & \checkmark & - - &\checkmark\checkmark \\ \midrule
 			Extensibilité & \checkmark\checkmark & \checkmark & - & \checkmark \\ \midrule
 			\rowcolor{GrayRow}\textbf{Générale} &  &  &  &  \\ \midrule[0.16em]
 			Fiabilité et longévité & \checkmark\checkmark & \checkmark\checkmark & \checkmark\checkmark & \checkmark\checkmark \\ \midrule
@@ -87,7 +87,7 @@ En dessous vous trouvez les critères avec une bref description qui seront utili
 			Couts & gratuit & Freemium* & Freemium* & Freemium \\ \midrule
 			Type de logiciel & Open Source (MIT) & Propriétaire & Open Source (MIT) & Propriétaire \\ \midrule
 			\rowcolor{GrayRow}\textbf{Taille de la communauté} & & & & \\ \midrule[0.16em]
-			Nombre d'utilisateurs & 127'000 & 30'000 clients & 240'000 projets & Many \\ \midrule
+			Nombre d'utilisateurs & 127'000 & 30'000 clients & 240'000 projets & pas connus (beaucoup) \\ \midrule
 			Nombre de plugins & \checkmark\checkmark & \checkmark & - - & - \\ \midrule
 			\rowcolor{GrayRow}\textbf{Utilisation} &  &  &  &  \\ \midrule[0.16em]
 			Facilité d'utilisation & \checkmark & \checkmark & \checkmark\checkmark & \checkmark\checkmark \\ \midrule
@@ -146,12 +146,12 @@ Tous les configurations et tous l'utilisation est effectué par l'interface web.
 	\item TeamCity Enterprise (3-100 agent packs)
 	\item TeamCity Additional Build Agent (+ 1 agent de construction)
 \end{itemize}
-La licence TeamCity Professional est gratuite mais limité. Pour les versions TeamCity Enterprise le nombre de projets est illimité mais payant (commençant de xxx) , mais on peu incrémenter le nombre d'agent de construction pour atteindre une meilleure performance quand il y a beaucoup de processus de construction parallèle. Pour des projets Open Source TeamCity est gratuite, pour des jeunes pousses il y a des rabais.\footnote{\citep{teamcitybuy}}
+La licence TeamCity Professional est gratuite mais limité. Pour les versions TeamCity Enterprise le nombre de projets est illimité mais payant (commençant de 1999\$) , mais on peu incrémenter le nombre d'agent de construction pour atteindre une meilleure performance quand il y a beaucoup de processus de construction parallèle. Pour des projets Open Source TeamCity est gratuite, pour des jeunes pousses il y a des rabais.\footnote{\citep{teamcitybuy}}
 \paragraph{Taille de la communauté}
 JetBrains affirme que 30'000+ clients utilise TeamCity pour exécuter l'intégration continue (Boeing, HP...). Il y a une grande nombre de plugins disponible sur le page web de TeamCity.\footnote{\citep{teamcityplugins}}
 \paragraph{Utilisation}
 L'installation de TeamCity est assez facile. Il existe des archive des fichiers exprès pour des installations rapide. TeamCity est basé sur Java et utilise un serveur Tomcat. Pour l'installation rapide, tous ce qu'on doit faire est télécharger et extraire l'archive, et puis exécuter un script et compléter la configuration initiale. Pour un système productive une installation un peu plus complexe est prévu.\\
-En utilisant TeamCity en premier on est confondu par la grande nombre d'options de configuration. Mais quand-même il était possible et pas très difficile de construire et mettre en rapport notre environnement teste. TeamCity est très volumineux, mais bien structuré et agréable pour l'utilisateur. Le faite qu'on peut faire toute la configuration sur l'interface web est un grande plus.
+En utilisant TeamCity en premier on est confondu par la grande nombre d'options de configuration. Mais quand-même il était possible et pas très difficile de construire et mettre en rapport notre environnement teste. TeamCity est très volumineux, mais bien structuré et agréable pour l'utilisateur. Le faite qu'on peut faire toute la configuration sur l'interface web est un grand plus.
 \begin{figure}[H]
 	\centering
 		\includegraphics[scale=0.35]{bilder/teamcityadmin}
@@ -172,7 +172,7 @@ En utilisant TeamCity en premier on est confondu par la grande nombre d'options 
   \caption{Travis CI Logo}
 \end{wrapfigure}
 \paragraph{Caractéristique du produit}
-Travis CI est un serveur de l'intégration continue très facile à mettre en service et avec une intégration excellente avec \href{https://github.com/}{github.com}. Il supporte beaucoup de différent langage et outil de construction. La liste complète peuvent être trouver dans la documentation\footnote{\citep{traviscidocs}}. Travis seulement supporte git comme outil de gestion des versions.\\
+Travis CI est un serveur de l'intégration continue très facile à mettre en service et avec une intégration excellente avec \href{https://github.com/}{github.com}. Il supporte beaucoup de différent langages et outils de construction. La liste complète peut être trouvé dans la documentation\footnote{\citep{traviscidocs}}. Travis seulement supporte git comme outil de gestion des versions.\\
 De plus il offre multiple voies d'information en retour. Le plus facile est par email, mais il y a aussi la possibilité d'envoyer des messages par IRC, Slack, HipChat etc.\footnote{\citep{traviscinotification}}. Chaque construction reçoit un identificateur numérique, mais il n'est pas possible de le changer. Il y a une API pour accéder à Travis (SaaS), mais l'extensibilité semble limité.
 
 \paragraph{Générale}
@@ -185,7 +185,7 @@ Il existe trois version de Travis CI.
 Les deux première versions sont accessible comme SaaS. Une version est pour des projets Open Source qui est gratuite et l'autre est pour des projets avec un dépôt de github privée qui est payant. La troisième version est pour des entreprises qui veulent mettre l'infrastructure à disposition eux-mêmes (Linux).
 
 \paragraph{Taille de la communauté}
-Travis CI affirme sur la page web qu'il y a 246'506 projets Open Source qui sont testé et intégré sur leur plateforme. Sur la nombre d'utilisateurs des deux versions commercial il n'y a pas d'information.
+Travis CI affirme sur la page web qu'il y a 246'506 projets Open Source qui sont testé et intégré sur leur plateforme. Sur la nombre d'utilisateurs des deux versions commerciales il n'y a pas d'information.
 
 \paragraph{Utilisation}
 L'utilisation de Travis CI est très pratiques est facile. Si on a déjà un dépôt sur github, il faut seulement trois pas pour lancer l'intégration continue avec Travis.
@@ -196,7 +196,7 @@ L'utilisation de Travis CI est très pratiques est facile. Si on a déjà un dé
 	\item Écrire un fichier .travis.yml pour définir la configuration
 \end{enumerate}
 
-Après ça chaque fois qu'il y a un changement sur le dépôt les tests et la construction seras exécuté automatiquement. Pour construire notre projet de test en java (maven), d'exécuter les testes avec trois différent version de java et envoyer un email à une adresse si quelque chose ne marche pas, le fichier en bas suffisait. De plus vous trouver un aperçu de l'interface d'administration de Travis.
+Après ça chaque fois qu'il y a un changement sur le dépôt les tests et la construction seras exécuté automatiquement. Pour construire notre projet de test en java (maven), d'exécuter les tests avec trois différents versions de java et envoyer un email à une adresse si quelque chose ne marche pas, le fichier en bas suffisait. De plus vous trouvez un aperçu de l'interface d'administration de Travis.
 
 \begin{figure}[H]
 	\centering
@@ -209,7 +209,7 @@ Après ça chaque fois qu'il y a un changement sur le dépôt les tests et la co
 
 
 \subsection{Team Foundation Server}
-\paragraph{Caractéristique du produit} TFS est de la forge logicielle de Microsoft. Le cycle de vie entier du développement logiciel agile est couvert. La gestion des versions (TFVC ou Git), des constructions, des résultats de test et beaucoup plus car on peut installer des plugins gratuit et payée facilement. Il y a une version "On-premises" qui est installé sur une machine/un serveur de l'entreprise mise a jour une foi par trimestre par Windows Update Services. Si on veut avoir la version la plus actuelle à n'importe quel temps il y a un service en ligne, fourni par Microsoft sur la nuage Azure.
+\paragraph{Caractéristique du produit} TFS est de la forge logicielle de Microsoft. Le cycle de vie entier du développement logiciel agile est couvert. La gestion des versions (TFVC ou Git), des constructions, des résultats de test et beaucoup plus, car on peut installer des plugins gratuit et payée facilement. Il y a une version "On-premises" qui est installé sur une machine/un serveur de l'entreprise, mise à jour une foi par trimestre par Windows Update Services. Si on veut avoir la version la plus actuelle à n'importe quel temps il y a un service en ligne, fourni par Microsoft sur la nuage Azure.
 
 \paragraph{Générale}  Le prix pour la version "On-premises" est calculé également pour la version SaaS listé en bas.
 \begin{table} [H]
@@ -229,7 +229,7 @@ Après ça chaque fois qu'il y a un changement sur le dépôt les tests et la co
 Combiné avec une suscription MSDN beaucoup des services VisualStudio et Azure sont inclue.
 \paragraph{Taille de la communauté} Sur le nouveau magasin en ligne on peut télécharger nombreux plugins publié par Microsoft ou des développeurs indépendantes. Il y a des addons pour Visual Studio, VisualStudioCode et VisualStudio TeamServices gratuit et payé.
 \paragraph{Utilisation} L'interface utilisateur est très intuitive. Après l'enregistrement on peut lier un projet locale avec le projet team en ligne. Si on veut configurer la construction ou le déploiement automatisé il faut ouvrir l'interface web et suivre les instructions. 
-La partie test est un peu confus au début, parce que les tests unitaires et les tests d'intégration sont inclue dans la construction et dans le chapitre test sont les tests d'acceptation recordé.
+La partie test est un peu confus au début, parce que les tests unitaires et les tests d'intégration sont inclue dans la partie construction, mais les tests d'acceptation se trouve à un endroit différent.
 
 \begin{figure}[H]
 	\centering

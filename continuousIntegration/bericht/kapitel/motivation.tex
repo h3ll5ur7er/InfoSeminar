@@ -7,7 +7,7 @@ En dessous vous trouvez quelques risques que l'IC aide à éviter, mais seulemen
 \subsection{Logiciel pas près pour le déploiement}
 Si on fait l'intégration d'un système seulement à la fin du projet, la probabilité de ne pas être capable à déployer et dérouler le logiciel pour le client est très haute. Des énonces comme "Mais ça marche sur ma machine" sont très connues. Des raisons pour cela peuvent être des configurations manquantes ou différentes sur la machine cible, ou même des dépendances qui n'ont pas été inclus pour le déploiement. Naturellement si le code source ne compile pas, le logiciel ne peut non plus être déroulé.
 
-En commettre, construire et déployer le logiciel souvent ce risque peut être diminuer. En faisant ça, on a la certitude d'avoir un logiciel qui marche au moins partiellement.
+En commettre, construire et déployer le logiciel souvent ce risque peut être diminué. En faisant ça, on a la certitude d'avoir un logiciel qui marche au moins partiellement.
 
 \subsection{Découverte tarde des erreurs}
 Par l'exécution des testes automatiques pendant le processus de construction des erreurs dans le code source peuvent être découvrit tôt. De plus il est aussi possible de déterminer la couverture du code par les tests. Naturellement la qualité des testes doit être bonne.
@@ -42,8 +42,8 @@ Il est conseillé de commettre le code source au moins une foi par jour. On doit
 
 \item\textit{Exécuter la construction et les testes localement (Run private builds)}
 
-\item\textit{Découpler le processus de construction du programme d'environnement intégré (Decouple build process from IDE)}\\
-Le programme d'environnement intégré peut faire des pas dans le processus de construction qui ne sont pas transparent pour le développeur ou les développeur utilises des différents IDE. C'est pour ça que la construction doit être possible et être fait à dehors d'une IDE.
+\item\textit{Découpler le processus de construction du logiciel de développement (Decouple build process from IDE)}\\
+Le logiciel de développement peut faire des pas dans le processus de construction qui ne sont pas transparent pour le développeur ou les développeur utilises des différents logiciel. C'est pour ça que la construction doit être possible et être fait à dehors d'un tel logiciel.
 
 \item\textit{Réparer des constructions non-fonctionnant immédiatement (Fix broken builds immediately)}\\
 Si quelque chose ne marche pas la réparation doit avoir la première priorité.
@@ -51,7 +51,7 @@ Si quelque chose ne marche pas la réparation doit avoir la première priorité.
 \item\textit{Écrire des testes automatisé (Write automated developer tests)}
 
 \item\textit{Tous les testes doivent réussir (All tests and inspections must pass)}\\
-Si on ignore des testes qui ne réunissent pas on diminue la visibilité du projet.
+Si on ignore des testes qui ne réussissent pas on diminue la visibilité du projet.
 
 \item\textit{Garder les constructions vite (Keep builds fast)}\\
 
